@@ -192,10 +192,10 @@ export function Footer() {
                     Phone
                   </p>
                   <a
-                    href="tel:+6281234567890"
+                    href="tel:+6282189885080"
                     className="text-sm hover:text-[var(--brand-primary)] transition-colors"
                   >
-                    +62 811-552-477
+                    +62 821-8988-5080
                   </a>
                 </div>
               </li>

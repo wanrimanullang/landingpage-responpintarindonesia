@@ -378,7 +378,7 @@ export default function PrivacyPage() {
               <div className="flex flex-col items-center gap-2 bg-card rounded-xl p-4 border border-border">
                 <Phone className="w-5 h-5 text-[var(--brand-primary)]" />
                 <p className="text-xs text-muted-foreground">Phone</p>
-                <p className="text-sm">+62811-552-477</p>
+                <p className="text-sm">+62 821-8988-5080</p>
               </div>
 
               <div className="flex flex-col items-center gap-2 bg-card rounded-xl p-4 border border-border">

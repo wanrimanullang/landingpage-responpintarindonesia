@@ -81,17 +81,30 @@ export function PricingSection() {
           {/* Features highlight */}
           <div className="grid sm:grid-cols-3 gap-6 mt-8">
             <div className="text-center">
-              <div className="text-2xl mb-2">🎯</div>
+              <svg className="w-8 h-8 mx-auto mb-2" viewBox="0 0 32 32" fill="none">
+                <circle cx="16" cy="16" r="14" stroke="var(--brand-primary)" strokeWidth="2" opacity="0.3" />
+                <circle cx="16" cy="16" r="9" stroke="var(--brand-primary)" strokeWidth="2" opacity="0.6" />
+                <circle cx="16" cy="16" r="4" fill="var(--brand-primary)" />
+              </svg>
               <p className="text-sm">Custom Packages</p>
               <p className="text-xs text-muted-foreground mt-1">Tailored to your business needs</p>
             </div>
             <div className="text-center">
-              <div className="text-2xl mb-2">💰</div>
+              <svg className="w-8 h-8 mx-auto mb-2" viewBox="0 0 32 32" fill="none">
+                <path d="M16 3L28 16L16 29L4 16Z" stroke="var(--brand-primary)" strokeWidth="2" fill="var(--brand-primary)" fillOpacity="0.15" />
+                <path d="M16 9L23 16L16 23L9 16Z" fill="var(--brand-primary)" fillOpacity="0.5" />
+              </svg>
               <p className="text-sm">Competitive Pricing</p>
               <p className="text-xs text-muted-foreground mt-1">Best value for your investment</p>
             </div>
             <div className="text-center">
-              <div className="text-2xl mb-2">🤝</div>
+              <svg className="w-8 h-8 mx-auto mb-2" viewBox="0 0 32 32" fill="none">
+                <circle cx="8" cy="16" r="5" stroke="var(--brand-primary)" strokeWidth="2" fill="var(--brand-primary)" fillOpacity="0.15" />
+                <circle cx="24" cy="16" r="5" stroke="var(--brand-primary)" strokeWidth="2" fill="var(--brand-primary)" fillOpacity="0.15" />
+                <path d="M13 16H19" stroke="var(--brand-primary)" strokeWidth="2" strokeLinecap="round" />
+                <circle cx="8" cy="16" r="2" fill="var(--brand-primary)" />
+                <circle cx="24" cy="16" r="2" fill="var(--brand-primary)" />
+              </svg>
               <p className="text-sm">Dedicated Support</p>
               <p className="text-xs text-muted-foreground mt-1">Team ready to help 24/7</p>
             </div>

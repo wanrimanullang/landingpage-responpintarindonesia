@@ -190,18 +190,83 @@ export default function AboutPage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: '🛒', title: 'E-Commerce', desc: 'Quick responses for product inquiries and orders' },
-              { icon: '🏥', title: 'Healthcare', desc: '24/7 consultation and health information services' },
-              { icon: '🎓', title: 'Education', desc: 'Learning support and student administration' },
-              { icon: '🏦', title: 'Banking', desc: 'Customer service and financial product information' },
-              { icon: '🏨', title: 'Hospitality', desc: 'Better booking and guest service experience' },
-              { icon: '📱', title: 'Technology', desc: 'Technical support and user onboarding' },
+              {
+                title: 'E-Commerce',
+                desc: 'Quick responses for product inquiries and orders',
+                svg: (
+                  <svg viewBox="0 0 40 40" fill="none" className="w-10 h-10">
+                    <rect x="6" y="14" width="28" height="20" rx="3" stroke="var(--brand-primary)" strokeWidth="2" fill="var(--brand-primary)" fillOpacity="0.1" />
+                    <path d="M14 14V10a6 6 0 0 1 12 0v4" stroke="var(--brand-primary)" strokeWidth="2" strokeLinecap="round" />
+                    <circle cx="20" cy="25" r="3" fill="var(--brand-primary)" fillOpacity="0.5" />
+                  </svg>
+                ),
+              },
+              {
+                title: 'Healthcare',
+                desc: '24/7 consultation and health information services',
+                svg: (
+                  <svg viewBox="0 0 40 40" fill="none" className="w-10 h-10">
+                    <rect x="4" y="4" width="32" height="32" rx="8" stroke="var(--brand-primary)" strokeWidth="2" fill="var(--brand-primary)" fillOpacity="0.1" />
+                    <path d="M20 12v16M12 20h16" stroke="var(--brand-primary)" strokeWidth="3" strokeLinecap="round" />
+                  </svg>
+                ),
+              },
+              {
+                title: 'Education',
+                desc: 'Learning support and student administration',
+                svg: (
+                  <svg viewBox="0 0 40 40" fill="none" className="w-10 h-10">
+                    <path d="M20 8L4 18l16 10 16-10L20 8z" stroke="var(--brand-primary)" strokeWidth="2" fill="var(--brand-primary)" fillOpacity="0.1" />
+                    <path d="M10 23v7l10 5 10-5v-7" stroke="var(--brand-primary)" strokeWidth="2" fill="var(--brand-primary)" fillOpacity="0.05" />
+                    <line x1="36" y1="18" x2="36" y2="32" stroke="var(--brand-primary)" strokeWidth="2" />
+                  </svg>
+                ),
+              },
+              {
+                title: 'Banking',
+                desc: 'Customer service and financial product information',
+                svg: (
+                  <svg viewBox="0 0 40 40" fill="none" className="w-10 h-10">
+                    <path d="M20 4L4 14h32L20 4z" stroke="var(--brand-primary)" strokeWidth="2" fill="var(--brand-primary)" fillOpacity="0.1" />
+                    <rect x="4" y="32" width="32" height="4" rx="1" fill="var(--brand-primary)" fillOpacity="0.3" />
+                    <rect x="9" y="16" width="4" height="16" rx="1" fill="var(--brand-primary)" fillOpacity="0.2" stroke="var(--brand-primary)" strokeWidth="1" />
+                    <rect x="18" y="16" width="4" height="16" rx="1" fill="var(--brand-primary)" fillOpacity="0.2" stroke="var(--brand-primary)" strokeWidth="1" />
+                    <rect x="27" y="16" width="4" height="16" rx="1" fill="var(--brand-primary)" fillOpacity="0.2" stroke="var(--brand-primary)" strokeWidth="1" />
+                  </svg>
+                ),
+              },
+              {
+                title: 'Hospitality',
+                desc: 'Better booking and guest service experience',
+                svg: (
+                  <svg viewBox="0 0 40 40" fill="none" className="w-10 h-10">
+                    <rect x="6" y="12" width="28" height="22" rx="3" stroke="var(--brand-primary)" strokeWidth="2" fill="var(--brand-primary)" fillOpacity="0.1" />
+                    <rect x="16" y="6" width="8" height="8" rx="2" stroke="var(--brand-primary)" strokeWidth="2" fill="var(--brand-primary)" fillOpacity="0.15" />
+                    <path d="M6 20h28" stroke="var(--brand-primary)" strokeWidth="1.5" opacity="0.4" />
+                    <rect x="12" y="24" width="6" height="6" rx="1" fill="var(--brand-primary)" fillOpacity="0.2" />
+                    <rect x="22" y="24" width="6" height="6" rx="1" fill="var(--brand-primary)" fillOpacity="0.2" />
+                  </svg>
+                ),
+              },
+              {
+                title: 'Technology',
+                desc: 'Technical support and user onboarding',
+                svg: (
+                  <svg viewBox="0 0 40 40" fill="none" className="w-10 h-10">
+                    <rect x="10" y="4" width="20" height="32" rx="4" stroke="var(--brand-primary)" strokeWidth="2" fill="var(--brand-primary)" fillOpacity="0.1" />
+                    <line x1="10" y1="10" x2="30" y2="10" stroke="var(--brand-primary)" strokeWidth="1.5" opacity="0.3" />
+                    <line x1="10" y1="30" x2="30" y2="30" stroke="var(--brand-primary)" strokeWidth="1.5" opacity="0.3" />
+                    <circle cx="20" cy="33" r="1.5" fill="var(--brand-primary)" fillOpacity="0.5" />
+                    <path d="M16 18l3 3 5-6" stroke="var(--brand-primary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                ),
+              },
             ].map((industry, index) => (
               <div
                 key={index}
                 className="bg-card border border-border rounded-xl p-6 hover:border-[var(--brand-primary)]/20 hover:shadow-lg transition-all"
               >
-                <div className="text-4xl mb-4">{industry.icon}</div>
+                <div className="mb-4">{industry.svg}</div>
                 <h3 className="text-lg mb-2">{industry.title}</h3>
                 <p className="text-sm text-muted-foreground">{industry.desc}</p>
               </div>
@@ -220,7 +285,7 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <button className="px-8 py-3 bg-white text-[var(--brand-primary)] rounded-lg hover:bg-gray-100 transition-all hover:scale-105">
-              <a href="https://wa.me/620811552477?text=Hello,%20I%20got%20information%20from%20the%20ResponPintar%20website.%20May%20I%20know%20more%20about%20the%20application?" target="_blank" rel="noopener noreferrer">Contact Sales</a>
+              <a href="https://wa.me/6282189885080?text=Hello,%20I%20got%20information%20from%20the%20ResponPintar%20website.%20May%20I%20know%20more%20about%20the%20application?" target="_blank" rel="noopener noreferrer">Contact Sales</a>
             </button>
             <a href="/demo" className="px-8 py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-lg hover:bg-white/20 transition-all inline-block">
               View Demo
