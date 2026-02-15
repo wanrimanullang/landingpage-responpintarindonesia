@@ -29,9 +29,9 @@ export function Footer() {
               <span className="text-lg">Respon Pintar</span>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Platform SaaS terdepan untuk otomasi customer
-              service dengan teknologi AI yang membantu bisnis
-              meningkatkan efisiensi dan kepuasan pelanggan.
+              A leading SaaS platform for customer service automation
+              powered by AI technology that helps businesses
+              improve efficiency and customer satisfaction.
             </p>
             {/* Social Media */}
             <div className="flex gap-3 pt-4">
@@ -75,14 +75,14 @@ export function Footer() {
 
           {/* Product */}
           <div>
-            <h4 className="mb-4">Produk</h4>
+            <h4 className="mb-4">Product</h4>
             <ul className="space-y-3">
               <li>
                 <a
                   href="#features"
                   className="text-sm text-muted-foreground hover:text-[var(--brand-primary)] transition-colors"
                 >
-                  Fitur
+                  Features
                 </a>
               </li>
               <li>
@@ -90,7 +90,7 @@ export function Footer() {
                   href="#pricing"
                   className="text-sm text-muted-foreground hover:text-[var(--brand-primary)] transition-colors"
                 >
-                  Harga
+                  Pricing
                 </a>
               </li>
               <li>
@@ -98,7 +98,7 @@ export function Footer() {
                   href="#"
                   className="text-sm text-muted-foreground hover:text-[var(--brand-primary)] transition-colors"
                 >
-                  Integrasi
+                  Integrations
                 </a>
               </li>
               <li>
@@ -122,14 +122,14 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="mb-4">Perusahaan</h4>
+            <h4 className="mb-4">Company</h4>
             <ul className="space-y-3">
               <li>
                 <Link
                   to="/about"
                   className="text-sm text-muted-foreground hover:text-[var(--brand-primary)] transition-colors"
                 >
-                  Tentang Kami
+                  About Us
                 </Link>
               </li>
               <li>
@@ -145,7 +145,7 @@ export function Footer() {
                   href="#"
                   className="text-sm text-muted-foreground hover:text-[var(--brand-primary)] transition-colors"
                 >
-                  Karir
+                  Careers
                 </a>
               </li>
               <li>
@@ -169,7 +169,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="mb-4">Hubungi Kami</h4>
+            <h4 className="mb-4">Contact Us</h4>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-[var(--brand-primary)] flex-shrink-0 mt-0.5" />
@@ -189,7 +189,7 @@ export function Footer() {
                 <Phone className="w-5 h-5 text-[var(--brand-primary)] flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-sm text-muted-foreground">
-                    Telepon
+                    Phone
                   </p>
                   <a
                     href="tel:+6281234567890"
@@ -203,9 +203,14 @@ export function Footer() {
                 <MapPin className="w-5 h-5 text-[var(--brand-primary)] flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-sm text-muted-foreground">
-                    Alamat
+                    Address
                   </p>
-                  <p className="text-sm">Plaza Aminta, Jl TB Simatupang, Kebayoran Lama Jakarta Selatan, Indonesia</p>
+                  <p className="text-sm">
+                    Plaza Aminta 5th Floor/504, Jl. TB Simatupang Kav. 10,<br />
+                    Pondok Pinang, Kebayoran Lama,<br />
+                    South Jakarta, DKI Jakarta,<br />
+                    Postal Code: 12310
+                  </p>
                 </div>
               </li>
             </ul>

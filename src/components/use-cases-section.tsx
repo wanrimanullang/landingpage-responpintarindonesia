@@ -6,26 +6,26 @@ const useCases = [
   {
     icon: ShoppingCart,
     title: 'E-Commerce',
-    description: 'Tangani pertanyaan produk, tracking pesanan, dan keluhan customer secara otomatis.',
-    benefits: ['Tingkatkan konversi 40%', 'Kurangi cart abandonment', 'Support 24/7 tanpa biaya tambahan'],
+    description: 'Automatically handle product inquiries, order tracking, and customer complaints.',
+    benefits: ['Increase conversion by 40%', 'Reduce cart abandonment', '24/7 support at no extra cost'],
   },
   {
     icon: Building2,
-    title: 'Bisnis & Korporat',
-    description: 'Otomasi customer support, lead generation, dan internal communication.',
-    benefits: ['Hemat biaya operasional 60%', 'Respon lebih cepat', 'Tingkatkan produktivitas tim'],
+    title: 'Business & Corporate',
+    description: 'Automate customer support, lead generation, and internal communication.',
+    benefits: ['Save 60% on operational costs', 'Faster response times', 'Boost team productivity'],
   },
   {
     icon: GraduationCap,
-    title: 'Pendidikan',
-    description: 'Jawab pertanyaan siswa, informasi pendaftaran, dan panduan pembelajaran.',
-    benefits: ['Layani ribuan siswa sekaligus', 'Informasi akurat 24/7', 'Tingkatkan engagement'],
+    title: 'Education',
+    description: 'Answer student questions, provide enrollment information, and learning guidance.',
+    benefits: ['Serve thousands of students at once', 'Accurate info 24/7', 'Increase engagement'],
   },
   {
     icon: Stethoscope,
     title: 'Healthcare',
-    description: 'Jadwal appointment, informasi layanan, dan FAQ medis umum.',
-    benefits: ['Kurangi beban admin', 'Appointment management otomatis', 'Layanan lebih efisien'],
+    description: 'Schedule appointments, provide service information, and answer common medical FAQs.',
+    benefits: ['Reduce admin workload', 'Automatic appointment management', 'More efficient service'],
   },
 ];
 
@@ -39,16 +39,16 @@ export function UseCasesSection() {
             <Building2 className="w-4 h-4 text-[var(--brand-primary)]" />
             <span className="text-sm">Use Cases</span>
           </div>
-          
+
           <h2 className="text-3xl sm:text-4xl lg:text-5xl">
-            Solusi untuk{' '}
+            Solutions for{' '}
             <span className="bg-gradient-to-r from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] bg-clip-text text-transparent">
-              Berbagai Industri
+              Various Industries
             </span>
           </h2>
-          
+
           <p className="text-lg text-muted-foreground">
-            Dari startup hingga enterprise, Respon Pintar membantu bisnis dari berbagai sektor meningkatkan customer experience.
+            From startups to enterprises, Respon Pintar helps businesses across sectors improve their customer experience.
           </p>
         </div>
 

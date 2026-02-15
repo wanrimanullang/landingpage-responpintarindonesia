@@ -1,6 +1,7 @@
 'use client';
 
 import { ArrowRight, Sparkles, Zap } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Button } from './ui/button';
 
 export function HeroSection() {
@@ -17,20 +18,20 @@ export function HeroSection() {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 border border-border">
               <Sparkles className="w-4 h-4 text-[var(--brand-primary)]" />
-              <span className="text-sm">Platform SaaS untuk Otomasi Respons</span>
+              <span className="text-sm">SaaS Platform for Response Automation</span>
             </div>
 
             {/* Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl !leading-tight">
-              Tingkatkan Respons Customer dengan{' '}
+              Boost Customer Response with{' '}
               <span className="bg-gradient-to-r from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] bg-clip-text text-transparent">
-                Teknologi AI
+                AI Technology
               </span>
             </h1>
 
             {/* Subheadline */}
             <p className="text-lg text-muted-foreground !leading-relaxed">
-              Otomasi respons pelanggan, tingkatkan kepuasan, dan hemat waktu hingga 70% dengan platform chatbot berbasis AI yang mudah digunakan.
+              Automate customer responses, increase satisfaction, and save up to 70% of your time with an easy-to-use AI-powered chatbot platform.
             </p>
 
             {/* CTA Buttons */}
@@ -39,17 +40,19 @@ export function HeroSection() {
                 size="lg"
                 className="bg-gradient-to-r from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] hover:opacity-90 transition-all hover:scale-105 hover:shadow-lg shadow-[var(--brand-primary)]/20 group"
               >
-                <a href="https://wa.me/620811552477?text=Halo,%20saya%20mendapatkan%20informasi%20dari%20website%20ResponPintar.%20Apakah%20saya%20boleh%20tahu%20informasi%20aplikasinya?">Mulai Gratis</a>
+                <a href="https://wa.me/620811552477?text=Hello,%20I%20got%20information%20from%20the%20ResponPintar%20website.%20May%20I%20know%20more%20about%20the%20application?">Start Free</a>
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
 
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-border hover:bg-accent hover:scale-105 transition-all"
-              >
-                Lihat Demo
-              </Button>
+              <Link to="/demo">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-border hover:bg-accent hover:scale-105 transition-all"
+                >
+                  View Demo
+                </Button>
+              </Link>
             </div>
 
             {/* Stats */}
@@ -60,7 +63,7 @@ export function HeroSection() {
                     10K+
                   </span>
                 </div>
-                <p className="text-sm text-muted-foreground">Pengguna Aktif</p>
+                <p className="text-sm text-muted-foreground">Active Users</p>
               </div>
               <div>
                 <div className="flex items-baseline gap-1">
@@ -68,7 +71,7 @@ export function HeroSection() {
                     98%
                   </span>
                 </div>
-                <p className="text-sm text-muted-foreground">Kepuasan Customer</p>
+                <p className="text-sm text-muted-foreground">Customer Satisfaction</p>
               </div>
               <div>
                 <div className="flex items-baseline gap-1">
@@ -76,7 +79,7 @@ export function HeroSection() {
                     24/7
                   </span>
                 </div>
-                <p className="text-sm text-muted-foreground">Dukungan Otomatis</p>
+                <p className="text-sm text-muted-foreground">Automated Support</p>
               </div>
             </div>
           </div>
@@ -111,7 +114,7 @@ export function HeroSection() {
                 {/* User message */}
                 <div className="flex justify-end">
                   <div className="bg-gradient-to-r from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] text-white px-4 py-2 rounded-2xl rounded-tr-sm max-w-[80%]">
-                    <p className="text-sm">Bagaimana cara menggunakan fitur otomasi?</p>
+                    <p className="text-sm">How do I use the automation feature?</p>
                   </div>
                 </div>
 
@@ -121,7 +124,7 @@ export function HeroSection() {
                     <Zap className="w-4 h-4 text-[var(--brand-primary)]" />
                   </div>
                   <div className="bg-secondary px-4 py-2 rounded-2xl rounded-tl-sm max-w-[80%]">
-                    <p className="text-sm">Fitur otomasi kami sangat mudah! Anda tinggal setup template respons, dan AI akan menangani sisanya secara otomatis 24/7.</p>
+                    <p className="text-sm">Our automation feature is super easy! Just set up your response templates, and the AI will handle the rest automatically 24/7.</p>
                   </div>
                 </div>
 
@@ -143,7 +146,7 @@ export function HeroSection() {
               {/* Input area */}
               <div className="flex gap-2 pt-4 border-t border-border">
                 <div className="flex-1 bg-secondary px-4 py-2 rounded-lg">
-                  <p className="text-sm text-muted-foreground">Ketik pesan...</p>
+                  <p className="text-sm text-muted-foreground">Type a message...</p>
                 </div>
                 <button className="w-10 h-10 rounded-lg bg-gradient-to-r from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] flex items-center justify-center">
                   <ArrowRight className="w-5 h-5 text-white" />

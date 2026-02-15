@@ -24,7 +24,7 @@ export function PartnersSection() {
   // Auto-slide functionality
   useEffect(() => {
     if (isPaused) return;
-    
+
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % partners.length);
     }, 3000);
@@ -48,7 +48,7 @@ export function PartnersSection() {
   const getVisiblePartners = () => {
     const windowWidth = typeof window !== 'undefined' ? window.innerWidth : 1024;
     let slidesToShow = 5;
-    
+
     if (windowWidth < 480) {
       slidesToShow = 2;
     } else if (windowWidth < 768) {
@@ -72,18 +72,18 @@ export function PartnersSection() {
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border">
             <Users className="w-4 h-4 text-[var(--brand-primary)]" />
-            <span className="text-sm">Partner & Client</span>
+            <span className="text-sm">Partners & Clients</span>
           </div>
-          
+
           <h2 className="text-3xl sm:text-4xl lg:text-5xl">
-            Partner & Client{' '}
+            Our Partners &{' '}
             <span className="bg-gradient-to-r from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] bg-clip-text text-transparent">
-              Kami
+              Clients
             </span>
           </h2>
-          
+
           <p className="text-lg text-muted-foreground">
-            Bergabunglah dengan lebih dari 10,000+ bisnis yang telah mempercayai Respon Pintar
+            Join over 10,000+ businesses that trust Respon Pintar
           </p>
         </div>
 
@@ -99,7 +99,7 @@ export function PartnersSection() {
               <ChevronLeft className="w-5 h-5 text-foreground" />
             </button>
           </div>
-          
+
           <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 hidden md:block">
             <button
               onClick={goToNext}
@@ -111,15 +111,15 @@ export function PartnersSection() {
           </div>
 
           {/* Partners Grid */}
-          <div 
+          <div
             className="overflow-hidden"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
               {getVisiblePartners().map((partner, index) => (
-                <div 
-                  key={`${partner.name}-${index}`} 
+                <div
+                  key={`${partner.name}-${index}`}
                   className="animate-fadeIn"
                 >
                   <div className="bg-card border border-border rounded-xl p-6 h-28 flex items-center justify-center hover:border-[var(--brand-primary)]/20 hover:shadow-lg transition-all group cursor-pointer">
@@ -141,11 +141,10 @@ export function PartnersSection() {
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-2 h-2 rounded-full transition-all ${
-                  index === currentIndex
-                    ? 'bg-[var(--brand-primary)] w-6'
-                    : 'bg-[var(--brand-primary)] opacity-30 hover:opacity-50'
-                }`}
+                className={`w-2 h-2 rounded-full transition-all ${index === currentIndex
+                  ? 'bg-[var(--brand-primary)] w-6'
+                  : 'bg-[var(--brand-primary)] opacity-30 hover:opacity-50'
+                  }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
             ))}
@@ -182,7 +181,7 @@ export function PartnersSection() {
       </div>
 
       {/* Animation styles */}
-      <style jsx>{`
+      <style>{`
         @keyframes fadeIn {
           from {
             opacity: 0;
@@ -197,7 +196,8 @@ export function PartnersSection() {
         .animate-fadeIn {
           animation: fadeIn 0.5s ease-out;
         }
-      `}</style>
+      `}
+      </style>
     </section>
   );
 }

@@ -10,23 +10,22 @@ import TermsPage from './pages/terms';
 import AboutPage from './pages/about';
 import BlogPage from './pages/blog';
 import BlogPostPage from './pages/blog-post';
+import DemoPage from './pages/demo';
 import { useChatwoot } from './hooks/useChatwoot';
 
 export default function App() {
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
 
-  // Load theme from localStorage on mount
+  // Load theme from localStorage on mount (default: light)
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
     if (savedTheme) {
       setTheme(savedTheme);
       document.documentElement.classList.toggle('dark', savedTheme === 'dark');
     } else {
-      // Check system preference
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const initialTheme = prefersDark ? 'dark' : 'light';
-      setTheme(initialTheme);
-      document.documentElement.classList.toggle('dark', prefersDark);
+      // Default to light mode
+      setTheme('light');
+      document.documentElement.classList.remove('dark');
     }
   }, []);
 
@@ -43,7 +42,7 @@ export default function App() {
     websiteToken: 'AH84MtFe5Ux2XxicvHdu77PX',
     baseUrl: 'https://chat.responpintar.com',
     position: 'right',
-    locale: 'id',
+    locale: 'en',
   });
 
   return (
@@ -58,6 +57,7 @@ export default function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:slug" element={<BlogPostPage />} />
+          <Route path="/demo" element={<DemoPage />} />
         </Routes>
 
         <Footer />

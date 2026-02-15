@@ -5,33 +5,33 @@ import { Bot, Zap, Shield, BarChart3, MessageSquare, Clock } from 'lucide-react'
 const features = [
   {
     icon: Bot,
-    title: 'AI Chatbot Pintar',
-    description: 'Chatbot berbasis AI yang memahami konteks dan memberikan respons natural seperti manusia.',
+    title: 'Smart AI Chatbot',
+    description: 'An AI-powered chatbot that understands context and delivers natural, human-like responses.',
   },
   {
     icon: Zap,
-    title: 'Otomasi Instant',
-    description: 'Setup cepat dalam hitungan menit. Langsung aktif melayani customer Anda 24/7.',
+    title: 'Instant Automation',
+    description: 'Quick setup in minutes. Start serving your customers 24/7 right away.',
   },
   {
     icon: MessageSquare,
     title: 'Multi-Channel Support',
-    description: 'Integrasikan dengan WhatsApp, Instagram, Facebook, dan platform lainnya dalam satu dashboard.',
+    description: 'Integrate with WhatsApp, Instagram, Facebook, and other platforms in a single dashboard.',
   },
   {
     icon: BarChart3,
-    title: 'Analytics Mendalam',
-    description: 'Dashboard analytics untuk tracking performa, kepuasan customer, dan insight bisnis.',
+    title: 'In-Depth Analytics',
+    description: 'Analytics dashboard for tracking performance, customer satisfaction, and business insights.',
   },
   {
     icon: Shield,
-    title: 'Keamanan Terjamin',
-    description: 'Enkripsi end-to-end dan compliance standar internasional untuk melindungi data Anda.',
+    title: 'Guaranteed Security',
+    description: 'End-to-end encryption and international compliance standards to protect your data.',
   },
   {
     icon: Clock,
-    title: 'Respons Real-time',
-    description: 'Waktu respons di bawah 1 detik. Customer Anda tidak perlu menunggu lama.',
+    title: 'Real-time Response',
+    description: 'Response time under 1 second. Your customers never have to wait long.',
   },
 ];
 
@@ -43,18 +43,18 @@ export function FeaturesSection() {
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border">
             <Zap className="w-4 h-4 text-[var(--brand-primary)]" />
-            <span className="text-sm">Fitur Unggulan</span>
+            <span className="text-sm">Key Features</span>
           </div>
-          
+
           <h2 className="text-3xl sm:text-4xl lg:text-5xl">
-            Semua yang Anda Butuhkan untuk{' '}
+            Everything You Need for{' '}
             <span className="bg-gradient-to-r from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] bg-clip-text text-transparent">
-              Otomasi Customer Service
+              Customer Service Automation
             </span>
           </h2>
-          
+
           <p className="text-lg text-muted-foreground">
-            Platform lengkap dengan fitur-fitur canggih yang dirancang untuk memaksimalkan efisiensi dan kepuasan pelanggan Anda.
+            A complete platform with powerful features designed to maximize your efficiency and customer satisfaction.
           </p>
         </div>
 

@@ -8,7 +8,7 @@ const testimonials = [
     role: 'CEO',
     company: 'TechStore Indonesia',
     image: 'BS',
-    content: 'Respon Pintar mengubah cara kami berinteraksi dengan customer. Response time kami turun dari 2 jam menjadi hanya 30 detik!',
+    content: 'Respon Pintar transformed how we interact with customers. Our response time dropped from 2 hours to just 30 seconds!',
     rating: 5,
   },
   {
@@ -16,7 +16,7 @@ const testimonials = [
     role: 'Marketing Manager',
     company: 'EduLearn',
     image: 'SW',
-    content: 'Platform yang sangat user-friendly. Tim kami bisa setup dalam 1 hari dan langsung merasakan impact positifnya.',
+    content: 'An incredibly user-friendly platform. Our team set it up in 1 day and immediately felt the positive impact.',
     rating: 5,
   },
   {
@@ -24,7 +24,7 @@ const testimonials = [
     role: 'Founder',
     company: 'HealthCare Plus',
     image: 'AR',
-    content: 'ROI yang luar biasa! Kami hemat 60% biaya customer service dan kepuasan customer malah meningkat 40%.',
+    content: 'Amazing ROI! We saved 60% on customer service costs and customer satisfaction actually increased by 40%.',
     rating: 5,
   },
   {
@@ -32,7 +32,7 @@ const testimonials = [
     role: 'Operations Director',
     company: 'FashionHub',
     image: 'LP',
-    content: 'AI-nya sangat cerdas dan terus belajar. Sekarang customer service kami bisa fokus ke masalah yang lebih kompleks.',
+    content: 'The AI is incredibly smart and keeps learning. Now our customer service team can focus on more complex issues.',
     rating: 5,
   },
 ];
@@ -45,18 +45,18 @@ export function TestimonialsSection() {
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border">
             <Quote className="w-4 h-4 text-[var(--brand-primary)]" />
-            <span className="text-sm">Testimoni</span>
+            <span className="text-sm">Testimonials</span>
           </div>
-          
+
           <h2 className="text-3xl sm:text-4xl lg:text-5xl">
-            Dipercaya oleh{' '}
+            Trusted by{' '}
             <span className="bg-gradient-to-r from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] bg-clip-text text-transparent">
-              Ribuan Bisnis
+              Thousands of Businesses
             </span>
           </h2>
-          
+
           <p className="text-lg text-muted-foreground">
-            Dengarkan pengalaman customer kami yang telah merasakan transformasi customer service.
+            Hear from our customers who have experienced a transformation in their customer service.
           </p>
         </div>
 

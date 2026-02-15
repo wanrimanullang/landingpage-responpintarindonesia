@@ -26,13 +26,13 @@ export function Navbar({ theme, toggleTheme }: NavbarProps) {
           {/* Navigation Links */}
           <div className="hidden md:flex items-center gap-8">
             <Link to="/#features" className="text-muted-foreground hover:text-foreground transition-colors">
-              Fitur
+              Features
             </Link>
             <Link to="/#use-cases" className="text-muted-foreground hover:text-foreground transition-colors">
-              Manfaat
+              Use Cases
             </Link>
             <Link to="/about" className="text-muted-foreground hover:text-foreground transition-colors">
-              Tentang
+              About
             </Link>
             <Link to="/blog" className="text-muted-foreground hover:text-foreground transition-colors">
               Blog
@@ -53,23 +53,23 @@ export function Navbar({ theme, toggleTheme }: NavbarProps) {
               )}
             </button>
 
-            <Button
+            {/* <Button
               variant="ghost"
               className="hidden sm:inline-flex text-foreground hover:text-foreground"
             >
-              Masuk
-            </Button>
+              Login
+            </Button> */}
 
             <Button
               asChild
               className="bg-gradient-to-r from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] hover:opacity-90 transition-all hover:scale-105 hover:shadow-lg shadow-[var(--brand-primary)]/20"
             >
               <a
-                href="https://wa.me/620811552477?text=Halo,%20saya%20mendapatkan%20informasi%20dari%20website%20ResponPintar.%20Apakah%20saya%20boleh%20tahu%20informasi%20aplikasinya?"
+                href="https://wa.me/620811552477?text=Hello,%20I%20got%20information%20from%20the%20ResponPintar%20website.%20May%20I%20know%20more%20about%20the%20application?"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Coba Sekarang
+                Try Now
               </a>
             </Button>
           </div>

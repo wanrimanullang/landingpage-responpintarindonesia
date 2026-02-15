@@ -2,7 +2,8 @@ import { HeroSection } from '../components/hero-section';
 import { FeaturesSection } from '../components/features-section';
 import { UseCasesSection } from '../components/use-cases-section';
 import { PricingSection } from '../components/pricing-section';
-import { TestimonialsSection } from '../components/testimonials-section';
+// import { TestimonialsSection } from '../components/testimonials-section';
+import { OurClientsSection } from '../components/our-clients-section';
 import { AnimatedSection } from '../components/animated-section';
 
 export default function HomePage() {
@@ -22,8 +23,12 @@ export default function HomePage() {
         <PricingSection />
       </AnimatedSection>
 
-      <AnimatedSection animation="fade-up" delay={100}>
+      {/* <AnimatedSection animation="fade-up" delay={100}>
         <TestimonialsSection />
+      </AnimatedSection> */}
+
+      <AnimatedSection animation="fade-up" delay={100}>
+        <OurClientsSection />
       </AnimatedSection>
     </main>
   );

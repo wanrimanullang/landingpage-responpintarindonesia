@@ -13,16 +13,16 @@ export default function BlogPage() {
             <BookOpen className="w-4 h-4 text-[var(--brand-primary)]" />
             <span className="text-sm">Blog & Insights</span>
           </div>
-          
+
           <h1 className="text-4xl sm:text-5xl mb-4">
-            Artikel & Wawasan{' '}
+            Articles & Insights on{' '}
             <span className="bg-gradient-to-r from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] bg-clip-text text-transparent">
               Customer Service
             </span>
           </h1>
-          
+
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Pelajari strategi, tips, dan tren terbaru dalam customer service dan AI untuk membantu bisnis Anda berkembang
+            Learn the latest strategies, tips, and trends in customer service and AI to help your business grow
           </p>
         </div>
 
@@ -45,7 +45,7 @@ export default function BlogPage() {
                   </span>
                 </div>
               </div>
-              
+
               <div className="p-8 flex flex-col justify-center">
                 <div className="flex items-center gap-4 mb-4 text-sm text-muted-foreground">
                   <span className="px-3 py-1 bg-secondary rounded-full text-[var(--brand-primary)]">
@@ -60,15 +60,15 @@ export default function BlogPage() {
                     <span>{blogPosts[0].readTime}</span>
                   </div>
                 </div>
-                
+
                 <h2 className="text-3xl mb-4 group-hover:text-[var(--brand-primary)] transition-colors">
                   {blogPosts[0].title}
                 </h2>
-                
+
                 <p className="text-muted-foreground mb-6 leading-relaxed">
                   {blogPosts[0].excerpt}
                 </p>
-                
+
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] flex items-center justify-center">
@@ -79,9 +79,9 @@ export default function BlogPage() {
                       <p className="text-xs text-muted-foreground">Author</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center gap-2 text-[var(--brand-primary)] group-hover:gap-3 transition-all">
-                    <span className="text-sm">Baca Selengkapnya</span>
+                    <span className="text-sm">Read More</span>
                     <ArrowRight className="w-4 h-4" />
                   </div>
                 </div>
@@ -105,7 +105,7 @@ export default function BlogPage() {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
-              
+
               <div className="p-6">
                 <div className="flex items-center gap-3 mb-3 text-xs text-muted-foreground">
                   <span className="px-2 py-1 bg-secondary rounded-full text-[var(--brand-primary)]">
@@ -120,15 +120,15 @@ export default function BlogPage() {
                     <span>{post.readTime}</span>
                   </div>
                 </div>
-                
+
                 <h3 className="text-lg mb-2 group-hover:text-[var(--brand-primary)] transition-colors line-clamp-2">
                   {post.title}
                 </h3>
-                
+
                 <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
                   {post.excerpt}
                 </p>
-                
+
                 <div className="flex items-center justify-between pt-4 border-t border-border">
                   <div className="flex items-center gap-2">
                     <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] flex items-center justify-center">
@@ -136,7 +136,7 @@ export default function BlogPage() {
                     </div>
                     <span className="text-xs">{post.author.name}</span>
                   </div>
-                  
+
                   <ArrowRight className="w-4 h-4 text-[var(--brand-primary)] group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
@@ -146,7 +146,7 @@ export default function BlogPage() {
 
         {/* Categories */}
         <div className="mt-16 p-8 bg-gradient-to-br from-[var(--brand-gradient-start)]/10 to-[var(--brand-gradient-end)]/10 border border-[var(--brand-primary)]/20 rounded-2xl">
-          <h2 className="text-2xl mb-6 text-center">Kategori</h2>
+          <h2 className="text-2xl mb-6 text-center">Categories</h2>
           <div className="flex flex-wrap justify-center gap-3">
             {Array.from(new Set(blogPosts.map(post => post.category))).map((category) => (
               <button

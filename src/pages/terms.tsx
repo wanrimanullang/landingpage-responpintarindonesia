@@ -8,18 +8,18 @@ export default function TermsPage() {
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-6">
             <Scale className="w-4 h-4 text-[var(--brand-primary)]" />
-            <span className="text-sm">Syarat dan Ketentuan</span>
+            <span className="text-sm">Terms and Conditions</span>
           </div>
-          
+
           <h1 className="text-4xl sm:text-5xl mb-4">
-            Syarat dan{' '}
+            Terms and{' '}
             <span className="bg-gradient-to-r from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] bg-clip-text text-transparent">
-              Ketentuan
+              Conditions
             </span>
           </h1>
-          
+
           <p className="text-lg text-muted-foreground">
-            Terakhir diperbarui: 15 Maret 2025
+            Last updated: March 15, 2025
           </p>
         </div>
 
@@ -32,9 +32,9 @@ export default function TermsPage() {
                 <FileText className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h2 className="text-2xl mb-2">1. Ketentuan Umum</h2>
+                <h2 className="text-2xl mb-2">1. General Terms</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  Dengan menggunakan layanan ResponPintar ("Layanan"), Anda menyetujui untuk terikat dengan syarat dan ketentuan ini ("Ketentuan"). Ketentuan ini merupakan perjanjian yang mengikat secara hukum antara Anda dan PT ResponPintar Indonesia ("Kami"). Jika Anda tidak setuju dengan Ketentuan ini, mohon untuk tidak menggunakan Layanan kami.
+                  By using the ResponPintar service ("Service"), you agree to be bound by these terms and conditions ("Terms"). These Terms constitute a legally binding agreement between you and PT ResponPintar Indonesia ("We"). If you do not agree with these Terms, please do not use our Service.
                 </p>
               </div>
             </div>
@@ -47,28 +47,28 @@ export default function TermsPage() {
                 <FileText className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h2 className="text-2xl mb-2">2. Definisi</h2>
+                <h2 className="text-2xl mb-2">2. Definitions</h2>
                 <p className="text-muted-foreground mb-4">
-                  Dalam Ketentuan ini, istilah-istilah berikut memiliki arti sebagaimana didefinisikan:
+                  In these Terms, the following terms have the meanings as defined:
                 </p>
               </div>
             </div>
 
             <div className="ml-14 space-y-3">
               <div className="text-muted-foreground">
-                <span className="text-foreground">"Layanan"</span> merujuk pada platform ResponPintar, termasuk semua fitur, fungsionalitas, dan antarmuka pengguna
+                <span className="text-foreground">"Service"</span> refers to the ResponPintar platform, including all features, functionality, and user interfaces
               </div>
               <div className="text-muted-foreground">
-                <span className="text-foreground">"Pengguna"</span> adalah individu atau entitas yang telah mendaftar dan menggunakan Layanan
+                <span className="text-foreground">"User"</span> is an individual or entity that has registered for and uses the Service
               </div>
               <div className="text-muted-foreground">
-                <span className="text-foreground">"Konten"</span> mencakup semua materi, data, teks, gambar, video, audio, atau konten lain yang dibuat, diunggah, atau ditransmisikan melalui Layanan
+                <span className="text-foreground">"Content"</span> includes all materials, data, text, images, video, audio, or other content created, uploaded, or transmitted through the Service
               </div>
               <div className="text-muted-foreground">
-                <span className="text-foreground">"Data Pelanggan"</span> adalah informasi yang diproses atau disimpan oleh Pengguna melalui Layanan
+                <span className="text-foreground">"Customer Data"</span> is information processed or stored by the User through the Service
               </div>
               <div className="text-muted-foreground">
-                <span className="text-foreground">"Hak Kekayaan Intelektual"</span> mencakup hak cipta, paten, merek dagang, rahasia dagang, dan hak properti lainnya
+                <span className="text-foreground">"Intellectual Property Rights"</span> includes copyrights, patents, trademarks, trade secrets, and other proprietary rights
               </div>
             </div>
           </section>
@@ -80,51 +80,51 @@ export default function TermsPage() {
                 <FileText className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h2 className="text-2xl mb-2">3. Penggunaan Layanan</h2>
+                <h2 className="text-2xl mb-2">3. Use of Service</h2>
               </div>
             </div>
 
             <div className="space-y-4 ml-14">
               <div>
-                <h3 className="text-lg mb-2">3.1. Persyaratan Penggunaan:</h3>
+                <h3 className="text-lg mb-2">3.1. Usage Requirements:</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-start gap-2">
                     <span className="text-[var(--brand-primary)] mt-1">•</span>
-                    <span>Anda harus berusia minimal 18 tahun atau usia legal di wilayah Anda</span>
+                    <span>You must be at least 18 years old or the legal age in your jurisdiction</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[var(--brand-primary)] mt-1">•</span>
-                    <span>Memberikan informasi yang akurat dan lengkap saat pendaftaran</span>
+                    <span>Provide accurate and complete information during registration</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[var(--brand-primary)] mt-1">•</span>
-                    <span>Menjaga kerahasiaan kredensial akun</span>
+                    <span>Maintain the confidentiality of your account credentials</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[var(--brand-primary)] mt-1">•</span>
-                    <span>Bertanggung jawab atas semua aktivitas dalam akun Anda</span>
+                    <span>Be responsible for all activities under your account</span>
                   </li>
                 </ul>
               </div>
 
               <div>
-                <h3 className="text-lg mb-2">3.2. Larangan:</h3>
+                <h3 className="text-lg mb-2">3.2. Prohibited Activities:</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-start gap-2">
                     <span className="text-[var(--brand-primary)] mt-1">•</span>
-                    <span>Menggunakan Layanan untuk tujuan ilegal atau tidak sah</span>
+                    <span>Using the Service for illegal or unauthorized purposes</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[var(--brand-primary)] mt-1">•</span>
-                    <span>Melanggar hak kekayaan intelektual pihak lain</span>
+                    <span>Infringing on the intellectual property rights of others</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[var(--brand-primary)] mt-1">•</span>
-                    <span>Mengunggah konten berbahaya atau melanggar hukum</span>
+                    <span>Uploading harmful or unlawful content</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[var(--brand-primary)] mt-1">•</span>
-                    <span>Mencoba mengakses Layanan secara tidak sah</span>
+                    <span>Attempting to gain unauthorized access to the Service</span>
                   </li>
                 </ul>
               </div>
@@ -138,51 +138,51 @@ export default function TermsPage() {
                 <DollarSign className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h2 className="text-2xl mb-2">4. Langganan dan Pembayaran</h2>
+                <h2 className="text-2xl mb-2">4. Subscription and Payment</h2>
               </div>
             </div>
 
             <div className="space-y-4 ml-14">
               <div>
-                <h3 className="text-lg mb-2">4.1. Biaya dan Pembayaran:</h3>
+                <h3 className="text-lg mb-2">4.1. Fees and Payment:</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-start gap-2">
                     <span className="text-[var(--brand-primary)] mt-1">•</span>
-                    <span>Pembayaran dilakukan di muka untuk periode langganan</span>
+                    <span>Payment is made in advance for the subscription period</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[var(--brand-primary)] mt-1">•</span>
-                    <span>Semua biaya dalam Rupiah dan tidak termasuk pajak</span>
+                    <span>All fees are in Rupiah and exclude taxes</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[var(--brand-primary)] mt-1">•</span>
-                    <span>Pembayaran diproses melalui payment gateway resmi</span>
+                    <span>Payments are processed through official payment gateways</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[var(--brand-primary)] mt-1">•</span>
-                    <span>Anda bertanggung jawab atas semua biaya dan pajak yang berlaku</span>
+                    <span>You are responsible for all applicable fees and taxes</span>
                   </li>
                 </ul>
               </div>
 
               <div>
-                <h3 className="text-lg mb-2">4.2. Perubahan dan Pembatalan:</h3>
+                <h3 className="text-lg mb-2">4.2. Changes and Cancellation:</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-start gap-2">
                     <span className="text-[var(--brand-primary)] mt-1">•</span>
-                    <span>Kami dapat mengubah harga dengan pemberitahuan 30 hari</span>
+                    <span>We may change prices with 30 days' notice</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[var(--brand-primary)] mt-1">•</span>
-                    <span>Pembatalan dapat dilakukan sebelum periode berikutnya</span>
+                    <span>Cancellation can be done before the next billing period</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[var(--brand-primary)] mt-1">•</span>
-                    <span>Pengembalian dana sesuai kebijakan yang berlaku</span>
+                    <span>Refunds are subject to the applicable refund policy</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[var(--brand-primary)] mt-1">•</span>
-                    <span>Tidak ada pengembalian dana untuk periode yang telah berjalan</span>
+                    <span>No refunds for the current active period</span>
                   </li>
                 </ul>
               </div>
@@ -196,43 +196,43 @@ export default function TermsPage() {
                 <Award className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h2 className="text-2xl mb-2">5. Hak Kekayaan Intelektual</h2>
+                <h2 className="text-2xl mb-2">5. Intellectual Property Rights</h2>
               </div>
             </div>
 
             <div className="space-y-4 ml-14">
               <div>
-                <h3 className="text-lg mb-2">5.1. Kepemilikan:</h3>
+                <h3 className="text-lg mb-2">5.1. Ownership:</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-start gap-2">
                     <span className="text-[var(--brand-primary)] mt-1">•</span>
-                    <span>Semua Hak Kekayaan Intelektual dalam Layanan adalah milik ResponPintar</span>
+                    <span>All Intellectual Property Rights in the Service belong to ResponPintar</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[var(--brand-primary)] mt-1">•</span>
-                    <span>Pengguna mempertahankan hak atas Data Pelanggan mereka</span>
+                    <span>Users retain rights to their Customer Data</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[var(--brand-primary)] mt-1">•</span>
-                    <span>Konten yang diunggah tetap menjadi milik pengunggah</span>
+                    <span>Uploaded content remains the property of the uploader</span>
                   </li>
                 </ul>
               </div>
 
               <div>
-                <h3 className="text-lg mb-2">5.2. Lisensi:</h3>
+                <h3 className="text-lg mb-2">5.2. License:</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-start gap-2">
                     <span className="text-[var(--brand-primary)] mt-1">•</span>
-                    <span>Kami memberikan lisensi terbatas, non-eksklusif untuk menggunakan Layanan</span>
+                    <span>We grant a limited, non-exclusive license to use the Service</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[var(--brand-primary)] mt-1">•</span>
-                    <span>Anda memberikan kami lisensi untuk memproses Data Pelanggan sesuai kebutuhan Layanan</span>
+                    <span>You grant us a license to process Customer Data as required by the Service</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[var(--brand-primary)] mt-1">•</span>
-                    <span>Lisensi berakhir saat penggunaan Layanan dihentikan</span>
+                    <span>The license terminates when use of the Service is discontinued</span>
                   </li>
                 </ul>
               </div>
@@ -246,47 +246,47 @@ export default function TermsPage() {
                 <AlertCircle className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h2 className="text-2xl mb-2">6. Batasan Tanggung Jawab</h2>
+                <h2 className="text-2xl mb-2">6. Limitation of Liability</h2>
               </div>
             </div>
 
             <div className="space-y-4 ml-14">
               <div>
-                <h3 className="text-lg mb-2">6.1. Batasan Umum:</h3>
+                <h3 className="text-lg mb-2">6.1. General Limitations:</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-start gap-2">
                     <span className="text-[var(--brand-primary)] mt-1">•</span>
-                    <span>Layanan disediakan "sebagaimana adanya" tanpa jaminan apapun</span>
+                    <span>The Service is provided "as is" without any warranties</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[var(--brand-primary)] mt-1">•</span>
-                    <span>Kami tidak bertanggung jawab atas kerugian tidak langsung</span>
+                    <span>We are not liable for indirect damages</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[var(--brand-primary)] mt-1">•</span>
-                    <span>Total tanggung jawab kami terbatas pada jumlah yang Anda bayarkan</span>
+                    <span>Our total liability is limited to the amount you have paid</span>
                   </li>
                 </ul>
               </div>
 
               <div>
-                <h3 className="text-lg mb-2">6.2. Pengecualian:</h3>
+                <h3 className="text-lg mb-2">6.2. Exclusions:</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-start gap-2">
                     <span className="text-[var(--brand-primary)] mt-1">•</span>
-                    <span>Kehilangan data akibat kelalaian Pengguna</span>
+                    <span>Data loss due to User negligence</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[var(--brand-primary)] mt-1">•</span>
-                    <span>Gangguan layanan di luar kendali kami</span>
+                    <span>Service disruptions beyond our control</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[var(--brand-primary)] mt-1">•</span>
-                    <span>Kerusakan akibat perangkat atau koneksi Pengguna</span>
+                    <span>Damage caused by User devices or connectivity</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[var(--brand-primary)] mt-1">•</span>
-                    <span>Kerugian akibat pelanggaran Ketentuan ini</span>
+                    <span>Losses resulting from violation of these Terms</span>
                   </li>
                 </ul>
               </div>
@@ -300,47 +300,47 @@ export default function TermsPage() {
                 <XCircle className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h2 className="text-2xl mb-2">7. Penghentian Layanan</h2>
+                <h2 className="text-2xl mb-2">7. Termination of Service</h2>
               </div>
             </div>
 
             <div className="space-y-4 ml-14">
               <div>
-                <h3 className="text-lg mb-2">7.1. Penghentian oleh Kami:</h3>
+                <h3 className="text-lg mb-2">7.1. Termination by Us:</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-start gap-2">
                     <span className="text-[var(--brand-primary)] mt-1">•</span>
-                    <span>Melanggar ketentuan penggunaan</span>
+                    <span>Violation of terms of use</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[var(--brand-primary)] mt-1">•</span>
-                    <span>Gagal membayar biaya layanan</span>
+                    <span>Failure to pay service fees</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[var(--brand-primary)] mt-1">•</span>
-                    <span>Melakukan aktivitas yang mencurigakan atau berbahaya</span>
+                    <span>Engaging in suspicious or harmful activities</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[var(--brand-primary)] mt-1">•</span>
-                    <span>Atas permintaan otoritas yang berwenang</span>
+                    <span>Upon request from competent authorities</span>
                   </li>
                 </ul>
               </div>
 
               <div>
-                <h3 className="text-lg mb-2">7.2. Penghentian oleh Pengguna:</h3>
+                <h3 className="text-lg mb-2">7.2. Termination by User:</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-start gap-2">
                     <span className="text-[var(--brand-primary)] mt-1">•</span>
-                    <span>Dapat menghentikan layanan setiap saat</span>
+                    <span>May terminate the service at any time</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[var(--brand-primary)] mt-1">•</span>
-                    <span>Harus memberikan pemberitahuan tertulis</span>
+                    <span>Must provide written notice</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[var(--brand-primary)] mt-1">•</span>
-                    <span>Bertanggung jawab atas backup Data Pelanggan</span>
+                    <span>Responsible for backing up Customer Data</span>
                   </li>
                 </ul>
               </div>
@@ -354,28 +354,28 @@ export default function TermsPage() {
                 <RefreshCw className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h2 className="text-2xl mb-2">8. Perubahan Ketentuan</h2>
+                <h2 className="text-2xl mb-2">8. Changes to Terms</h2>
               </div>
             </div>
 
             <div className="ml-14">
-              <h3 className="text-lg mb-2">8.1. Proses Perubahan:</h3>
+              <h3 className="text-lg mb-2">8.1. Change Process:</h3>
               <ul className="space-y-2 text-muted-foreground">
                 <li className="flex items-start gap-2">
                   <span className="text-[var(--brand-primary)] mt-1">•</span>
-                  <span>Kami berhak mengubah Ketentuan ini sewaktu-waktu</span>
+                  <span>We reserve the right to modify these Terms at any time</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-[var(--brand-primary)] mt-1">•</span>
-                  <span>Perubahan material akan diberitahukan 30 hari sebelumnya</span>
+                  <span>Material changes will be notified 30 days in advance</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-[var(--brand-primary)] mt-1">•</span>
-                  <span>Pemberitahuan melalui email atau platform</span>
+                  <span>Notification via email or platform</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-[var(--brand-primary)] mt-1">•</span>
-                  <span>Penggunaan berkelanjutan berarti persetujuan atas perubahan</span>
+                  <span>Continued use constitutes acceptance of the changes</span>
                 </li>
               </ul>
             </div>
@@ -388,28 +388,28 @@ export default function TermsPage() {
                 <Gavel className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h2 className="text-2xl mb-2">9. Hukum yang Berlaku</h2>
+                <h2 className="text-2xl mb-2">9. Governing Law</h2>
               </div>
             </div>
 
             <div className="ml-14">
-              <h3 className="text-lg mb-2">9.1. Yurisdiksi:</h3>
+              <h3 className="text-lg mb-2">9.1. Jurisdiction:</h3>
               <ul className="space-y-2 text-muted-foreground">
                 <li className="flex items-start gap-2">
                   <span className="text-[var(--brand-primary)] mt-1">•</span>
-                  <span>Ketentuan ini tunduk pada hukum Republik Indonesia</span>
+                  <span>These Terms are governed by the laws of the Republic of Indonesia</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-[var(--brand-primary)] mt-1">•</span>
-                  <span>Setiap perselisihan akan diselesaikan melalui mediasi terlebih dahulu</span>
+                  <span>Any dispute shall first be resolved through mediation</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-[var(--brand-primary)] mt-1">•</span>
-                  <span>Jika mediasi gagal, akan diselesaikan di Pengadilan Negeri Jakarta Selatan</span>
+                  <span>If mediation fails, disputes shall be resolved at the South Jakarta District Court</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-[var(--brand-primary)] mt-1">•</span>
-                  <span>Anda setuju untuk tunduk pada yurisdiksi eksklusif pengadilan tersebut</span>
+                  <span>You agree to submit to the exclusive jurisdiction of said court</span>
                 </li>
               </ul>
             </div>
@@ -417,11 +417,11 @@ export default function TermsPage() {
 
           {/* Contact Section */}
           <section className="bg-gradient-to-br from-[var(--brand-gradient-start)]/10 to-[var(--brand-gradient-end)]/10 border border-[var(--brand-primary)]/20 rounded-2xl p-8">
-            <h2 className="text-2xl mb-6 text-center">10. Kontak</h2>
+            <h2 className="text-2xl mb-6 text-center">10. Contact</h2>
             <p className="text-muted-foreground text-center mb-6">
-              Untuk pertanyaan atau klarifikasi tentang Ketentuan ini, silakan hubungi kami di:
+              For questions or clarification about these Terms, please contact us at:
             </p>
-            
+
             <div className="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
               <div className="flex flex-col items-center gap-2 bg-card rounded-xl p-4 border border-border">
                 <Mail className="w-5 h-5 text-[var(--brand-primary)]" />
@@ -431,13 +431,13 @@ export default function TermsPage() {
 
               <div className="flex flex-col items-center gap-2 bg-card rounded-xl p-4 border border-border">
                 <Phone className="w-5 h-5 text-[var(--brand-primary)]" />
-                <p className="text-xs text-muted-foreground">Telepon</p>
+                <p className="text-xs text-muted-foreground">Phone</p>
                 <p className="text-sm">+62811-552-477</p>
               </div>
 
               <div className="flex flex-col items-center gap-2 bg-card rounded-xl p-4 border border-border">
                 <MapPin className="w-5 h-5 text-[var(--brand-primary)]" />
-                <p className="text-xs text-muted-foreground">Alamat</p>
+                <p className="text-xs text-muted-foreground">Address</p>
                 <p className="text-sm text-center">Plaza Aminta Jl. TB Simatupang Jakarta Selatan, 12160</p>
               </div>
             </div>
