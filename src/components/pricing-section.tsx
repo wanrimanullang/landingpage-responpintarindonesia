@@ -52,13 +52,13 @@ export function PricingSection() {
               <div className="bg-secondary/50 rounded-xl p-4 border border-border">
                 <Phone className="w-6 h-6 text-[var(--brand-primary)] mx-auto mb-2" />
                 <p className="text-xs text-muted-foreground mb-1">Phone</p>
-                <p className="text-sm">+62 811-552-477</p>
+                <p className="text-sm">+62 821-8988-5080</p>
               </div>
 
               <div className="bg-secondary/50 rounded-xl p-4 border border-border">
                 <MessageCircle className="w-6 h-6 text-[var(--brand-primary)] mx-auto mb-2" />
                 <p className="text-xs text-muted-foreground mb-1">WhatsApp</p>
-                <p className="text-sm">+62 811-552-477</p>
+                <p className="text-sm">+62 821-8988-5080</p>
               </div>
             </div>
 
