@@ -12,6 +12,7 @@ import BlogPage from './pages/blog';
 import BlogPostPage from './pages/blog-post';
 import DemoPage from './pages/demo';
 import { useChatwoot } from './hooks/useChatwoot';
+import { ChatbotDemoModalProvider } from './context/chatbot-demo-context';
 
 export default function App() {
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
@@ -47,21 +48,23 @@ export default function App() {
 
   return (
     <Router>
-      <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
-        <Navbar theme={theme} toggleTheme={toggleTheme} />
+      <ChatbotDemoModalProvider>
+        <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
+          <Navbar theme={theme} toggleTheme={toggleTheme} />
 
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/privacy" element={<PrivacyPage />} />
-          <Route path="/terms" element={<TermsPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/blog/:slug" element={<BlogPostPage />} />
-          <Route path="/demo" element={<DemoPage />} />
-        </Routes>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/privacy" element={<PrivacyPage />} />
+            <Route path="/terms" element={<TermsPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/:slug" element={<BlogPostPage />} />
+            <Route path="/demo" element={<DemoPage />} />
+          </Routes>
 
-        <Footer />
-      </div>
+          <Footer />
+        </div>
+      </ChatbotDemoModalProvider>
     </Router>
   );
 }

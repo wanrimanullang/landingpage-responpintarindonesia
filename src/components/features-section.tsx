@@ -1,35 +1,35 @@
 'use client';
 
-import { Bot, Zap, Shield, BarChart3, MessageSquare, Clock } from 'lucide-react';
+import { BrainCircuit, Gauge, Network, TrendingUp, ShieldCheck, Timer, Sparkles } from 'lucide-react';
 
 const features = [
   {
-    icon: Bot,
+    icon: BrainCircuit,
     title: 'Smart AI Chatbot',
     description: 'An AI-powered chatbot that understands context and delivers natural, human-like responses.',
   },
   {
-    icon: Zap,
+    icon: Gauge,
     title: 'Instant Automation',
     description: 'Quick setup in minutes. Start serving your customers 24/7 right away.',
   },
   {
-    icon: MessageSquare,
+    icon: Network,
     title: 'Multi-Channel Support',
     description: 'Integrate with WhatsApp, Instagram, Facebook, and other platforms in a single dashboard.',
   },
   {
-    icon: BarChart3,
+    icon: TrendingUp,
     title: 'In-Depth Analytics',
     description: 'Analytics dashboard for tracking performance, customer satisfaction, and business insights.',
   },
   {
-    icon: Shield,
+    icon: ShieldCheck,
     title: 'Guaranteed Security',
     description: 'End-to-end encryption and international compliance standards to protect your data.',
   },
   {
-    icon: Clock,
+    icon: Timer,
     title: 'Real-time Response',
     description: 'Response time under 1 second. Your customers never have to wait long.',
   },
@@ -42,7 +42,7 @@ export function FeaturesSection() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border">
-            <Zap className="w-4 h-4 text-[var(--brand-primary)]" />
+            <Sparkles className="w-4 h-4 text-[var(--brand-primary)]" />
             <span className="text-sm">Key Features</span>
           </div>
 
