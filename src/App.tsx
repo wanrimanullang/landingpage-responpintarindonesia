@@ -11,6 +11,7 @@ import AboutPage from './pages/about';
 import BlogPage from './pages/blog';
 import BlogPostPage from './pages/blog-post';
 import DemoPage from './pages/demo';
+import ChatbotDemoPage from './pages/chatbot-demo';
 import { useChatwoot } from './hooks/useChatwoot';
 
 export default function App() {
@@ -58,6 +59,7 @@ export default function App() {
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:slug" element={<BlogPostPage />} />
           <Route path="/demo" element={<DemoPage />} />
+          <Route path="/try" element={<ChatbotDemoPage />} />
         </Routes>
 
         <Footer />

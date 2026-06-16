@@ -17,236 +17,118 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-muted/30 border-t border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          {/* Brand */}
-          <div className="space-y-4">
-            <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-              <div className="w-8 h-8">
-                <Logo />
-              </div>
-              <span className="text-lg">Respon Pintar</span>
+    <footer style={{ background: '#0a0a0a', color: '#fff', overflow: 'hidden', position: 'relative' }}>
+      
+      {/* ===== TOP SECTION: Nav Links ===== */}
+      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '64px 32px 48px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', gap: '48px', flexWrap: 'wrap' }}>
+          
+          {/* Brand + Tagline */}
+          <div style={{ maxWidth: '280px' }}>
+            <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '16px', textDecoration: 'none' }}>
+              <div style={{ width: '32px', height: '32px' }}><Logo /></div>
+              <span style={{ color: '#fff', fontWeight: 600 }}>Respon Pintar</span>
             </Link>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              A leading SaaS platform for customer service automation
-              powered by AI technology that helps businesses
-              improve efficiency and customer satisfaction.
+            <p style={{ color: '#666', fontSize: '14px', lineHeight: 1.6 }}>
+              Solusi AI Terdepan untuk Customer Service Automation
             </p>
             {/* Social Media */}
-            <div className="flex gap-3 pt-4">
-              <a
-                href="#"
-                className="w-9 h-9 rounded-lg bg-secondary hover:bg-gradient-to-br hover:from-[var(--brand-gradient-start)] hover:to-[var(--brand-gradient-end)] flex items-center justify-center transition-all hover:scale-110 group"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-4 h-4 text-muted-foreground group-hover:text-white transition-colors" />
+            <div style={{ display: 'flex', gap: '12px', marginTop: '24px' }}>
+              <a href="#" aria-label="Facebook" style={{ color: '#666', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#fff'} onMouseOut={(e) => e.currentTarget.style.color = '#666'}>
+                <Facebook className="w-5 h-5" />
               </a>
-              <a
-                href="#"
-                className="w-9 h-9 rounded-lg bg-secondary hover:bg-gradient-to-br hover:from-[var(--brand-gradient-start)] hover:to-[var(--brand-gradient-end)] flex items-center justify-center transition-all hover:scale-110 group"
-                aria-label="Twitter"
-              >
-                <Twitter className="w-4 h-4 text-muted-foreground group-hover:text-white transition-colors" />
+              <a href="#" aria-label="Twitter" style={{ color: '#666', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#fff'} onMouseOut={(e) => e.currentTarget.style.color = '#666'}>
+                <Twitter className="w-5 h-5" />
               </a>
-              <a
-                href="#"
-                className="w-9 h-9 rounded-lg bg-secondary hover:bg-gradient-to-br hover:from-[var(--brand-gradient-start)] hover:to-[var(--brand-gradient-end)] flex items-center justify-center transition-all hover:scale-110 group"
-                aria-label="Instagram"
-              >
-                <Instagram className="w-4 h-4 text-muted-foreground group-hover:text-white transition-colors" />
+              <a href="#" aria-label="Instagram" style={{ color: '#666', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#fff'} onMouseOut={(e) => e.currentTarget.style.color = '#666'}>
+                <Instagram className="w-5 h-5" />
               </a>
-              <a
-                href="https://www.linkedin.com/company/109874968/"
-                className="w-9 h-9 rounded-lg bg-secondary hover:bg-gradient-to-br hover:from-[var(--brand-gradient-start)] hover:to-[var(--brand-gradient-end)] flex items-center justify-center transition-all hover:scale-110 group"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-4 h-4 text-muted-foreground group-hover:text-white transition-colors" />
+              <a href="https://www.linkedin.com/company/109874968/" aria-label="LinkedIn" style={{ color: '#666', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#fff'} onMouseOut={(e) => e.currentTarget.style.color = '#666'}>
+                <Linkedin className="w-5 h-5" />
               </a>
-              <a
-                href="#"
-                className="w-9 h-9 rounded-lg bg-secondary hover:bg-gradient-to-br hover:from-[var(--brand-gradient-start)] hover:to-[var(--brand-gradient-end)] flex items-center justify-center transition-all hover:scale-110 group"
-                aria-label="YouTube"
-              >
-                <Youtube className="w-4 h-4 text-muted-foreground group-hover:text-white transition-colors" />
+              <a href="#" aria-label="YouTube" style={{ color: '#666', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#fff'} onMouseOut={(e) => e.currentTarget.style.color = '#666'}>
+                <Youtube className="w-5 h-5" />
               </a>
             </div>
           </div>
 
-          {/* Product */}
+          {/* Product Links */}
           <div>
-            <h4 className="mb-4">Product</h4>
-            <ul className="space-y-3">
-              <li>
-                <a
-                  href="#features"
-                  className="text-sm text-muted-foreground hover:text-[var(--brand-primary)] transition-colors"
-                >
-                  Features
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#pricing"
-                  className="text-sm text-muted-foreground hover:text-[var(--brand-primary)] transition-colors"
-                >
-                  Pricing
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-sm text-muted-foreground hover:text-[var(--brand-primary)] transition-colors"
-                >
-                  Integrations
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-sm text-muted-foreground hover:text-[var(--brand-primary)] transition-colors"
-                >
-                  API Documentation
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-sm text-muted-foreground hover:text-[var(--brand-primary)] transition-colors"
-                >
-                  Changelog
-                </a>
-              </li>
+            <h4 style={{ color: '#fff', fontWeight: 600, marginBottom: '20px', fontSize: '14px', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Product</h4>
+            <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              <li><a href="#features" style={{ color: '#666', fontSize: '14px', textDecoration: 'none', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#fff'} onMouseOut={(e) => e.currentTarget.style.color = '#666'}>Features</a></li>
+              <li><a href="#pricing" style={{ color: '#666', fontSize: '14px', textDecoration: 'none', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#fff'} onMouseOut={(e) => e.currentTarget.style.color = '#666'}>Pricing</a></li>
+              <li><a href="#" style={{ color: '#666', fontSize: '14px', textDecoration: 'none', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#fff'} onMouseOut={(e) => e.currentTarget.style.color = '#666'}>Integrations</a></li>
+              <li><a href="#" style={{ color: '#666', fontSize: '14px', textDecoration: 'none', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#fff'} onMouseOut={(e) => e.currentTarget.style.color = '#666'}>API Docs</a></li>
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Company Links */}
           <div>
-            <h4 className="mb-4">Company</h4>
-            <ul className="space-y-3">
-              <li>
-                <Link
-                  to="/about"
-                  className="text-sm text-muted-foreground hover:text-[var(--brand-primary)] transition-colors"
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/blog"
-                  className="text-sm text-muted-foreground hover:text-[var(--brand-primary)] transition-colors"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-sm text-muted-foreground hover:text-[var(--brand-primary)] transition-colors"
-                >
-                  Careers
-                </a>
-              </li>
-              <li>
-                <Link
-                  to="/privacy"
-                  className="text-sm text-muted-foreground hover:text-[var(--brand-primary)] transition-colors"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/terms"
-                  className="text-sm text-muted-foreground hover:text-[var(--brand-primary)] transition-colors"
-                >
-                  Terms of Service
-                </Link>
-              </li>
+            <h4 style={{ color: '#fff', fontWeight: 600, marginBottom: '20px', fontSize: '14px', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Company</h4>
+            <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              <li><Link to="/about" style={{ color: '#666', fontSize: '14px', textDecoration: 'none', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#fff'} onMouseOut={(e) => e.currentTarget.style.color = '#666'}>About Us</Link></li>
+              <li><Link to="/blog" style={{ color: '#666', fontSize: '14px', textDecoration: 'none', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#fff'} onMouseOut={(e) => e.currentTarget.style.color = '#666'}>Blog</Link></li>
+              <li><Link to="/privacy" style={{ color: '#666', fontSize: '14px', textDecoration: 'none', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#fff'} onMouseOut={(e) => e.currentTarget.style.color = '#666'}>Privacy Policy</Link></li>
+              <li><Link to="/terms" style={{ color: '#666', fontSize: '14px', textDecoration: 'none', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#fff'} onMouseOut={(e) => e.currentTarget.style.color = '#666'}>Terms of Service</Link></li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="mb-4">Contact Us</h4>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-3">
-                <Mail className="w-5 h-5 text-[var(--brand-primary)] flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="text-sm text-muted-foreground">
-                    Email
-                  </p>
-                  <a
-                    href="mailto:hello@responpintar.com"
-                    className="text-sm hover:text-[var(--brand-primary)] transition-colors"
-                  >
-                    support@responpintar.com
-                  </a>
-                </div>
+            <h4 style={{ color: '#fff', fontWeight: 600, marginBottom: '20px', fontSize: '14px', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Contact</h4>
+            <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              <li style={{ color: '#666', fontSize: '14px', display: 'flex', gap: '8px', alignItems: 'center' }}>
+                <Mail className="w-4 h-4" /> support@responpintar.com
               </li>
-              <li className="flex items-start gap-3">
-                <Phone className="w-5 h-5 text-[var(--brand-primary)] flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="text-sm text-muted-foreground">
-                    Phone
-                  </p>
-                  <a
-                    href="tel:+6282189885080"
-                    className="text-sm hover:text-[var(--brand-primary)] transition-colors"
-                  >
-                    +62 821-8988-5080
-                  </a>
-                </div>
+              <li style={{ color: '#666', fontSize: '14px', display: 'flex', gap: '8px', alignItems: 'center' }}>
+                <Phone className="w-4 h-4" /> +62 821-8988-5080
               </li>
-              <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-[var(--brand-primary)] flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="text-sm text-muted-foreground">
-                    Address
-                  </p>
-                  <p className="text-sm">
-                    Plaza Aminta 5th Floor/504, Jl. TB Simatupang Kav. 10,<br />
-                    Pondok Pinang, Kebayoran Lama,<br />
-                    South Jakarta, DKI Jakarta,<br />
-                    Postal Code: 12310
-                  </p>
-                </div>
+              <li style={{ color: '#666', fontSize: '14px', display: 'flex', gap: '8px', alignItems: 'flex-start', lineHeight: 1.5 }}>
+                <MapPin className="w-4 h-4 mt-0.5" /> 
+                <span>Plaza Aminta 5th Floor/504,<br />South Jakarta 12310</span>
               </li>
             </ul>
           </div>
-        </div>
 
-        {/* Bottom */}
-        <div className="pt-8 border-t border-border">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-muted-foreground">
-              © {currentYear} Respon Pintar. All rights
-              reserved.
-            </p>
-            <div className="flex gap-6">
-              <Link
-                to="/privacy"
-                className="text-sm text-muted-foreground hover:text-[var(--brand-primary)] transition-colors"
-              >
-                Privacy
-              </Link>
-              <Link
-                to="/terms"
-                className="text-sm text-muted-foreground hover:text-[var(--brand-primary)] transition-colors"
-              >
-                Terms
-              </Link>
-              <a
-                href="#"
-                className="text-sm text-muted-foreground hover:text-[var(--brand-primary)] transition-colors"
-              >
-                Cookies
-              </a>
-            </div>
-          </div>
         </div>
       </div>
+
+      {/* ===== DIVIDER ===== */}
+      <div style={{ height: '1px', background: '#1a1a1a', maxWidth: '1280px', margin: '0 auto 0' }} />
+
+      {/* ===== BIG BRAND NAME (KEY FEATURE) ===== */}
+      <div style={{
+        padding: '0 24px',
+        lineHeight: 0.85,
+        overflow: 'hidden',
+        textAlign: 'center',
+        marginTop: '20px'
+      }}>
+        <span style={{
+          display: 'block',
+          fontFamily: "'Inter', 'SF Pro Display', sans-serif",
+          fontWeight: 900,
+          fontSize: 'clamp(80px, 18vw, 220px)',
+          letterSpacing: '-0.03em',
+          color: '#fff',
+          opacity: 0.08,
+          userSelect: 'none',
+          whiteSpace: 'nowrap',
+        }}>
+          ResponPintar
+        </span>
+      </div>
+
+      {/* ===== BOTTOM BAR ===== */}
+      <div style={{ borderTop: '1px solid #1a1a1a', padding: '20px 32px', maxWidth: '1280px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
+        <p style={{ color: '#444', fontSize: '13px' }}>© {currentYear} Respon Pintar. All rights reserved.</p>
+        <div style={{ display: 'flex', gap: '24px' }}>
+          <Link to="/privacy" style={{ color: '#444', fontSize: '13px', textDecoration: 'none', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#fff'} onMouseOut={(e) => e.currentTarget.style.color = '#444'}>Privacy</Link>
+          <Link to="/terms" style={{ color: '#444', fontSize: '13px', textDecoration: 'none', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#fff'} onMouseOut={(e) => e.currentTarget.style.color = '#444'}>Terms</Link>
+        </div>
+      </div>
+
     </footer>
   );
 }

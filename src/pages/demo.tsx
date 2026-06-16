@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Calendar, ArrowLeft } from 'lucide-react';
+import { CalendarRange, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function DemoPage() {
@@ -20,7 +20,7 @@ export default function DemoPage() {
                         </Link>
                     </div>
                     <div className="flex items-center gap-2">
-                        <Calendar className="w-5 h-5 text-[var(--brand-primary)]" />
+                        <CalendarRange className="w-5 h-5 text-[var(--brand-primary)]" />
                         <h1 className="text-lg font-semibold">Book a Demo</h1>
                     </div>
                     <div className="w-24" />
@@ -58,7 +58,7 @@ export default function DemoPage() {
                             />
                             {/* Center icon */}
                             <div className="absolute inset-0 flex items-center justify-center">
-                                <Calendar className="w-6 h-6 text-[var(--brand-primary)]" style={{ animation: 'demo-pulse 2s ease-in-out infinite' }} />
+                                <CalendarRange className="w-6 h-6 text-[var(--brand-primary)]" style={{ animation: 'demo-pulse 2s ease-in-out infinite' }} />
                             </div>
                         </div>
 

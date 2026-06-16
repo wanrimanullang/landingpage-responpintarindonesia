@@ -1,16 +1,16 @@
 'use client';
 
-import { Building2, ShoppingCart, GraduationCap, Stethoscope } from 'lucide-react';
+import { Briefcase, ShoppingBag, GraduationCap, Cross, Target } from 'lucide-react';
 
 const useCases = [
   {
-    icon: ShoppingCart,
+    icon: ShoppingBag,
     title: 'E-Commerce',
     description: 'Automatically handle product inquiries, order tracking, and customer complaints.',
     benefits: ['Increase conversion by 40%', 'Reduce cart abandonment', '24/7 support at no extra cost'],
   },
   {
-    icon: Building2,
+    icon: Briefcase,
     title: 'Business & Corporate',
     description: 'Automate customer support, lead generation, and internal communication.',
     benefits: ['Save 60% on operational costs', 'Faster response times', 'Boost team productivity'],
@@ -22,7 +22,7 @@ const useCases = [
     benefits: ['Serve thousands of students at once', 'Accurate info 24/7', 'Increase engagement'],
   },
   {
-    icon: Stethoscope,
+    icon: Cross,
     title: 'Healthcare',
     description: 'Schedule appointments, provide service information, and answer common medical FAQs.',
     benefits: ['Reduce admin workload', 'Automatic appointment management', 'More efficient service'],
@@ -36,7 +36,7 @@ export function UseCasesSection() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border">
-            <Building2 className="w-4 h-4 text-[var(--brand-primary)]" />
+            <Target className="w-4 h-4 text-[var(--brand-primary)]" />
             <span className="text-sm">Use Cases</span>
           </div>
 

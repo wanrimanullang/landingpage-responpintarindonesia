@@ -9,6 +9,12 @@ const clients = [
     { name: "Sagara", logo: "/our-clients/sagara - our clients.png" },
     { name: "The Crest", logo: "/our-clients/the crest - our clients.png" },
     { name: "Vista Residence", logo: "/our-clients/vista residence - our clients.png" },
+    { name: "Almeria Vista", logo: "/our-clients/almeria vista - our clients.png" },
+    { name: "Avani Breeze", logo: "/our-clients/avani breeze - our clients.png" },
+    { name: "Bale Raya", logo: "/our-clients/bale raya - our clients.jpg" },
+    { name: "Green Vasanta", logo: "/our-clients/green vasanta - our clients.png" },
+    { name: "Pesona Land", logo: "/our-clients/pesona land - our clients.png" },
+    { name: "Tanari", logo: "/our-clients/tanari forest - our clients.png" },
 ];
 
 export function OurClientsSection() {

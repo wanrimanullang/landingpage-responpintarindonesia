@@ -37,6 +37,9 @@ export function Navbar({ theme, toggleTheme }: NavbarProps) {
             <Link to="/blog" className="text-muted-foreground hover:text-foreground transition-colors">
               Blog
             </Link>
+            <Link to="/try" className="text-muted-foreground hover:text-[var(--brand-primary)] font-medium transition-colors">
+              Coba Demo
+            </Link>
           </div>
 
           {/* CTA & Theme Toggle */}
