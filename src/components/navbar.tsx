@@ -4,6 +4,7 @@ import { Moon, Sun } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from './ui/button';
 import Logo from '../imports/Logo';
+import { useChatbotDemoModal } from '../context/chatbot-demo-context';
 
 interface NavbarProps {
   theme: 'light' | 'dark';
@@ -11,6 +12,7 @@ interface NavbarProps {
 }
 
 export function Navbar({ theme, toggleTheme }: NavbarProps) {
+  const { openModal } = useChatbotDemoModal();
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -28,18 +30,18 @@ export function Navbar({ theme, toggleTheme }: NavbarProps) {
             <Link to="/#features" className="text-muted-foreground hover:text-foreground transition-colors">
               Features
             </Link>
-            <Link to="/#use-cases" className="text-muted-foreground hover:text-foreground transition-colors">
-              Use Cases
-            </Link>
             <Link to="/about" className="text-muted-foreground hover:text-foreground transition-colors">
               About
             </Link>
             <Link to="/blog" className="text-muted-foreground hover:text-foreground transition-colors">
               Blog
             </Link>
-            <Link to="/try" className="text-muted-foreground hover:text-[var(--brand-primary)] font-medium transition-colors">
-              Coba Demo
-            </Link>
+            <button
+              onClick={openModal}
+              className="text-muted-foreground hover:text-[var(--brand-primary)] font-medium transition-colors text-sm"
+            >
+              Try Demo
+            </button>
           </div>
 
           {/* CTA & Theme Toggle */}

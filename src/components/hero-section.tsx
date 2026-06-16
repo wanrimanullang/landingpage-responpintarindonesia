@@ -1,10 +1,11 @@
 'use client';
 
 import { ArrowRight, Sparkles, Zap } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import { Button } from './ui/button';
+import { useChatbotDemoModal } from '../context/chatbot-demo-context';
 
 export function HeroSection() {
+  const { openModal } = useChatbotDemoModal();
   return (
     <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Background gradient effects */}
@@ -44,7 +45,7 @@ export function HeroSection() {
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
 
-              <Link to="/demo">
+              <button onClick={openModal}>
                 <Button
                   size="lg"
                   variant="outline"
@@ -52,7 +53,7 @@ export function HeroSection() {
                 >
                   View Demo
                 </Button>
-              </Link>
+              </button>
             </div>
 
             {/* Stats */}
