@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowRight, Sparkles, Zap } from 'lucide-react';
+import { ArrowRightIcon, SparklesIcon, BoltIcon } from '@heroicons/react/24/outline';
 import { Button } from './ui/button';
 import { useChatbotDemoModal } from '../context/chatbot-demo-context';
 
@@ -18,7 +18,7 @@ export function HeroSection() {
           <div className="space-y-8">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 border border-border">
-              <Sparkles className="w-4 h-4 text-[var(--brand-primary)]" />
+              <SparklesIcon className="w-4 h-4 text-[var(--brand-primary)]" />
               <span className="text-sm">SaaS Platform for Response Automation</span>
             </div>
 
@@ -42,7 +42,7 @@ export function HeroSection() {
                 className="bg-gradient-to-r from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] hover:opacity-90 transition-all hover:scale-105 hover:shadow-lg shadow-[var(--brand-primary)]/20 group"
               >
                 <a href="https://crm.responpintar.com/auth/login">Start Free</a>
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
 
               <button onClick={openModal}>
@@ -96,7 +96,7 @@ export function HeroSection() {
               <div className="flex items-center justify-between pb-4 border-b border-border">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] flex items-center justify-center">
-                    <Zap className="w-5 h-5 text-white" />
+                    <BoltIcon className="w-5 h-5 text-white" />
                   </div>
                   <div>
                     <p className="text-sm">Respon Pintar AI</p>
@@ -122,7 +122,7 @@ export function HeroSection() {
                 {/* AI response */}
                 <div className="flex gap-2">
                   <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center flex-shrink-0">
-                    <Zap className="w-4 h-4 text-[var(--brand-primary)]" />
+                    <BoltIcon className="w-4 h-4 text-[var(--brand-primary)]" />
                   </div>
                   <div className="bg-secondary px-4 py-2 rounded-2xl rounded-tl-sm max-w-[80%]">
                     <p className="text-sm">Our automation feature is super easy! Just set up your response templates, and the AI will handle the rest automatically 24/7.</p>
@@ -132,7 +132,7 @@ export function HeroSection() {
                 {/* Typing indicator */}
                 <div className="flex gap-2">
                   <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center flex-shrink-0">
-                    <Zap className="w-4 h-4 text-[var(--brand-primary)]" />
+                    <BoltIcon className="w-4 h-4 text-[var(--brand-primary)]" />
                   </div>
                   <div className="bg-secondary px-4 py-2 rounded-2xl">
                     <div className="flex gap-1">
@@ -150,7 +150,7 @@ export function HeroSection() {
                   <p className="text-sm text-muted-foreground">Type a message...</p>
                 </div>
                 <button className="w-10 h-10 rounded-lg bg-gradient-to-r from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] flex items-center justify-center">
-                  <ArrowRight className="w-5 h-5 text-white" />
+                  <ArrowRightIcon className="w-5 h-5 text-white" />
                 </button>
               </div>
             </div>
@@ -165,7 +165,7 @@ export function HeroSection() {
 
             <div className="absolute -bottom-4 -left-4 bg-card border border-border rounded-xl shadow-lg p-3">
               <div className="flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-[var(--brand-primary)]" />
+                <SparklesIcon className="w-4 h-4 text-[var(--brand-primary)]" />
                 <span className="text-xs">Smart Response</span>
               </div>
             </div>

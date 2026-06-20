@@ -2,16 +2,15 @@
 
 import { Link } from 'react-router-dom';
 import {
-  Mail,
-  MapPin,
-  Phone,
   Facebook,
   Twitter,
   Instagram,
   Linkedin,
   Youtube,
 } from "lucide-react";
+import { EnvelopeIcon, MapPinIcon, PhoneIcon } from "@heroicons/react/24/outline";
 import Logo from '../imports/Logo';
+import { Button } from "./ui/button";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -33,22 +32,32 @@ export function Footer() {
               Solusi AI Terdepan untuk Customer Service Automation
             </p>
             {/* Social Media */}
-            <div style={{ display: 'flex', gap: '12px', marginTop: '24px' }}>
-              <a href="#" aria-label="Facebook" style={{ color: '#666', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#fff'} onMouseOut={(e) => e.currentTarget.style.color = '#666'}>
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" aria-label="Twitter" style={{ color: '#666', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#fff'} onMouseOut={(e) => e.currentTarget.style.color = '#666'}>
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" aria-label="Instagram" style={{ color: '#666', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#fff'} onMouseOut={(e) => e.currentTarget.style.color = '#666'}>
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a href="https://www.linkedin.com/company/109874968/" aria-label="LinkedIn" style={{ color: '#666', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#fff'} onMouseOut={(e) => e.currentTarget.style.color = '#666'}>
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="#" aria-label="YouTube" style={{ color: '#666', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#fff'} onMouseOut={(e) => e.currentTarget.style.color = '#666'}>
-                <Youtube className="w-5 h-5" />
-              </a>
+            <div className="flex gap-2 mt-6">
+              <Button variant="ghost" size="icon" className="text-neutral-400 hover:text-white hover:bg-neutral-800 rounded-full" asChild>
+                <a href="#" aria-label="Facebook">
+                  <Facebook className="w-5 h-5" />
+                </a>
+              </Button>
+              <Button variant="ghost" size="icon" className="text-neutral-400 hover:text-white hover:bg-neutral-800 rounded-full" asChild>
+                <a href="#" aria-label="Twitter">
+                  <Twitter className="w-5 h-5" />
+                </a>
+              </Button>
+              <Button variant="ghost" size="icon" className="text-neutral-400 hover:text-white hover:bg-neutral-800 rounded-full" asChild>
+                <a href="#" aria-label="Instagram">
+                  <Instagram className="w-5 h-5" />
+                </a>
+              </Button>
+              <Button variant="ghost" size="icon" className="text-neutral-400 hover:text-white hover:bg-neutral-800 rounded-full" asChild>
+                <a href="https://www.linkedin.com/company/109874968/" aria-label="LinkedIn">
+                  <Linkedin className="w-5 h-5" />
+                </a>
+              </Button>
+              <Button variant="ghost" size="icon" className="text-neutral-400 hover:text-white hover:bg-neutral-800 rounded-full" asChild>
+                <a href="#" aria-label="YouTube">
+                  <Youtube className="w-5 h-5" />
+                </a>
+              </Button>
             </div>
           </div>
 
@@ -79,13 +88,13 @@ export function Footer() {
             <h4 style={{ color: '#fff', fontWeight: 600, marginBottom: '20px', fontSize: '14px', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Contact</h4>
             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
               <li style={{ color: '#666', fontSize: '14px', display: 'flex', gap: '8px', alignItems: 'center' }}>
-                <Mail className="w-4 h-4" /> support@responpintar.com
+                <EnvelopeIcon className="w-4 h-4" /> support@responpintar.com
               </li>
               <li style={{ color: '#666', fontSize: '14px', display: 'flex', gap: '8px', alignItems: 'center' }}>
-                <Phone className="w-4 h-4" /> +62 821-8988-5080
+                <PhoneIcon className="w-4 h-4" /> +62 821-8988-5080
               </li>
               <li style={{ color: '#666', fontSize: '14px', display: 'flex', gap: '8px', alignItems: 'flex-start', lineHeight: 1.5 }}>
-                <MapPin className="w-4 h-4 mt-0.5" /> 
+                <MapPinIcon className="w-4 h-4 mt-0.5" /> 
                 <span>Plaza Aminta 5th Floor/504,<br />South Jakarta 12310</span>
               </li>
             </ul>
