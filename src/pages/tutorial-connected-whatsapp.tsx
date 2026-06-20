@@ -161,8 +161,8 @@ export default function TutorialConnectedWhatsappPage() {
                 color: isActive
                   ? 'var(--brand-primary)'
                   : isDone
-                  ? 'var(--foreground)'
-                  : 'var(--muted-foreground, #888)',
+                    ? 'var(--foreground)'
+                    : 'var(--muted-foreground, #888)',
               }}
               onMouseEnter={(e) => {
                 if (!isActive) (e.currentTarget.style.background = 'var(--accent, #f5f5f5)');
@@ -186,13 +186,13 @@ export default function TutorialConnectedWhatsappPage() {
                   background: isActive
                     ? 'var(--brand-primary)'
                     : isDone
-                    ? 'color-mix(in srgb, var(--brand-primary) 12%, transparent)'
-                    : 'var(--secondary, #eee)',
+                      ? 'color-mix(in srgb, var(--brand-primary) 12%, transparent)'
+                      : 'var(--secondary, #eee)',
                   color: isActive
                     ? '#fff'
                     : isDone
-                    ? 'var(--brand-primary)'
-                    : 'var(--muted-foreground, #888)',
+                      ? 'var(--brand-primary)'
+                      : 'var(--muted-foreground, #888)',
                   transition: 'all 150ms ease',
                 }}
               >
@@ -241,8 +241,8 @@ export default function TutorialConnectedWhatsappPage() {
               background: i === activeStep
                 ? 'var(--brand-primary)'
                 : i < activeStep
-                ? 'color-mix(in srgb, var(--brand-primary) 35%, transparent)'
-                : 'var(--border)',
+                  ? 'color-mix(in srgb, var(--brand-primary) 35%, transparent)'
+                  : 'var(--border)',
               width: i === activeStep ? 28 : 8,
               height: 8,
               padding: 0,
@@ -517,7 +517,7 @@ export default function TutorialConnectedWhatsappPage() {
                 ) : (
                   <a
                     id="tutorial-finish-btn"
-                    href="https://dashboard.responpintar.com"
+                    href="https://crm.responpintar.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex"
