@@ -1,4 +1,4 @@
-# 📋 Issue: Feature Enhancements Batch 2 — ResponPintar Landing Page
+# 📋 Issue: Feature Enhancements Batch 3 — ResponPintar Landing Page
 
 > **Untuk:** Junior Programmer / AI Model  
 > **Prioritas:** Medium–High  
@@ -15,6 +15,7 @@
 | 2 | Hilangkan submenu "Use Cases" dari Navbar | `navbar.tsx` | `[ ] TODO` |
 | 3 | Redesign halaman chatbot demo sesuai `box-chat-example.png` | `chatbot-demo.tsx` | `[ ] TODO` |
 | 4 | Ganti font menjadi lebih minimalis | `index.html`, `index.css` | `[ ] TODO` |
+| 5 | Halaman Tutorial: Cara Menghubungkan WhatsApp via QR Code | `tutorial-connected-whatsapp.tsx`, `App.tsx` | `[x] DONE` |
 
 ---
 
@@ -486,3 +487,155 @@ DIUBAH:
 ---
 
 *Issue dibuat: 2026-06-16 | Project: ResponPintar Landing Page | Batch 2*
+
+---
+
+## 📌 Issue #5 — Halaman Tutorial: Menghubungkan WhatsApp via QR Code
+
+> **Status:** `[x] DONE — Sudah diimplementasikan`  
+> **Tanggal Selesai:** 2026-06-20  
+> **Dibuat oleh:** AI Agent (Antigravity)
+
+### Deskripsi
+Membuat halaman tutorial baru yang memandu pengguna menghubungkan nomor WhatsApp bisnis mereka ke platform ResponPintar menggunakan fitur **QR Code Connection**. Halaman ini menampilkan panduan langkah demi langkah yang dilengkapi dengan screenshot nyata dari dashboard.
+
+### Route Baru
+- **URL:** `/tutorial/connected-whatsapp`
+- **Komponen:** `src/pages/tutorial-connected-whatsapp.tsx`
+
+### Fitur yang Diimplementasikan
+
+#### 1. Layout Interaktif Step-by-Step
+```
+┌────────────────────────────────────────────────────────┐
+│  Page Header (Judul, Deskripsi, 3 Stats Cards)         │
+├─────────────────────┬──────────────────────────────────┤
+│  LEFT (Sticky):     │  RIGHT (Detail Step):            │
+│                     │                                  │
+│  [Step Navigator]   │  [Step Header + Icon]            │
+│  ✓ Langkah 1        │  [Deskripsi + Sub-steps]         │
+│  ✓ Langkah 2        │  [Tips Box]                      │
+│  ▶ Langkah 3        │                                  │
+│    Langkah 4        │  [Browser Screenshot Frame]      │
+│    Langkah 5        │  [Gambar Step Real]              │
+│    Langkah 6        │                                  │
+│  [Progress Bar]     │  [Prev] [Dots] [Next]            │
+└─────────────────────┴──────────────────────────────────┘
+│  Tips & Hal Penting (3 Cards)                          │
+│  CTA Section                                           │
+└────────────────────────────────────────────────────────┘
+```
+
+#### 2. Konten 6 Langkah
+| Step | Judul | Icon | Gambar |
+|------|-------|------|--------|
+| 1 | Buka Menu Integrasi | MessageCircle | `step 1.png` |
+| 2 | Pilih Tab "QR Code Connection" | QrCode | `step 2.png` |
+| 3 | Buat QR Code | QrCode | `step 3.png` |
+| 4 | Scan dengan Handphone | Smartphone | `step 4.png` |
+| 5 | Tunggu Status Terhubung | Wifi | `step 5.png` |
+| 6 | Mulai Membalas Pesan | CheckCircle2 | `step 6.png` |
+
+#### 3. Fitur UX
+- **Progress bar** real-time di sidebar kiri
+- **Active state** step dengan gradient brand color
+- **Dot navigation** di bawah content
+- **Tombol Prev/Next** untuk navigasi antar langkah
+- **Browser frame** mockup di sekitar screenshot
+- **Badge overlay** "Langkah N" di atas screenshot
+- **Tips box** informatif per langkah
+- **Sub-steps numbered** untuk Step 4 yang memiliki sub-instruksi
+
+#### 4. Sections Tambahan
+- **Stats cards** di header: `6 Langkah`, `< 2 Menit`, `100% Tanpa Coding`
+- **Tips & Hal Penting**: 3 kartu info (koneksi internet, putus kapan saja, multi-nomor)
+- **CTA Section**: Link ke WhatsApp support dan Demo Platform
+
+### File yang Dibuat / Diubah
+
+```
+DIBUAT:
+└── src/pages/tutorial-connected-whatsapp.tsx  ← Halaman tutorial baru
+
+DIUBAH:
+└── src/App.tsx  ← Ditambahkan import + route `/tutorial/connected-whatsapp`
+```
+
+### Assets yang Digunakan
+```
+public/tutorial-connected-whatsapp/
+├── step 1.png   ← Tampilan menu integrasi WA Chat
+├── step 2.png   ← Tab QR Code Connection
+├── step 3.png   ← Form nama instance + tombol Generate
+├── step 4.png   ← QR Code yang muncul untuk di-scan
+├── step 5.png   ← Notifikasi "Account Connected"
+└── step 6.png   ← Tampilan conversations list
+```
+
+### Routing
+```tsx
+// Di src/App.tsx:
+<Route path="/tutorial/connected-whatsapp" element={<TutorialConnectedWhatsappPage />} />
+```
+
+### Copywriting Tone
+Gaya bahasa disesuaikan dengan brand voice ResponPintar:
+- **Ringkas dan jelas** — Tidak bertele-tele
+- **Action-oriented** — Setiap instruksi dimulai dengan kata kerja aktif
+- **Ramah tapi profesional** — Hindari bahasa terlalu formal atau terlalu kasual
+- **Bilingual cues** — Istilah teknis dalam Bahasa Inggris ditebalkan/ditulis dalam kurung jika diperlukan
+
+### Testing Checklist
+- [x] Halaman dapat diakses di `/tutorial/connected-whatsapp`
+- [x] 6 langkah tampil dengan benar
+- [x] Navigasi Prev/Next berfungsi
+- [x] Dot navigation berfungsi
+- [x] Sidebar step navigator berfungsi
+- [x] Screenshot gambar tampil dari `/public/tutorial-connected-whatsapp/`
+- [x] Progress bar update sesuai langkah aktif
+- [x] Responsif di mobile (sidebar collapse)
+- [x] CTA link ke WhatsApp support
+- [x] Route terdaftar di App.tsx
+
+---
+
+## 🔧 Urutan Implementasi yang Direkomendasikan (Issue #1-#4)
+
+```
+1. Issue #2 (termudah, 5 menit) → Hapus 1 baris di navbar.tsx
+2. Issue #4 (mudah, 10 menit)   → Ganti font di index.html + index.css
+3. Issue #1 (medium, 30 menit)  → Ubah grid → marquee animation
+4. Issue #3 (paling kompleks)   → Redesign total layout chatbot-demo.tsx
+```
+
+---
+
+## 📁 Ringkasan File yang Diubah (Semua Issue)
+
+```
+DIUBAH:
+├── src/components/our-clients-section.tsx  ← Ganti grid → marquee animasi           [Issue #1]
+├── src/components/navbar.tsx               ← Hapus link "Use Cases"                  [Issue #2]
+├── src/pages/chatbot-demo.tsx              ← Redesign total layout 2-panel            [Issue #3]
+├── src/index.css                           ← Tambah animasi marquee + ganti font-family [Issue #4]
+├── index.html                              ← Ganti import Google Fonts                [Issue #4]
+└── src/App.tsx                             ← Tambah route tutorial                    [Issue #5]
+
+DIBUAT:
+└── src/pages/tutorial-connected-whatsapp.tsx  ← Halaman tutorial WA QR Code          [Issue #5]
+```
+
+---
+
+## 💬 Catatan Tambahan
+
+- **Jangan ubah** `src/App.tsx` routing yang sudah ada (hanya tambah)
+- **Jangan ubah** Chatwoot integration (`useChatwoot`)
+- **Jangan ubah** file-file di `src/components/ui/`
+- Semua perubahan harus kompatibel dengan **TailwindCSS v4**
+- Gunakan CSS variable yang sudah ada: `var(--brand-primary)`, `var(--brand-gradient-start)`, `var(--brand-gradient-end)`
+- Referensi visual ada di root project: `box-chat-example.png`, `footer-example.png`, `icon-example.png`
+
+---
+
+*Issue dibuat: 2026-06-16 | Diperbarui: 2026-06-20 | Project: ResponPintar Landing Page | Batch 3*
