@@ -12,6 +12,7 @@ import BlogPage from './pages/blog';
 import BlogPostPage from './pages/blog-post';
 import DemoPage from './pages/demo';
 import TutorialConnectedWhatsappPage from './pages/tutorial-connected-whatsapp';
+import TutorialSetupWorkflowPage from './pages/tutorial-setup-workflow';
 import { useChatwoot } from './hooks/useChatwoot';
 import { ChatbotDemoModalProvider } from './context/chatbot-demo-context';
 
@@ -62,6 +63,7 @@ export default function App() {
             <Route path="/blog/:slug" element={<BlogPostPage />} />
             <Route path="/demo" element={<DemoPage />} />
             <Route path="/tutorial/connected-whatsapp" element={<TutorialConnectedWhatsappPage />} />
+            <Route path="/tutorial/setup-workflow" element={<TutorialSetupWorkflowPage />} />
           </Routes>
 
           <Footer />

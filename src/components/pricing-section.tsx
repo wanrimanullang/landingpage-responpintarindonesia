@@ -2,8 +2,20 @@
 
 import { TrophyIcon, EnvelopeIcon, ChatBubbleOvalLeftEllipsisIcon, PhoneIcon } from '@heroicons/react/24/outline';
 import { Button } from './ui/button';
+import { useEffect } from 'react';
 
 export function PricingSection() {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://api.responpintar.com/api/plan-snippets/widget.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
       <div className="max-w-7xl mx-auto">
@@ -25,6 +37,9 @@ export function PricingSection() {
             We provide custom packages tailored to your business needs. Contact our team for the best offer.
           </p>
         </div>
+
+        {/* Pricing Widget */}
+        <div className="w-full mb-16" data-wapi-snippet="36058ade7948a5937101b838"></div>
 
         {/* Contact Cards */}
         <div className="max-w-4xl mx-auto">
