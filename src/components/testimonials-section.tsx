@@ -1,6 +1,7 @@
 'use client';
 
-import { Quote, Star } from 'lucide-react';
+import { ChatBubbleLeftRightIcon } from '@heroicons/react/24/outline';
+import { StarIcon } from '@heroicons/react/24/solid';
 
 const testimonials = [
   {
@@ -44,7 +45,7 @@ export function TestimonialsSection() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border">
-            <Quote className="w-4 h-4 text-[var(--brand-primary)]" />
+            <ChatBubbleLeftRightIcon className="w-4 h-4 text-[var(--brand-primary)]" />
             <span className="text-sm">Testimonials</span>
           </div>
 
@@ -69,13 +70,13 @@ export function TestimonialsSection() {
             >
               {/* Quote icon */}
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <Quote className="w-5 h-5 text-white" />
+                <ChatBubbleLeftRightIcon className="w-5 h-5 text-white" />
               </div>
 
               {/* Rating */}
               <div className="flex gap-1 mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-[var(--brand-primary)] text-[var(--brand-primary)]" />
+                  <StarIcon key={i} className="w-4 h-4 text-[var(--brand-primary)]" />
                 ))}
               </div>
 

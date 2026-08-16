@@ -1,16 +1,28 @@
 'use client';
 
-import { Crown, Mail, MessageCircle, Phone } from 'lucide-react';
+import { TrophyIcon, EnvelopeIcon, ChatBubbleOvalLeftEllipsisIcon, PhoneIcon } from '@heroicons/react/24/outline';
 import { Button } from './ui/button';
+import { useEffect } from 'react';
 
 export function PricingSection() {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://api.responpintar.com/api/plan-snippets/widget.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border">
-            <Crown className="w-4 h-4 text-[var(--brand-primary)]" />
+            <TrophyIcon className="w-4 h-4 text-[var(--brand-primary)]" />
             <span className="text-sm">Pricing</span>
           </div>
 
@@ -26,11 +38,14 @@ export function PricingSection() {
           </p>
         </div>
 
+        {/* Pricing Widget */}
+        <div className="w-full mb-16" data-wapi-snippet="36058ade7948a5937101b838"></div>
+
         {/* Contact Cards */}
         <div className="max-w-4xl mx-auto">
           <div className="bg-card border border-border rounded-2xl p-12 text-center shadow-xl">
             <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] flex items-center justify-center">
-              <Crown className="w-10 h-10 text-white" />
+              <TrophyIcon className="w-10 h-10 text-white" />
             </div>
 
             <h3 className="text-2xl mb-4">
@@ -44,19 +59,19 @@ export function PricingSection() {
             {/* Contact Methods */}
             <div className="grid sm:grid-cols-3 gap-4 mb-8 max-w-2xl mx-auto">
               <div className="bg-secondary/50 rounded-xl p-4 border border-border">
-                <Mail className="w-6 h-6 text-[var(--brand-primary)] mx-auto mb-2" />
+                <EnvelopeIcon className="w-6 h-6 text-[var(--brand-primary)] mx-auto mb-2" />
                 <p className="text-xs text-muted-foreground mb-1">Email</p>
                 <p className="text-sm">support@responpintar.com</p>
               </div>
 
               <div className="bg-secondary/50 rounded-xl p-4 border border-border">
-                <Phone className="w-6 h-6 text-[var(--brand-primary)] mx-auto mb-2" />
+                <PhoneIcon className="w-6 h-6 text-[var(--brand-primary)] mx-auto mb-2" />
                 <p className="text-xs text-muted-foreground mb-1">Phone</p>
                 <p className="text-sm">+62 821-8988-5080</p>
               </div>
 
               <div className="bg-secondary/50 rounded-xl p-4 border border-border">
-                <MessageCircle className="w-6 h-6 text-[var(--brand-primary)] mx-auto mb-2" />
+                <ChatBubbleOvalLeftEllipsisIcon className="w-6 h-6 text-[var(--brand-primary)] mx-auto mb-2" />
                 <p className="text-xs text-muted-foreground mb-1">WhatsApp</p>
                 <p className="text-sm">+62 821-8988-5080</p>
               </div>

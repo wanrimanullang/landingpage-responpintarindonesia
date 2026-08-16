@@ -1,28 +1,28 @@
 'use client';
 
-import { Briefcase, ShoppingBag, GraduationCap, Cross, Target } from 'lucide-react';
+import { BriefcaseIcon, ShoppingBagIcon, AcademicCapIcon, HeartIcon, RocketLaunchIcon } from '@heroicons/react/24/outline';
 
 const useCases = [
   {
-    icon: ShoppingBag,
+    icon: ShoppingBagIcon,
     title: 'E-Commerce',
     description: 'Automatically handle product inquiries, order tracking, and customer complaints.',
     benefits: ['Increase conversion by 40%', 'Reduce cart abandonment', '24/7 support at no extra cost'],
   },
   {
-    icon: Briefcase,
+    icon: BriefcaseIcon,
     title: 'Business & Corporate',
     description: 'Automate customer support, lead generation, and internal communication.',
     benefits: ['Save 60% on operational costs', 'Faster response times', 'Boost team productivity'],
   },
   {
-    icon: GraduationCap,
+    icon: AcademicCapIcon,
     title: 'Education',
     description: 'Answer student questions, provide enrollment information, and learning guidance.',
     benefits: ['Serve thousands of students at once', 'Accurate info 24/7', 'Increase engagement'],
   },
   {
-    icon: Cross,
+    icon: HeartIcon,
     title: 'Healthcare',
     description: 'Schedule appointments, provide service information, and answer common medical FAQs.',
     benefits: ['Reduce admin workload', 'Automatic appointment management', 'More efficient service'],
@@ -36,7 +36,7 @@ export function UseCasesSection() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border">
-            <Target className="w-4 h-4 text-[var(--brand-primary)]" />
+            <RocketLaunchIcon className="w-4 h-4 text-[var(--brand-primary)]" />
             <span className="text-sm">Use Cases</span>
           </div>
 

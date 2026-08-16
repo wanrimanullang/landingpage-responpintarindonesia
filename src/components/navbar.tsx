@@ -1,6 +1,6 @@
 'use client';
 
-import { Moon, Sun } from 'lucide-react';
+import { MoonIcon, SunIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-router-dom';
 import { Button } from './ui/button';
 import Logo from '../imports/Logo';
@@ -52,9 +52,9 @@ export function Navbar({ theme, toggleTheme }: NavbarProps) {
               aria-label="Toggle theme"
             >
               {theme === 'light' ? (
-                <Moon className="w-5 h-5 text-foreground" />
+                <MoonIcon className="w-5 h-5 text-foreground" />
               ) : (
-                <Sun className="w-5 h-5 text-foreground" />
+                <SunIcon className="w-5 h-5 text-foreground" />
               )}
             </button>
 

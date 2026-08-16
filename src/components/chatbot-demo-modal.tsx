@@ -18,13 +18,13 @@ const MAX_USER_MESSAGES = 10;
 // Map industry ID → VITE_ env token key
 const INDUSTRY_TOKENS: Record<string, string | undefined> = {
   property: import.meta.env.VITE_CHATBOT_TOKEN_PROPERTY,
-  hospital:  import.meta.env.VITE_CHATBOT_TOKEN_HOSPITAL,
-  clinic:    import.meta.env.VITE_CHATBOT_TOKEN_CLINIC,
-  retail:    import.meta.env.VITE_CHATBOT_TOKEN_RETAIL,
-  bank:      import.meta.env.VITE_CHATBOT_TOKEN_BANK,
-  finance:   import.meta.env.VITE_CHATBOT_TOKEN_FINANCE,
+  hospital: import.meta.env.VITE_CHATBOT_TOKEN_HOSPITAL,
+  clinic: import.meta.env.VITE_CHATBOT_TOKEN_CLINIC,
+  retail: import.meta.env.VITE_CHATBOT_TOKEN_RETAIL,
+  bank: import.meta.env.VITE_CHATBOT_TOKEN_BANK,
+  finance: import.meta.env.VITE_CHATBOT_TOKEN_FINANCE,
   education: import.meta.env.VITE_CHATBOT_TOKEN_EDUCATION,
-  fnb:       import.meta.env.VITE_CHATBOT_TOKEN_FNB,
+  fnb: import.meta.env.VITE_CHATBOT_TOKEN_FNB,
   logistics: import.meta.env.VITE_CHATBOT_TOKEN_LOGISTICS,
   corporate: import.meta.env.VITE_CHATBOT_TOKEN_CORPORATE,
 };
@@ -32,16 +32,16 @@ const INDUSTRY_TOKENS: Record<string, string | undefined> = {
 const CHATBOT_BASE_URL: string = import.meta.env.VITE_CHATBOT_BASE_URL || 'https://chat.responpintar.com';
 
 const industries = [
-  { id: 'property',  name: 'Property / Real Estate', icon: Building2 },
-  { id: 'hospital',  name: 'Hospital',                icon: Hospital },
-  { id: 'clinic',    name: 'Clinic',                  icon: Hospital },
-  { id: 'retail',    name: 'Retail',                  icon: ShoppingBag },
-  { id: 'bank',      name: 'Banking',                 icon: Landmark },
-  { id: 'finance',   name: 'Finance / Fintech',       icon: TrendingUp },
-  { id: 'education', name: 'Education',               icon: GraduationCap },
-  { id: 'fnb',       name: 'F&B / Restaurant',        icon: UtensilsCrossed },
-  { id: 'logistics', name: 'Logistics',               icon: Truck },
-  { id: 'corporate', name: 'Corporate / Enterprise',  icon: Briefcase },
+  { id: 'property', name: 'Property / Real Estate', icon: Building2 },
+  { id: 'hospital', name: 'Hospital', icon: Hospital },
+  { id: 'clinic', name: 'Clinic', icon: Hospital },
+  { id: 'retail', name: 'Retail', icon: ShoppingBag },
+  { id: 'bank', name: 'Banking', icon: Landmark },
+  { id: 'finance', name: 'Finance / Fintech', icon: TrendingUp },
+  { id: 'education', name: 'Education', icon: GraduationCap },
+  { id: 'fnb', name: 'F&B / Restaurant', icon: UtensilsCrossed },
+  { id: 'logistics', name: 'Logistics', icon: Truck },
+  { id: 'corporate', name: 'Corporate / Enterprise', icon: Briefcase },
 ];
 
 // Fallback response when no API token is configured
@@ -54,17 +54,17 @@ function getFallbackResponse(industry: string, userMessage: string): string {
   if (m.includes('hello') || m.includes('hi') || m.includes('hey'))
     return "Hello! Please let me know what you need — I'm happy to help.";
   switch (industry) {
-    case 'property':  return "We have a wide selection of properties. Are you looking for residential, commercial, or investment?";
+    case 'property': return "We have a wide selection of properties. Are you looking for residential, commercial, or investment?";
     case 'hospital':
-    case 'clinic':    return "We can help schedule a consultation or provide information about our healthcare services.";
-    case 'retail':    return "Are you looking for a specific product, or need help tracking an existing order?";
+    case 'clinic': return "We can help schedule a consultation or provide information about our healthcare services.";
+    case 'retail': return "Are you looking for a specific product, or need help tracking an existing order?";
     case 'bank':
-    case 'finance':   return "Our financial application process is simple and fast. Would you like a simulation?";
+    case 'finance': return "Our financial application process is simple and fast. Would you like a simulation?";
     case 'education': return "We offer excellent programmes. Do you need information on enrollment or curriculum?";
-    case 'fnb':       return "You can make a reservation or order from our menu directly through this chat.";
+    case 'fnb': return "You can make a reservation or order from our menu directly through this chat.";
     case 'logistics': return "Provide your tracking number for updates, or ask about our delivery services.";
     case 'corporate': return "We're ready to serve your enterprise with customised B2B solutions. Which department can I connect you to?";
-    default:          return "Thank you for your message. We'll assist with your business needs shortly.";
+    default: return "Thank you for your message. We'll assist with your business needs shortly.";
   }
 }
 
@@ -384,8 +384,8 @@ export function ChatbotDemoModal() {
                   disabled={!chatActive || isLimitReached}
                   placeholder={
                     !chatActive ? 'Select an industry first...' :
-                    isLimitReached ? 'Demo session ended' :
-                    'Type a message...'
+                      isLimitReached ? 'Demo session ended' :
+                        'Type a message...'
                   }
                   className={`flex-1 bg-background border rounded-xl py-2.5 px-4 text-sm placeholder:text-muted-foreground focus:outline-none disabled:opacity-50 transition-all
                     ${chatActive && !isLimitReached

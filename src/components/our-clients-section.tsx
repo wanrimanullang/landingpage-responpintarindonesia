@@ -1,5 +1,7 @@
 "use client";
 
+import { Badge } from "./ui/badge";
+
 const clients = [
     { name: "Bali Resort Tangerang", logo: "/our-clients/bali resort tangerang - our clients.png" },
     { name: "Geriya Selaras", logo: "/our-clients/geriya selaras - our clients.png" },
@@ -72,15 +74,16 @@ export function OurClientsSection() {
                         Connected on
                     </span>
                     {platforms.map((p) => (
-                        <div
+                        <Badge
                             key={p.name}
-                            className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full border border-border bg-card text-sm font-medium text-foreground transition-all hover:scale-105 hover:shadow-md"
+                            variant="outline"
+                            className="rounded-full px-4 py-2 text-sm gap-2 font-medium transition-all hover:scale-105 hover:shadow-md cursor-default bg-card"
                             style={{ color: p.color }}
                             title={p.name}
                         >
                             {p.icon}
                             <span className="text-foreground text-xs">{p.name}</span>
-                        </div>
+                        </Badge>
                     ))}
                 </div>
             </div>
