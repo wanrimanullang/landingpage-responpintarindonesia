@@ -3071,6 +3071,22 @@ html, body {
   }
 }
 
+/* Subpage Main: systematic offset for 64px fixed header + section padding */
+.landing-subpage {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: calc(var(--header-height) + var(--space-48));
+  padding-bottom: var(--section-padding-mobile);
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .landing-subpage {
+    padding-top: calc(var(--header-height) + var(--space-64));
+    padding-bottom: var(--section-padding-desktop);
+  }
+}
+
 /* Header: Fixed height 64px, border-bottom 1px solid rgba(255,255,255,0.12) */
 .landing-header {
   height: var(--header-height);

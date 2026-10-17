@@ -22,34 +22,36 @@ export default function DeleteAccountPage() {
   }, []);
 
   return (
-    <main className="jamie-root min-h-screen bg-[#0B0C0E] text-[#E9EBEF] relative overflow-hidden font-sans selection:bg-[#8FE3B0]/20 selection:text-[#8FE3B0] pt-36 sm:pt-44 pb-28 sm:pb-36 px-6 lg:px-16">
+    <main className="landing-subpage bg-[#0B0C0E] text-[#E9EBEF] relative font-sans selection:bg-[#8FE3B0]/20 selection:text-[#8FE3B0]">
       {/* Background Interactive Particle Field & Mesh */}
       <BackgroundScene />
 
-      <div className="relative z-10 max-w-4xl mx-auto delete-account-container space-y-12 sm:space-y-16">
-        {/* Header Section */}
-        <DeleteAccountHeader />
+      <div className="landing-container relative z-10">
+        <div className="max-w-4xl mx-auto delete-account-container space-y-12 sm:space-y-16">
+          {/* Header Section */}
+          <DeleteAccountHeader />
 
-        {/* Warning Alert Banner */}
-        <DeleteAccountWarning />
+          {/* Warning Alert Banner */}
+          <DeleteAccountWarning />
 
-        {/* Step-by-Step Instructions (Dashboard vs Web) */}
-        <DeleteAccountSteps />
+          {/* Step-by-Step Instructions (Dashboard vs Web) */}
+          <DeleteAccountSteps />
 
-        {/* Deleted Data Categories & Retained Data Table */}
-        <DeleteAccountDataList />
+          {/* Deleted Data Categories & Retained Data Table */}
+          <DeleteAccountDataList />
 
-        {/* Timeline / Process Schedule */}
-        <DeleteAccountTimeline />
+          {/* Timeline / Process Schedule */}
+          <DeleteAccountTimeline />
 
-        {/* Web Request Form */}
-        <DeleteAccountForm />
+          {/* Web Request Form */}
+          <DeleteAccountForm />
 
-        {/* Frequently Asked Questions */}
-        <DeleteAccountFaq />
+          {/* Frequently Asked Questions */}
+          <DeleteAccountFaq />
 
-        {/* Contact Support Section */}
-        <DeleteAccountSupport />
+          {/* Contact Support Section */}
+          <DeleteAccountSupport />
+        </div>
       </div>
     </main>
   );

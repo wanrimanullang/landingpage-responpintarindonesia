@@ -3,11 +3,12 @@ import BackgroundScene from '../components/showcase/BackgroundScene';
 
 export default function PrivacyPage() {
   return (
-    <main className="jamie-root min-h-screen bg-[#0B0C0E] text-[#E9EBEF] relative overflow-hidden font-sans selection:bg-[#8FE3B0]/20 selection:text-[#8FE3B0] pt-36 sm:pt-44 pb-28 sm:pb-36 px-6 lg:px-16">
+    <main className="landing-subpage bg-[#0B0C0E] text-[#E9EBEF] relative font-sans selection:bg-[#8FE3B0]/20 selection:text-[#8FE3B0]">
       {/* Background Interactive Particle Field & Mesh */}
       <BackgroundScene />
 
-      <div className="relative z-10 max-w-4xl mx-auto space-y-12 sm:space-y-14">
+      <div className="landing-container relative z-10">
+        <div className="max-w-4xl mx-auto space-y-12 sm:space-y-14">
         {/* Header */}
         <div className="text-center">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[rgba(244,245,247,0.12)] bg-[#16181D]/80 text-[#AEB4BD] text-xs font-mono tracking-wider uppercase mb-6 backdrop-blur-md">
@@ -282,6 +283,7 @@ export default function PrivacyPage() {
           </section>
         </div>
       </div>
-    </main>
-  );
+    </div>
+  </main>
+);
 }
