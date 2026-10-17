@@ -51,29 +51,29 @@ export function DeleteAccountDataList() {
   return (
     <div className="space-y-10">
       {/* Data yang Akan Dihapus */}
-      <section className="bg-card border border-border rounded-2xl p-6 sm:p-8 space-y-6">
-        <div className="flex items-start gap-4">
-          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] flex items-center justify-center flex-shrink-0">
-            <User className="w-5 h-5 text-white" />
+      <section className="bg-card border border-border rounded-2xl p-6 sm:p-10 space-y-8 shadow-sm">
+        <div className="flex items-start gap-4 sm:gap-5">
+          <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] flex items-center justify-center flex-shrink-0 shadow-sm">
+            <User className="w-6 h-6 text-white" />
           </div>
           <div>
-            <h2 className="text-2xl font-bold mb-1">Data yang Akan Dihapus</h2>
-            <p className="text-muted-foreground text-sm">
-              Berikut adalah rincian data pribadi dan data operasional yang akan dimusnahkan secara permanen:
+            <h2 className="text-2xl sm:text-3xl font-bold mb-2">Data yang Akan Dihapus</h2>
+            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+              Berikut adalah rincian data pribadi dan data operasional yang akan dimusnahkan secara permanen dari seluruh sistem Respon Pintar:
             </p>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 pt-2">
           {deletedItems.map((item, idx) => {
             const Icon = item.icon;
             return (
-              <div key={idx} className="p-4 rounded-xl border border-border bg-background space-y-2">
-                <div className={`w-8 h-8 rounded-lg ${item.colorClass} flex items-center justify-center`}>
-                  <Icon className="w-4 h-4" />
+              <div key={idx} className="p-6 rounded-2xl border border-border/80 bg-background space-y-3 hover:border-[var(--brand-primary)]/40 transition-colors shadow-sm">
+                <div className={`w-10 h-10 rounded-xl ${item.colorClass} flex items-center justify-center`}>
+                  <Icon className="w-5 h-5" />
                 </div>
-                <h3 className="font-semibold text-sm">{item.title}</h3>
-                <p className="text-xs text-muted-foreground leading-relaxed">{item.description}</p>
+                <h3 className="font-bold text-base text-foreground">{item.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
               </div>
             );
           })}
@@ -81,48 +81,48 @@ export function DeleteAccountDataList() {
       </section>
 
       {/* Data yang Tetap Disimpan */}
-      <section className="bg-card border border-border rounded-2xl p-6 sm:p-8 space-y-6">
-        <div className="flex items-start gap-4">
-          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] flex items-center justify-center flex-shrink-0">
-            <Shield className="w-5 h-5 text-white" />
+      <section className="bg-card border border-border rounded-2xl p-6 sm:p-10 space-y-8 shadow-sm">
+        <div className="flex items-start gap-4 sm:gap-5">
+          <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] flex items-center justify-center flex-shrink-0 shadow-sm">
+            <Shield className="w-6 h-6 text-white" />
           </div>
           <div>
-            <h2 className="text-2xl font-bold mb-1">Data yang Tetap Disimpan & Alasannya</h2>
-            <p className="text-muted-foreground text-sm">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-2">Data yang Tetap Disimpan & Alasannya</h2>
+            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
               Sesuai dengan peraturan perundang-undangan Republik Indonesia, beberapa jenis data tertentu tetap wajib kami simpan dalam batas waktu tertentu:
             </p>
           </div>
         </div>
 
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto rounded-xl border border-border">
           <table className="w-full text-left text-sm border-collapse">
             <thead>
-              <tr className="border-b border-border bg-secondary/30">
-                <th className="py-3 px-4 font-semibold text-foreground">Jenis Data</th>
-                <th className="py-3 px-4 font-semibold text-foreground">Dasar Hukum & Alasan</th>
-                <th className="py-3 px-4 font-semibold text-foreground">Masa Retensi</th>
+              <tr className="border-b border-border bg-secondary/50">
+                <th className="py-4 px-5 font-semibold text-foreground text-sm sm:text-base">Jenis Data</th>
+                <th className="py-4 px-5 font-semibold text-foreground text-sm sm:text-base">Dasar Hukum & Alasan</th>
+                <th className="py-4 px-5 font-semibold text-foreground text-sm sm:text-base">Masa Retensi</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-border">
+            <tbody className="divide-y divide-border bg-background">
               <tr>
-                <td className="py-3 px-4 font-medium text-foreground">
+                <td className="py-4 px-5 font-semibold text-foreground text-sm sm:text-base">
                   Catatan Transaksi & Faktur Pajak
                 </td>
-                <td className="py-3 px-4 text-muted-foreground text-xs sm:text-sm">
-                  Kepatuhan terhadap UU Perpajakan Republik Indonesia dan kewajiban audit laporan keuangan resmi.
+                <td className="py-4 px-5 text-muted-foreground text-sm sm:text-base leading-relaxed">
+                  Kepatuhan terhadap UU Perpajakan Republik Indonesia dan kewajiban audit laporan keuangan resmi perusahaan.
                 </td>
-                <td className="py-3 px-4 text-muted-foreground text-xs sm:text-sm whitespace-nowrap">
+                <td className="py-4 px-5 text-muted-foreground text-sm sm:text-base whitespace-nowrap font-medium">
                   5 Tahun
                 </td>
               </tr>
               <tr>
-                <td className="py-3 px-4 font-medium text-foreground">
+                <td className="py-4 px-5 font-semibold text-foreground text-sm sm:text-base">
                   Log Akses Keamanan Teranonim
                 </td>
-                <td className="py-3 px-4 text-muted-foreground text-xs sm:text-sm">
-                  Audit pencegahan serangan siber, penipuan (<em>fraud prevention</em>), tanpa mengidentifikasi informasi pribadi langsung.
+                <td className="py-4 px-5 text-muted-foreground text-sm sm:text-base leading-relaxed">
+                  Audit pencegahan serangan siber dan deteksi aktivitas mencurigakan (<em>fraud prevention</em>), tanpa menyimpan informasi identitas pribadi (PII).
                 </td>
-                <td className="py-3 px-4 text-muted-foreground text-xs sm:text-sm whitespace-nowrap">
+                <td className="py-4 px-5 text-muted-foreground text-sm sm:text-base whitespace-nowrap font-medium">
                   12 Bulan
                 </td>
               </tr>

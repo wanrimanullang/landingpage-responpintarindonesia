@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, CheckCircle2 } from 'lucide-react';
+import { Mail, CheckCircle2, Send, AlertCircle } from 'lucide-react';
 
 export function DeleteAccountForm() {
   const [email, setEmail] = useState('');
@@ -26,41 +26,45 @@ export function DeleteAccountForm() {
   };
 
   return (
-    <section id="request-form" className="bg-card border border-border rounded-2xl p-6 sm:p-8 space-y-6 scroll-mt-24">
-      <div className="flex items-start gap-4">
-        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] flex items-center justify-center flex-shrink-0">
-          <Mail className="w-5 h-5 text-white" />
+    <section id="request-form" className="bg-card border border-border rounded-2xl p-6 sm:p-10 space-y-8 scroll-mt-24 shadow-sm">
+      {/* Section Header */}
+      <div className="flex items-start gap-4 sm:gap-5">
+        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] flex items-center justify-center flex-shrink-0 shadow-sm">
+          <Mail className="w-6 h-6 text-white" />
         </div>
         <div>
-          <h2 className="text-2xl font-bold mb-1">Formulir Pengajuan Penghapusan Akun</h2>
-          <p className="text-muted-foreground text-sm">
-            Isi data di bawah ini untuk mengajukan permintaan penghapusan akun jika Anda tidak dapat login ke dashboard.
+          <h2 className="text-2xl sm:text-3xl font-bold mb-2">Formulir Pengajuan Penghapusan Akun</h2>
+          <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+            Isi formulir di bawah ini dengan lengkap jika Anda ingin tim dukungan kami memproses penghapusan akun dan data Anda secara manual.
           </p>
         </div>
       </div>
 
       {formSubmitted ? (
-        <div className="bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 rounded-xl p-6 text-center space-y-3">
-          <CheckCircle2 className="w-10 h-10 text-emerald-600 dark:text-emerald-400 mx-auto" />
-          <h3 className="text-lg font-semibold text-emerald-800 dark:text-emerald-300">
+        <div className="bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 rounded-2xl p-8 text-center space-y-4">
+          <CheckCircle2 className="w-12 h-12 text-emerald-600 dark:text-emerald-400 mx-auto" />
+          <h3 className="text-xl font-bold text-emerald-800 dark:text-emerald-300">
             Permintaan Berhasil Disiapkan
           </h3>
-          <p className="text-sm text-emerald-700 dark:text-emerald-400 max-w-lg mx-auto">
-            Aplikasi email Anda seharusnya terbuka dengan rincian permintaan terisi otomatis. Silakan klik "Kirim" pada email Anda. Tim kami akan memverifikasi permohonan dalam waktu 1-3 hari kerja.
+          <p className="text-sm sm:text-base text-emerald-700 dark:text-emerald-400 max-w-xl mx-auto leading-relaxed">
+            Aplikasi email Anda seharusnya terbuka dengan rincian permintaan terisi otomatis. Silakan klik <strong>"Kirim"</strong> pada email Anda. Tim kami akan memverifikasi permohonan dalam waktu 1–3 hari kerja.
           </p>
-          <button
-            type="button"
-            onClick={() => setFormSubmitted(false)}
-            className="mt-2 text-xs font-semibold text-emerald-800 dark:text-emerald-300 underline hover:opacity-80"
-          >
-            Kirim formulir lain
-          </button>
+          <div className="pt-2">
+            <button
+              type="button"
+              onClick={() => setFormSubmitted(false)}
+              className="text-sm font-semibold text-emerald-800 dark:text-emerald-300 underline hover:opacity-80 transition"
+            >
+              Kirim pengajuan lain
+            </button>
+          </div>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="space-y-4 pt-2">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <form onSubmit={handleSubmit} className="space-y-6 pt-2">
+          {/* Email & Phone fields */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label htmlFor="email" className="block text-xs font-semibold mb-1 text-foreground">
+              <label htmlFor="email" className="block text-sm font-semibold mb-2.5 text-foreground">
                 Alamat Email Terdaftar <span className="text-red-500">*</span>
               </label>
               <input
@@ -70,12 +74,12 @@ export function DeleteAccountForm() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="nama@email.com"
-                className="w-full px-4 py-2.5 rounded-xl border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)] transition"
+                className="w-full px-4 sm:px-5 py-3.5 sm:py-4 rounded-xl border border-border bg-background text-foreground text-sm sm:text-base placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)] focus:border-transparent transition-all shadow-sm"
               />
             </div>
 
             <div>
-              <label htmlFor="phone" className="block text-xs font-semibold mb-1 text-foreground">
+              <label htmlFor="phone" className="block text-sm font-semibold mb-2.5 text-foreground">
                 Nomor WhatsApp / Telepon <span className="text-red-500">*</span>
               </label>
               <input
@@ -85,22 +89,23 @@ export function DeleteAccountForm() {
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 placeholder="+62 812-xxxx-xxxx"
-                className="w-full px-4 py-2.5 rounded-xl border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)] transition"
+                className="w-full px-4 sm:px-5 py-3.5 sm:py-4 rounded-xl border border-border bg-background text-foreground text-sm sm:text-base placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)] focus:border-transparent transition-all shadow-sm"
               />
             </div>
           </div>
 
+          {/* Reason selection */}
           <div>
-            <label htmlFor="reason" className="block text-xs font-semibold mb-1 text-foreground">
+            <label htmlFor="reason" className="block text-sm font-semibold mb-2.5 text-foreground">
               Alasan Penghapusan (Opsional)
             </label>
             <select
               id="reason"
               value={reason}
               onChange={(e) => setReason(e.target.value)}
-              className="w-full px-4 py-2.5 rounded-xl border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)] transition"
+              className="w-full px-4 sm:px-5 py-3.5 sm:py-4 rounded-xl border border-border bg-background text-foreground text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)] focus:border-transparent transition-all shadow-sm"
             >
-              <option value="">Pilih alasan...</option>
+              <option value="">Pilih alasan penghapusan...</option>
               <option value="Tidak lagi membutuhkan layanan">Tidak lagi membutuhkan layanan</option>
               <option value="Beralih ke platform lain">Beralih ke platform lain</option>
               <option value="Bisnis sudah tidak beroperasi">Bisnis sudah tidak beroperasi</option>
@@ -110,46 +115,51 @@ export function DeleteAccountForm() {
             </select>
           </div>
 
+          {/* Notes textarea */}
           <div>
-            <label htmlFor="notes" className="block text-xs font-semibold mb-1 text-foreground">
+            <label htmlFor="notes" className="block text-sm font-semibold mb-2.5 text-foreground">
               Catatan Tambahan (Opsional)
             </label>
             <textarea
               id="notes"
-              rows={3}
+              rows={4}
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
-              placeholder="Informasi tambahan untuk mempercepat verifikasi akun Anda..."
-              className="w-full px-4 py-2.5 rounded-xl border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)] transition resize-none"
+              placeholder="Tuliskan informasi atau pertanyaan tambahan untuk tim verifikasi kami..."
+              className="w-full px-4 sm:px-5 py-3.5 sm:py-4 rounded-xl border border-border bg-background text-foreground text-sm sm:text-base placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)] focus:border-transparent transition-all shadow-sm resize-none min-h-[120px]"
             />
           </div>
 
-          <div className="pt-2">
-            <label className="flex items-start gap-3 cursor-pointer select-none">
+          {/* Consent Checkbox */}
+          <div className="p-5 sm:p-6 rounded-xl bg-secondary/40 border border-border/80">
+            <label className="flex items-start gap-3.5 cursor-pointer select-none">
               <input
                 type="checkbox"
                 checked={confirmed}
                 onChange={(e) => setConfirmed(e.target.checked)}
                 required
-                className="mt-1 w-4 h-4 rounded border-border text-[var(--brand-primary)] focus:ring-[var(--brand-primary)]"
+                className="mt-1 w-5 h-5 rounded border-border text-[var(--brand-primary)] focus:ring-[var(--brand-primary)] cursor-pointer flex-shrink-0"
               />
-              <span className="text-xs text-muted-foreground leading-relaxed">
-                Saya menyatakan secara sadar bahwa saya adalah pemilik sah dari akun di atas dan memahami bahwa seluruh data, alur bot, kontak, dan riwayat pesan akan <strong>dihapus permanen</strong> serta tidak dapat dipulihkan kembali.
+              <span className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                Saya menyatakan secara sadar bahwa saya adalah pemilik sah akun di atas dan memahami bahwa seluruh data, konfigurasi bot, kontak, dan riwayat chat akan <strong className="text-foreground">dihapus secara permanen</strong> setelah masa tenggang berakhir serta tidak dapat dipulihkan kembali.
               </span>
             </label>
           </div>
 
-          <div className="pt-4 flex flex-col sm:flex-row items-center gap-3">
+          {/* Submit Action */}
+          <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
             <button
               type="submit"
               disabled={!confirmed}
-              className="w-full sm:w-auto px-6 py-3 rounded-xl bg-red-600 hover:bg-red-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold text-sm transition-colors duration-200 shadow-sm"
+              className="px-8 py-3.5 sm:py-4 rounded-xl bg-red-600 hover:bg-red-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold text-sm sm:text-base transition-all duration-200 shadow-md hover:shadow-lg flex items-center justify-center gap-2"
             >
-              Kirim Permintaan Hapus Akun
+              <Send className="w-4 h-4" />
+              <span>Kirim Permintaan Hapus Akun</span>
             </button>
-            <span className="text-xs text-muted-foreground text-center sm:text-left">
-              Atau email langsung ke{' '}
-              <a href="mailto:support@responpintar.com" className="text-[var(--brand-primary)] underline">
+
+            <span className="text-xs sm:text-sm text-muted-foreground text-center sm:text-left">
+              Atau kirimkan email langsung ke{' '}
+              <a href="mailto:support@responpintar.com" className="text-[var(--brand-primary)] font-medium underline hover:opacity-80">
                 support@responpintar.com
               </a>
             </span>

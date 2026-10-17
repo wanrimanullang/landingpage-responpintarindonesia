@@ -42,41 +42,41 @@ export function DeleteAccountFaq() {
   };
 
   return (
-    <section className="bg-card border border-border rounded-2xl p-6 sm:p-8 space-y-6">
-      <div className="flex items-start gap-4">
-        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] flex items-center justify-center flex-shrink-0">
-          <HelpCircle className="w-5 h-5 text-white" />
+    <section className="bg-card border border-border rounded-2xl p-6 sm:p-10 space-y-8 shadow-sm">
+      <div className="flex items-start gap-4 sm:gap-5">
+        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] flex items-center justify-center flex-shrink-0 shadow-sm">
+          <HelpCircle className="w-6 h-6 text-white" />
         </div>
         <div>
-          <h2 className="text-2xl font-bold mb-1">Pertanyaan yang Sering Diajukan (FAQ)</h2>
-          <p className="text-muted-foreground text-sm">
-            Jawaban seputar kebijakan penghapusan akun dan retensi data di Respon Pintar.
+          <h2 className="text-2xl sm:text-3xl font-bold mb-2">Pertanyaan yang Sering Diajukan (FAQ)</h2>
+          <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+            Jawaban seputar kebijakan penghapusan akun, pemulihan data, dan retensi sistem di Respon Pintar.
           </p>
         </div>
       </div>
 
-      <div className="space-y-3 pt-2">
+      <div className="space-y-4 pt-2">
         {faqs.map((faq, index) => {
           const isOpen = openFaqIndex === index;
           return (
             <div
               key={index}
-              className="border border-border rounded-xl overflow-hidden bg-background transition"
+              className="border border-border/80 rounded-2xl overflow-hidden bg-background transition-colors hover:border-[var(--brand-primary)]/40 shadow-sm"
             >
               <button
                 type="button"
                 onClick={() => toggleFaq(index)}
-                className="w-full flex items-center justify-between p-4 text-left font-semibold text-sm hover:bg-secondary/40 transition gap-4"
+                className="w-full flex items-center justify-between p-5 sm:p-6 text-left font-bold text-sm sm:text-base hover:bg-secondary/40 transition gap-4"
               >
-                <span>{faq.question}</span>
+                <span className="text-foreground">{faq.question}</span>
                 {isOpen ? (
-                  <ChevronUp className="w-4 h-4 text-muted-foreground flex-shrink-0" />
+                  <ChevronUp className="w-5 h-5 text-[var(--brand-primary)] flex-shrink-0" />
                 ) : (
-                  <ChevronDown className="w-4 h-4 text-muted-foreground flex-shrink-0" />
+                  <ChevronDown className="w-5 h-5 text-muted-foreground flex-shrink-0" />
                 )}
               </button>
               {isOpen && (
-                <div className="p-4 pt-0 text-xs sm:text-sm text-muted-foreground leading-relaxed border-t border-border/40 mt-1">
+                <div className="px-5 sm:px-6 pb-6 pt-2 text-sm sm:text-base text-muted-foreground leading-relaxed border-t border-border/50">
                   {faq.answer}
                 </div>
               )}
