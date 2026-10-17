@@ -30,8 +30,8 @@ export default function MoatPanel({
       ref={panelRef}
       onMouseMove={handleMouseMove}
       onClick={onClick}
-      className={`group panel-jamie ticks-jamie relative overflow-hidden transition-all duration-300 ${
-        onClick ? 'cursor-pointer hover:border-[rgba(244,245,247,0.18)]' : ''
+      className={`group panel-jamie relative overflow-hidden transition-all duration-300 rounded-[12px] border border-[rgba(255,255,255,0.12)] ${
+        onClick ? 'cursor-pointer hover:border-[rgba(255,255,255,0.3)]' : ''
       } ${className}`}
       style={{
         backgroundColor: 'rgba(17, 18, 20, 0.88)',

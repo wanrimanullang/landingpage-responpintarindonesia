@@ -33,7 +33,7 @@ export default function SignalBadge({
 
   return (
     <span
-      className={`inline-flex items-center gap-2 whitespace-nowrap border px-2.5 py-1 font-mono text-[11px] uppercase tracking-[0.12em] ${className}`}
+      className={`inline-flex items-center gap-2 whitespace-nowrap border px-[10px] py-[4px] rounded-[6px] font-mono text-[12px] uppercase tracking-[0.08em] leading-tight select-none ${className}`}
       style={{ borderColor: s.border, color: s.color }}
     >
       <span

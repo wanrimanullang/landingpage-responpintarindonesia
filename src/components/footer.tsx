@@ -18,10 +18,10 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-[#0B0C0E] text-[#E9EBEF] border-t border-[rgba(244,245,247,0.08)] overflow-hidden">
+    <footer className="relative bg-[#0B0C0E] text-[#E9EBEF] border-t border-[rgba(255,255,255,0.12)] overflow-hidden">
       {/* Top Telemetry & Status Bar */}
-      <div className="border-b border-[rgba(244,245,247,0.06)] bg-[#111214]/60">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-3 flex flex-wrap items-center justify-between gap-4 font-mono text-[10px] text-[#636B76] uppercase tracking-[0.14em]">
+      <div className="border-b border-[rgba(255,255,255,0.12)] bg-[#111214]/60">
+        <div className="landing-container py-3 flex flex-wrap items-center justify-between gap-4 font-mono text-[10px] text-[#636B76] uppercase tracking-[0.14em]">
           <div className="flex items-center gap-3">
             <SignalBadge label="ALL SYSTEMS OPERATIONAL" variant="positive" />
             <span className="hidden sm:inline">· P95 LATENCY &lt; 380MS</span>
@@ -34,12 +34,12 @@ export function Footer() {
       </div>
 
       {/* Main Footer Content */}
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12 pt-16 pb-12">
+      <div className="landing-container pt-16 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand Info (2 cols) */}
           <div className="lg:col-span-2 space-y-5">
             <Link to="/" className="inline-flex items-center gap-3 no-underline">
-              <div className="w-8 h-8 rounded border border-[rgba(244,245,247,0.14)] bg-[#111214] p-1 flex items-center justify-center">
+              <div className="w-8 h-8 rounded-[6px] border border-[rgba(255,255,255,0.12)] bg-[#111214] p-1 flex items-center justify-center">
                 <Logo />
               </div>
               <span className="text-xl font-bold tracking-tight text-[#E9EBEF]">
@@ -64,7 +64,7 @@ export function Footer() {
                   key={s.label}
                   href={s.href}
                   aria-label={s.label}
-                  className="w-8 h-8 rounded border border-[rgba(244,245,247,0.1)] bg-white/[0.02] text-[#AEB4BD] hover:text-[#8FE3B0] hover:border-[#8FE3B0]/40 flex items-center justify-center transition-colors"
+                  className="w-8 h-8 rounded-[6px] border border-[rgba(255,255,255,0.12)] bg-white/[0.02] text-[#AEB4BD] hover:text-[#8FE3B0] hover:border-[#8FE3B0]/40 flex items-center justify-center transition-colors"
                 >
                   <s.icon className="w-4 h-4" />
                 </a>
@@ -175,8 +175,8 @@ export function Footer() {
       </div>
 
       {/* Bottom Copyright Bar */}
-      <div className="border-t border-[rgba(244,245,247,0.06)] py-6 bg-[#0B0C0E]">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex flex-wrap items-center justify-between gap-4 font-mono text-[11px] text-[#636B76]">
+      <div className="border-t border-[rgba(255,255,255,0.12)] py-6 bg-[#0B0C0E]">
+        <div className="landing-container flex flex-wrap items-center justify-between gap-4 font-mono text-[11px] text-[#636B76]">
           <p>© {currentYear} Respon Pintar Indonesia. All rights reserved.</p>
           <div className="flex gap-6">
             <Link to="/privacy" className="hover:text-[#AEB4BD] transition-colors">

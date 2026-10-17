@@ -24,21 +24,19 @@ export function PricingSection() {
   }, []);
 
   return (
-    <section id="pricing" className="py-28 sm:py-36 px-6 lg:px-16 relative">
-      <div className="max-w-[1400px] mx-auto">
+    <section id="pricing" className="landing-section">
+      <div className="landing-container">
         {/* Section Header */}
-        <div className="max-w-3xl mb-18 space-y-4">
+        <div className="landing-section-header">
           <ScrollReveal>
-            <div className="flex items-center gap-3">
-              <p className="label-mono text-[#8FE3B0]">
-                03 · COMMERCIAL INDEX
-              </p>
+            <div className="landing-section-label">
+              <span>03 · COMMERCIAL INDEX</span>
               <SignalBadge label="PAKET TRANSPARAN" variant="positive" />
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={80}>
-            <h2 className="text-display font-bold tracking-tight text-[#E9EBEF]">
+            <h2 className="landing-section-title text-display font-bold tracking-tight text-[#E9EBEF]">
               Investasi Terbaik untuk{' '}
               <span className="chrome-text block">Efisiensi Tim CS.</span>
             </h2>
@@ -54,7 +52,7 @@ export function PricingSection() {
 
         {/* Pricing Widget Container (embedded from API) */}
         <ScrollReveal delay={180}>
-          <div className="w-full mb-18">
+          <div className="w-full mb-16">
             <div className="w-full text-[#E9EBEF]" data-wapi-snippet="36058ade7948a5937101b838" />
           </div>
         </ScrollReveal>
@@ -62,14 +60,14 @@ export function PricingSection() {
         {/* Custom Enterprise Quote Card in MoatPanel */}
         <div className="max-w-4xl mx-auto">
           <ScrollReveal delay={240}>
-            <MoatPanel className="p-8 sm:p-14 border border-[rgba(244,245,247,0.12)]">
-              <div className="text-center max-w-2xl mx-auto space-y-6">
-                <div className="w-14 h-14 mx-auto rounded border border-[#8FE3B0]/40 bg-[#8FE3B0]/10 flex items-center justify-center text-[#8FE3B0] shadow-[0_0_15px_rgba(143,227,176,0.2)]">
+            <div className="landing-card p-6 sm:p-10">
+              <div className="text-center max-w-2xl mx-auto flex flex-col gap-6">
+                <div className="w-14 h-14 mx-auto rounded-[6px] border border-[#8FE3B0]/40 bg-[#8FE3B0]/10 flex items-center justify-center text-[#8FE3B0] shadow-[0_0_15px_rgba(143,227,176,0.2)]">
                   <TrophyIcon className="w-7 h-7" />
                 </div>
 
                 <div>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-[#8FE3B0] mb-2">
+                  <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-[#8FE3B0] mb-2">
                     KONSULTASI PAKET ENTERPRISE
                   </p>
                   <h3 className="text-2xl sm:text-3xl font-bold text-[#E9EBEF]">
@@ -83,20 +81,20 @@ export function PricingSection() {
                 </p>
 
                 {/* Contact Methods Cards */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 text-left font-mono">
-                  <div className="border border-[rgba(244,245,247,0.08)] bg-[#111214] p-5 text-center">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2 text-left font-mono">
+                  <div className="rounded-[6px] border border-[rgba(255,255,255,0.12)] bg-[#111214] p-4 text-center">
                     <EnvelopeIcon className="w-5 h-5 text-[#8FE3B0] mx-auto mb-2" />
                     <p className="text-[10px] text-[#636B76] uppercase tracking-wider mb-1">Email</p>
                     <p className="text-xs text-[#E9EBEF] truncate">support@responpintar.com</p>
                   </div>
 
-                  <div className="border border-[rgba(244,245,247,0.08)] bg-[#111214] p-5 text-center">
+                  <div className="rounded-[6px] border border-[rgba(255,255,255,0.12)] bg-[#111214] p-4 text-center">
                     <PhoneIcon className="w-5 h-5 text-[#8FE3B0] mx-auto mb-2" />
                     <p className="text-[10px] text-[#636B76] uppercase tracking-wider mb-1">Telepon</p>
                     <p className="text-xs text-[#E9EBEF]">+62 821-8988-5080</p>
                   </div>
 
-                  <div className="border border-[rgba(244,245,247,0.08)] bg-[#111214] p-5 text-center">
+                  <div className="rounded-[6px] border border-[rgba(255,255,255,0.12)] bg-[#111214] p-4 text-center">
                     <ChatBubbleOvalLeftEllipsisIcon className="w-5 h-5 text-[#8FE3B0] mx-auto mb-2" />
                     <p className="text-[10px] text-[#636B76] uppercase tracking-wider mb-1">WhatsApp</p>
                     <p className="text-xs text-[#8FE3B0]">+62 821-8988-5080</p>
@@ -104,24 +102,24 @@ export function PricingSection() {
                 </div>
 
                 {/* CTA Button */}
-                <div className="pt-4 flex flex-wrap justify-center gap-4 text-xs font-mono">
+                <div className="pt-2 flex flex-wrap justify-center gap-4">
                   <a
                     href="https://wa.me/6282189885080?text=Halo%20ResponPintar,%20saya%20ingin%20konsultasi%20paket%20omnichannel."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-[#E9EBEF] text-[#0B0C0E] border border-white font-medium px-8 py-3.5 uppercase tracking-wider hover:bg-white transition-all shadow-[0_0_15px_rgba(255,255,255,0.2)] no-underline"
+                    className="landing-btn-primary"
                   >
                     Hubungi Tim Sales →
                   </a>
                 </div>
 
-                <div className="pt-4 border-t border-[rgba(244,245,247,0.06)] text-[11px] font-mono text-[#636B76]">
+                <div className="pt-4 border-t border-[rgba(255,255,255,0.12)] text-[11px] font-mono text-[#636B76]">
                   <p>
                     💡 <strong className="text-[#AEB4BD]">14 Hari Free Trial:</strong> Coba fitur omnichannel tanpa resiko kartu kredit.
                   </p>
                 </div>
               </div>
-            </MoatPanel>
+            </div>
           </ScrollReveal>
         </div>
       </div>

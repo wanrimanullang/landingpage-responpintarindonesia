@@ -1,9 +1,8 @@
 'use client';
 
 import React from 'react';
-import { BoltIcon, ChatBubbleLeftRightIcon, CheckCircleIcon } from '@heroicons/react/24/outline';
+import { ChatBubbleLeftRightIcon, CheckCircleIcon } from '@heroicons/react/24/outline';
 import { useChatbotDemoModal } from '../context/chatbot-demo-context';
-import MoatPanel from './showcase/MoatPanel';
 import SignalBadge from './showcase/SignalBadge';
 import ScrollReveal from './showcase/ScrollReveal';
 
@@ -11,15 +10,15 @@ export function HeroSection() {
   const { openModal } = useChatbotDemoModal();
 
   return (
-    <section className="pt-36 sm:pt-44 pb-24 sm:pb-32 px-6 lg:px-16 relative overflow-hidden border-b border-[rgba(244,245,247,0.08)]">
-      <div className="max-w-[1400px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
-          {/* Left Column: Heading, Subtitle, Button Trio (like Jamie McKaye) */}
-          <div className="space-y-8">
+    <section className="landing-hero">
+      <div className="landing-container">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Left Column: Heading, Subtitle, Button Trio */}
+          <div>
             {/* Top Category Label */}
             <ScrollReveal>
-              <div className="flex flex-wrap items-center gap-3">
-                <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-[#8A9099]">
+              <div className="flex flex-wrap items-center gap-3 mb-4">
+                <p className="font-mono text-xs uppercase tracking-[0.14em] text-[#8A9099]">
                   Respon Pintar / Platform Omnichannel
                 </p>
                 <SignalBadge label="LIVE SYNC" variant="positive" />
@@ -28,7 +27,7 @@ export function HeroSection() {
 
             {/* Headline */}
             <ScrollReveal delay={80}>
-              <h1 className="text-display font-bold tracking-tight text-[#E9EBEF]">
+              <h1 className="text-display font-bold tracking-tight text-[#E9EBEF] mb-4">
                 Satu Inbox.{' '}
                 <span className="chrome-text block">Semua Percakapan.</span>
               </h1>
@@ -36,129 +35,117 @@ export function HeroSection() {
 
             {/* Subheadline */}
             <ScrollReveal delay={160}>
-              <p className="text-base sm:text-[17px] text-[#AEB4BD] font-normal leading-relaxed max-w-xl">
+              <p className="text-base sm:text-lg text-[#AEB4BD] font-normal leading-relaxed max-w-xl mb-8">
                 Kelola pesan WhatsApp Business, Instagram DM, Telegram, dan Live Chat dalam
                 satu sistem terpusat. Respon pelanggan lebih cepat, delegasi tim CS otomatis,
                 dan tingkatkan konversi penjualan bisnis Anda.
               </p>
             </ScrollReveal>
 
-            {/* Action Buttons Trio — exactly matching the reference style */}
+            {/* Action Buttons Trio — exactly matching the token specification */}
             <ScrollReveal delay={240}>
               <div className="flex flex-wrap items-center gap-4 pt-2">
-                {/* Button 1: Solid White Button */}
+                {/* Button 1: Primary (terang + teks gelap) */}
                 <a
                   href="https://crm.responpintar.com/auth/login"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-[#E9EBEF] text-[#0B0C0E] px-7 py-3.5 text-xs font-mono uppercase tracking-[0.1em] font-medium border border-white hover:bg-white transition-all shadow-[0_0_15px_rgba(255,255,255,0.2)] no-underline"
+                  className="landing-btn-primary"
                 >
                   Mulai Sekarang
                 </a>
 
-                {/* Button 2: Dark Transparent with Outline */}
+                {/* Button 2: Secondary (transparan + border) */}
                 <button
                   onClick={openModal}
-                  className="bg-transparent text-[#E9EBEF] px-7 py-3.5 text-xs font-mono uppercase tracking-[0.1em] font-medium border border-[rgba(244,245,247,0.2)] hover:border-[rgba(244,245,247,0.45)] hover:bg-white/[0.04] transition-all cursor-pointer"
+                  className="landing-btn-secondary"
                 >
                   Coba Demo
                 </button>
 
-                {/* Button 3: Underlined plain link */}
+                {/* Button 3: Tertiary (teks dengan underline) */}
                 <a
                   href="#features"
-                  className="text-[#AEB4BD] hover:text-[#E9EBEF] underline underline-offset-4 text-xs font-mono uppercase tracking-[0.1em] font-medium transition-colors ml-1"
+                  className="landing-btn-tertiary"
                 >
                   Pelajari fitur
                 </a>
               </div>
             </ScrollReveal>
 
-            {/* Stats Telemetry Readout */}
+            {/* Stats Telemetry Readout (e: gap 32px, angka besar, label kecil mt-4px) */}
             <ScrollReveal delay={320}>
-              <div className="grid grid-cols-3 gap-6 pt-8 border-t border-[rgba(244,245,247,0.08)] max-w-lg">
+              <div className="landing-stats-grid mt-8">
                 <div>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-[#636B76] mb-1">
-                    CHANNELS SYNCED
-                  </p>
-                  <p className="text-2xl sm:text-3xl font-mono font-bold text-[#E9EBEF]">
-                    100%
-                  </p>
-                  <p className="text-[11px] text-[#AEB4BD] mt-0.5">real-time webhook</p>
+                  <div className="landing-stat-value">100%</div>
+                  <div className="landing-stat-label">Channels Synced</div>
+                  <div className="landing-stat-sub">real-time webhook</div>
                 </div>
                 <div>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-[#636B76] mb-1">
-                    AVG FIRST REPLY
-                  </p>
-                  <p className="text-2xl sm:text-3xl font-mono font-bold text-[#8FE3B0]">
-                    &lt; 45s
-                  </p>
-                  <p className="text-[11px] text-[#AEB4BD] mt-0.5">multi-agent speed</p>
+                  <div className="landing-stat-value !text-[#8FE3B0]">&lt; 45s</div>
+                  <div className="landing-stat-label">Avg First Reply</div>
+                  <div className="landing-stat-sub">multi-agent speed</div>
                 </div>
                 <div>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-[#636B76] mb-1">
-                    SYSTEM UPTIME
-                  </p>
-                  <p className="text-2xl sm:text-3xl font-mono font-bold text-[#E9EBEF]">
-                    99.98%
-                  </p>
-                  <p className="text-[11px] text-[#AEB4BD] mt-0.5">SLA production</p>
+                  <div className="landing-stat-value">99.98%</div>
+                  <div className="landing-stat-label">System Uptime</div>
+                  <div className="landing-stat-sub">SLA production</div>
                 </div>
               </div>
             </ScrollReveal>
           </div>
 
-          {/* Right Column: Omnichannel Live Simulation Mockup in MoatPanel */}
+          {/* Right Column: Omnichannel Live Simulation Mockup (Card Token c) */}
           <div>
             <ScrollReveal delay={120}>
-              <MoatPanel className="p-7 sm:p-8 shadow-2xl border border-[rgba(244,245,247,0.1)]">
-                {/* Header Mockup */}
-                <div className="flex items-center justify-between pb-5 border-b border-[rgba(244,245,247,0.08)]">
+              <div className="landing-card shadow-2xl">
+                {/* Header kartu dipisah garis tipis (border-bottom) dengan padding-bottom 16px */}
+                <div className="landing-card-header">
                   <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded border border-[rgba(244,245,247,0.14)] bg-[#1a1c1f] flex items-center justify-center text-[#8FE3B0]">
+                    <div className="w-9 h-9 rounded-[6px] border border-[rgba(255,255,255,0.12)] bg-[#1a1c1f] flex items-center justify-center text-[#8FE3B0]">
                       <ChatBubbleLeftRightIcon className="w-5 h-5" />
                     </div>
                     <div>
                       <p className="text-sm font-semibold text-[#E9EBEF]">Respon Pintar Omnichannel Desk</p>
                       <div className="flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-[#8FE3B0] animate-pulse" />
-                        <p className="font-mono text-[10px] text-[#8FE3B0] uppercase tracking-wider">
+                        <p className="font-mono text-xs text-[#8FE3B0] uppercase tracking-wider">
                           4 Channels Active · WhatsApp / IG / TG / Web
                         </p>
                       </div>
                     </div>
                   </div>
-                  <div className="flex items-center gap-1.5 font-mono text-[10px] text-[#8A9099] border border-[rgba(244,245,247,0.1)] px-2 py-0.5 bg-[#0B0C0E]">
+                  <div className="landing-badge">
                     <span>MULTI-AGENT</span>
                   </div>
                 </div>
 
-                {/* Omnichannel Channel Selector Pills */}
-                <div className="flex items-center gap-2 pt-4 pb-2 border-b border-[rgba(244,245,247,0.06)] font-mono text-[10px]">
-                  <span className="px-2.5 py-1 bg-[#8FE3B0]/15 text-[#8FE3B0] border border-[#8FE3B0]/30 font-semibold">
+                {/* Omnichannel Channel Selector Pills (Row gap 16px) */}
+                <div className="flex flex-wrap items-center gap-2 pb-2 border-b border-[rgba(255,255,255,0.08)] font-mono text-xs">
+                  <span className="px-2.5 py-1 bg-[#8FE3B0]/15 text-[#8FE3B0] border border-[#8FE3B0]/30 rounded-[6px] font-semibold">
                     WhatsApp (+62 821-xxxx)
                   </span>
-                  <span className="px-2.5 py-1 text-[#636B76] border border-transparent">
+                  <span className="px-2.5 py-1 text-[#636B76] border border-transparent rounded-[6px]">
                     Instagram Direct
                   </span>
-                  <span className="px-2.5 py-1 text-[#636B76] border border-transparent">
+                  <span className="px-2.5 py-1 text-[#636B76] border border-transparent rounded-[6px]">
                     Telegram
                   </span>
-                  <span className="px-2.5 py-1 text-[#636B76] border border-transparent">
+                  <span className="px-2.5 py-1 text-[#636B76] border border-transparent rounded-[6px]">
                     Live Chat
                   </span>
                 </div>
 
                 {/* Chat Messages Simulation */}
-                <div className="py-6 space-y-4 font-mono text-xs">
+                <div className="space-y-4 font-mono text-xs">
                   {/* Incoming Customer Message */}
                   <div className="flex justify-start">
-                    <div className="border border-[rgba(244,245,247,0.12)] bg-[#1a1c1f] text-[#E9EBEF] px-4 py-3 max-w-[85%] space-y-1">
-                      <div className="flex items-center justify-between text-[10px] text-[#636B76]">
+                    <div className="border border-[rgba(255,255,255,0.12)] bg-[#1a1c1f] text-[#E9EBEF] p-4 rounded-[8px] max-w-[85%] space-y-1">
+                      <div className="flex items-center justify-between text-xs text-[#636B76] gap-4">
                         <span>Customer (Budi Santoso)</span>
                         <span>14:02 WIB</span>
                       </div>
-                      <p className="text-[12px] leading-relaxed font-sans text-[#AEB4BD]">
+                      <p className="text-xs leading-relaxed font-sans text-[#AEB4BD]">
                         Halo kak, mau tanya nomor resi untuk pesanan #RP-9921 kemarin sudah dikirimkan belum ya?
                       </p>
                     </div>
@@ -166,22 +153,22 @@ export function HeroSection() {
 
                   {/* Agent Response */}
                   <div className="flex justify-end">
-                    <div className="border border-[#8FE3B0]/30 bg-[#0B0C0E] px-4 py-3 text-[#E9EBEF] max-w-[88%] space-y-2">
-                      <div className="flex items-center justify-between text-[10px] text-[#8FE3B0] border-b border-[rgba(244,245,247,0.06)] pb-1.5">
+                    <div className="border border-[#8FE3B0]/30 bg-[#0B0C0E] p-4 rounded-[8px] text-[#E9EBEF] max-w-[88%] space-y-2">
+                      <div className="flex items-center justify-between text-xs text-[#8FE3B0] border-b border-[rgba(255,255,255,0.08)] pb-1.5 gap-4">
                         <span className="flex items-center gap-1">
                           <CheckCircleIcon className="w-3.5 h-3.5 text-[#8FE3B0]" />
                           <span>Agent Sarah (CS Tim 1)</span>
                         </span>
                         <span>14:02 WIB</span>
                       </div>
-                      <p className="text-[12px] text-[#E9EBEF] leading-relaxed font-sans">
+                      <p className="text-xs text-[#E9EBEF] leading-relaxed font-sans">
                         Halo Pak Budi! Pesanan #RP-9921 sudah dikirim via J&amp;T dengan nomor resi <strong className="text-[#8FE3B0]">JT881928301</strong>. Paket dalam perjalanan dan estimasi tiba esok siang ya.
                       </p>
                       <div className="flex gap-2 pt-1 font-mono">
-                        <span className="text-[9px] uppercase px-1.5 py-0.5 border border-[#8FE3B0]/30 text-[#8FE3B0] bg-[#8FE3B0]/5">
+                        <span className="text-[10px] uppercase px-2 py-0.5 border border-[#8FE3B0]/30 text-[#8FE3B0] bg-[#8FE3B0]/5 rounded-[4px]">
                           Auto-Track J&amp;T
                         </span>
-                        <span className="text-[9px] uppercase px-1.5 py-0.5 border border-[rgba(244,245,247,0.1)] text-[#8A9099]">
+                        <span className="text-[10px] uppercase px-2 py-0.5 border border-[rgba(255,255,255,0.12)] text-[#8A9099] rounded-[4px]">
                           CRM Sync OK
                         </span>
                       </div>
@@ -189,21 +176,21 @@ export function HeroSection() {
                   </div>
 
                   {/* Diagnostic / Queue status */}
-                  <div className="flex items-center justify-between pt-2 text-[#636B76] text-[10px]">
+                  <div className="flex items-center justify-between text-[#636B76] text-xs">
                     <div className="flex items-center gap-1.5">
                       <span className="terminal-caret" aria-hidden="true" />
                       <span>Delegasi otomatis: Sesuai giliran agen aktif</span>
                     </div>
-                    <span className="text-[#8FE3B0]">Respon: 24 detik</span>
+                    <span className="text-[#8FE3B0] font-mono">Respon: 24 detik</span>
                   </div>
                 </div>
 
                 {/* Card Footer */}
-                <div className="pt-4 border-t border-[rgba(244,245,247,0.08)] flex items-center justify-between text-[10px] font-mono text-[#636B76]">
+                <div className="pt-3 border-t border-[rgba(255,255,255,0.08)] flex items-center justify-between text-xs font-mono text-[#636B76]">
                   <span>OMNICHANNEL DESK</span>
                   <span className="text-[#8A9099]">SINGLE INBOX · ZERO CHAT LOSS</span>
                 </div>
-              </MoatPanel>
+              </div>
             </ScrollReveal>
           </div>
         </div>
