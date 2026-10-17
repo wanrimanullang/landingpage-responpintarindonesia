@@ -47,8 +47,8 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-sm text-[#AEB4BD] leading-relaxed max-w-sm font-normal">
-              Solusi orkestrasi AI terdepan untuk otomatisasi customer service, omnichannel sync,
-              dan hybrid semantic retrieval dengan latensi sub-detik.
+              Solusi platform omnichannel terdepan untuk integrasi WhatsApp Business API,
+              Instagram DM, Telegram, dan Live Chat dalam satu dashboard terpusat dengan multi-CS inbox.
             </p>
 
             {/* Social Media Links */}
@@ -80,18 +80,13 @@ export function Footer() {
             <ul className="space-y-3 font-mono text-[12px] text-[#AEB4BD]">
               <li>
                 <a href="/#features" className="hover:text-[#8FE3B0] transition-colors">
-                  Features Index
+                  Omnichannel Inbox
                 </a>
               </li>
               <li>
-                <Link to="/services-new" className="hover:text-[#8FE3B0] transition-colors">
-                  Capability Bays
-                </Link>
-              </li>
-              <li>
-                <Link to="/showcase" className="hover:text-[#8FE3B0] transition-colors">
-                  Engineering Showcase
-                </Link>
+                <a href="/#use-cases" className="hover:text-[#8FE3B0] transition-colors">
+                  Industry Blueprints
+                </a>
               </li>
               <li>
                 <a href="/#pricing" className="hover:text-[#8FE3B0] transition-colors">

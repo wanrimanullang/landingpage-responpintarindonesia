@@ -14,23 +14,21 @@ import DemoPage from './pages/demo';
 import TutorialConnectedWhatsappPage from './pages/tutorial-connected-whatsapp';
 import TutorialSetupWorkflowPage from './pages/tutorial-setup-workflow';
 import DeleteAccountPage from './pages/delete-account';
-import ShowcasePage from './pages/showcase';
-import ServicesNewPage from './pages/services-new';
 import { ChatbotDemoModalProvider } from './context/chatbot-demo-context';
 
 export default function App() {
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
 
-  // Load theme from localStorage on mount (default: light)
+  // Load theme from localStorage on mount (default: dark for Jamie McKaye obsidian aesthetic)
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
     if (savedTheme) {
       setTheme(savedTheme);
       document.documentElement.classList.toggle('dark', savedTheme === 'dark');
     } else {
-      // Default to light mode
-      setTheme('light');
-      document.documentElement.classList.remove('dark');
+      // Default to dark mode
+      setTheme('dark');
+      document.documentElement.classList.add('dark');
     }
   }, []);
 
@@ -58,10 +56,6 @@ export default function App() {
             <Route path="/blog/:slug" element={<BlogPostPage />} />
             <Route path="/demo" element={<DemoPage />} />
             <Route path="/delete-account" element={<DeleteAccountPage />} />
-            <Route path="/showcase" element={<ShowcasePage />} />
-            <Route path="/work" element={<ShowcasePage />} />
-            <Route path="/services" element={<ServicesNewPage />} />
-            <Route path="/services-new" element={<ServicesNewPage />} />
             <Route path="/tutorial/connected-whatsapp" element={<TutorialConnectedWhatsappPage />} />
             <Route path="/tutorial/setup-workflow" element={<TutorialSetupWorkflowPage />} />
           </Routes>

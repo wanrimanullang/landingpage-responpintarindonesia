@@ -16,89 +16,89 @@ const useCases = [
     icon: ShoppingBagIcon,
     number: '01',
     industry: 'RETAIL & E-COMMERCE',
-    title: 'Automasi Pesanan & Cek Resi',
+    title: 'Automasi Pesanan & Cek Resi Cepat',
     description:
-      'Tangani ribuan pertanyaan ketersediaan stok, pelacakan ekspedisi otomatis, dan komplain pesanan secara instan 24/7.',
+      'Terima pesanan dari Instagram DM dan WhatsApp dalam 1 inbox. Kirim update resi ekspedisi dan notifikasi pembayaran otomatis tanpa ketik manual satu per satu.',
     benefits: [
       'Peningkatan konversi checkout hingga +40%',
-      'Eliminasi antrean CS saat peak sales',
-      'Integrasi direct ERP & inventaris multi-cabang',
+      'Eliminasi antrean chat saat flash sale & promo tanggal kembar',
+      'Integrasi langsung ke sistem pesanan dan katalog produk',
     ],
   },
   {
     icon: BriefcaseIcon,
     number: '02',
     industry: 'FINANCE & CORPORATE',
-    title: 'Dispute & Lead Qualification',
+    title: 'Kualifikasi Prospek & Eskalasi Tiket',
     description:
-      'Kualifikasi prospek B2B bernilai tinggi, verifikasi identitas, dan orkestrasi tiket klaim dengan enkripsi standar perbankan.',
+      'Saring pesan masuk dari website dan Telegram, lalu delegasikan prospek bernilai tinggi langsung ke account manager dengan pembagian tugas yang adil.',
     benefits: [
-      'Hemat 60% biaya CS operasional',
-      'Handoff konteks ke account manager dalam 82ms',
-      'Kepatuhan audit trail ISO 27001',
+      'Hemat hingga 60% biaya operasional customer service',
+      'Waktu respon pertama kurang dari 45 detik',
+      'Keamanan data pelanggan dengan enkripsi standar enterprise',
     ],
   },
   {
     icon: AcademicCapIcon,
     number: '03',
-    industry: 'EDUCATION & EDTECH',
-    title: 'Admission Concierge & Guidance',
+    industry: 'EDUCATION & KURSUS',
+    title: 'Informasi Pendaftaran & Konseling',
     description:
-      'Menjawab pertanyaan pendaftaran mahasiswa baru, jadwal seleksi, dan biaya kuliah akurat bebas halusinasi.',
+      'Layanan calon siswa baru via WhatsApp dan Live Chat website. Bagikan informasi biaya studi, jadwal pendaftaran, dan reminder seleksi secara massal.',
     benefits: [
-      'Layani 10,000+ calon siswa bersamaan',
-      'Tingkat akurasi informasi 99.8%',
-      'Follow-up prospek otomatis via WhatsApp',
+      'Layani ribuan pendaftar bersamaan tanpa kendala nomor diblokir',
+      'Multi-admin CS dapat menjawab dari perangkat berbeda',
+      'Follow-up otomatis calon pendaftar via WhatsApp blast resmi',
     ],
   },
   {
     icon: HeartIcon,
     number: '04',
-    industry: 'HEALTHCARE & CLINIC',
-    title: 'Reservasi Pasien & Tanya Dokter',
+    industry: 'KLINIK & HEALTHCARE',
+    title: 'Reservasi Jadwal & Pengingat Pasien',
     description:
-      'Atur jadwal temu dokter spesialis, reminder otomatis obat, dan panduan fasilitas rumah sakit tanpa repot telepon manual.',
+      'Kelola booking jadwal dokter dan kirim pengingat konsultasi otomatis sebelum hari pemeriksaan untuk mencegah pasien lupa atau terlambat datang.',
     benefits: [
-      'Penurunan angka no-show pasien sebesar 35%',
-      'Manajemen antrean real-time otomatis',
-      'Perlindungan privasi data medis sensitif',
+      'Turunkan angka no-show pasien hingga 35%',
+      'Manajemen antrean janji temu lebih teratur dan rapi',
+      'Respon cepat pertanyaan jadwal praktek dan fasilitas klinik',
     ],
   },
 ];
 
 export function UseCasesSection() {
   return (
-    <section id="use-cases" className="py-24 sm:py-32 px-4 sm:px-6 lg:px-12 border-b border-[rgba(244,245,247,0.08)] relative">
+    <section id="use-cases" className="py-28 sm:py-36 px-6 lg:px-16 border-b border-[rgba(244,245,247,0.08)] relative">
       <div className="max-w-[1400px] mx-auto">
         {/* Section Header */}
-        <div className="max-w-3xl mb-16 space-y-4">
+        <div className="max-w-3xl mb-18 space-y-4">
           <ScrollReveal>
             <p className="label-mono text-[#8FE3B0]">
-              03 · INDUSTRY BLUEPRINTS
+              02 · INDUSTRY BLUEPRINTS
             </p>
           </ScrollReveal>
 
           <ScrollReveal delay={80}>
             <h2 className="text-display font-bold tracking-tight text-[#E9EBEF]">
-              Tailored solutions for{' '}
-              <span className="chrome-text block">Various Industries.</span>
+              Solusi Tepat untuk{' '}
+              <span className="chrome-text block">Berbagai Industri.</span>
             </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={160}>
-            <p className="text-base sm:text-lg text-[#AEB4BD] font-normal leading-relaxed max-w-2xl">
-              Dari start-up logistik hingga grup ritel multinasional, Respon Pintar
-              menyediakan template blueprint yang telah teruji di lingkungan produksi nyata.
+            <p className="text-base sm:text-[17px] text-[#AEB4BD] font-normal leading-relaxed max-w-2xl">
+              Dari UMKM berkembang hingga korporasi besar, Respon Pintar membantu tim CS Anda
+              melayani pelanggan lebih cepat, teratur, dan profesional.
             </p>
           </ScrollReveal>
         </div>
 
         {/* Use Cases Grid with MoatPanels */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
           {useCases.map((useCase, index) => {
             const Icon = useCase.icon;
             return (
-              <ScrollReveal key={useCase.number} delay={index * 100}>
+              <ScrollReveal key={useCase.number} delay={index * 90}>
                 <MoatPanel className="p-8 sm:p-10 flex flex-col justify-between h-full border border-[rgba(244,245,247,0.08)]">
                   <div>
                     {/* Header */}
@@ -110,7 +110,7 @@ export function UseCasesSection() {
                     </div>
 
                     <div className="flex items-start gap-4 mb-5">
-                      <div className="w-10 h-10 rounded border border-[rgba(244,245,247,0.14)] bg-[#1a1c1f] flex items-center justify-center text-[#8FE3B0] shrink-0">
+                      <div className="w-11 h-11 rounded border border-[rgba(244,245,247,0.14)] bg-[#1a1c1f] flex items-center justify-center text-[#8FE3B0] shrink-0">
                         <Icon className="w-5 h-5" />
                       </div>
                       <div>
@@ -126,7 +126,7 @@ export function UseCasesSection() {
                     <ChromeRule className="my-6 opacity-40" />
 
                     {/* Benefits List */}
-                    <div className="space-y-2.5 font-mono text-[12px]">
+                    <div className="space-y-3 font-mono text-[12px]">
                       {useCase.benefits.map((benefit, idx) => (
                         <div key={idx} className="flex items-center gap-2.5 text-[#AEB4BD]">
                           <span className="text-[#8FE3B0] font-bold select-none">▸</span>
@@ -137,9 +137,9 @@ export function UseCasesSection() {
                   </div>
 
                   {/* Card Footer */}
-                  <div className="pt-6 mt-6 border-t border-[rgba(244,245,247,0.06)] flex items-center justify-between text-[10px] font-mono text-[#636B76]">
-                    <span>DEPLOYMENT TIME: &lt; 48 HOURS</span>
-                    <span className="text-[#8FE3B0]">VERIFIED BLUEPRINT</span>
+                  <div className="pt-6 mt-8 border-t border-[rgba(244,245,247,0.06)] flex items-center justify-between text-[10px] font-mono text-[#636B76]">
+                    <span>IMPLEMENTASI CEPAT</span>
+                    <span className="text-[#8FE3B0]">OMNICHANNEL CS</span>
                   </div>
                 </MoatPanel>
               </ScrollReveal>

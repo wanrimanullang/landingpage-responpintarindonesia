@@ -3,7 +3,6 @@ import { HeroSection } from '../components/hero-section';
 import { FeaturesSection } from '../components/features-section';
 import { UseCasesSection } from '../components/use-cases-section';
 import { PricingSection } from '../components/pricing-section';
-import { OurClientsSection } from '../components/our-clients-section';
 import { ChatbotDemoModal } from '../components/chatbot-demo-modal';
 import BackgroundScene from '../components/showcase/BackgroundScene';
 
@@ -16,7 +15,6 @@ export default function HomePage() {
       {/* Main Content Sections Layer */}
       <div className="relative z-10 w-full">
         <HeroSection />
-        <OurClientsSection />
         <FeaturesSection />
         <UseCasesSection />
         <PricingSection />

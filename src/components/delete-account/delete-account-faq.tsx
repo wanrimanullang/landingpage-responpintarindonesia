@@ -20,7 +20,7 @@ const faqs: FaqItem[] = [
   {
     question: 'Apakah data kontak dan pelanggan saya juga ikut terhapus?',
     answer:
-      'Ya. Seluruh data kontak pelanggan, riwayat percakapan (chat logs), tag kontak, dan variabel kustom yang Anda simpan di Respon Pintar akan ikut terhapus secara permanen dari server kami.',
+      'Ya. Seluruh data kontak pelanggan, riwayat percakapan (chat logs), tag kontak, dan variabel kustom saluran WhatsApp, Instagram, dan Telegram yang Anda simpan di Respon Pintar akan ikut terhapus secara permanen dari server kami.',
   },
   {
     question: 'Bagaimana dengan sisa masa aktif langganan atau kuota pesan saya?',
@@ -30,7 +30,7 @@ const faqs: FaqItem[] = [
   {
     question: 'Apakah koneksi WhatsApp Business saya akan langsung terputus?',
     answer:
-      'Ya. Sesi integrasi WhatsApp API / QR session akan langsung dinonaktifkan seketika proses penghapusan akun dimulai, sehingga bot otomatis dan alur kerja (workflow) tidak akan lagi merespons pesan masuk dari pelanggan Anda.',
+      'Ya. Sesi integrasi WhatsApp Cloud API / QR session akan langsung dinonaktifkan seketika proses penghapusan akun dimulai, sehingga sistem omnichannel tidak lagi menerima atau merespons pesan masuk dari pelanggan Anda.',
   },
 ];
 
@@ -42,41 +42,41 @@ export function DeleteAccountFaq() {
   };
 
   return (
-    <section className="bg-card border border-border rounded-2xl delete-account-card space-y-8 shadow-sm">
+    <section className="bg-[#111214]/90 border border-[rgba(244,245,247,0.08)] backdrop-blur-md rounded-2xl p-6 sm:p-10 shadow-[0_4px_24px_rgba(0,0,0,0.4)] space-y-8">
       <div className="flex items-start gap-4 sm:gap-5">
-        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] flex items-center justify-center flex-shrink-0 shadow-sm">
-          <HelpCircle className="w-6 h-6 text-white" />
+        <div className="w-12 h-12 rounded-xl bg-[#16181D] border border-[rgba(244,245,247,0.12)] flex items-center justify-center flex-shrink-0 text-[#8FE3B0]">
+          <HelpCircle className="w-6 h-6" />
         </div>
         <div>
-          <h2 className="text-2xl sm:text-3xl font-bold mb-2">Pertanyaan yang Sering Diajukan (FAQ)</h2>
-          <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-[#E9EBEF]">Pertanyaan yang Sering Diajukan (FAQ)</h2>
+          <p className="text-[#AEB4BD] text-sm sm:text-base leading-relaxed">
             Jawaban seputar kebijakan penghapusan akun, pemulihan data, dan retensi sistem di Respon Pintar.
           </p>
         </div>
       </div>
 
-      <div className="delete-account-faq-list" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+      <div className="flex flex-col gap-3.5 pt-1">
         {faqs.map((faq, index) => {
           const isOpen = openFaqIndex === index;
           return (
             <div
               key={index}
-              className="delete-account-faq-item"
+              className="rounded-xl border border-[rgba(244,245,247,0.08)] bg-[#16181D]/60 hover:border-[rgba(244,245,247,0.16)] transition-all overflow-hidden"
             >
               <button
                 type="button"
                 onClick={() => toggleFaq(index)}
-                className="delete-account-faq-trigger"
+                className="w-full flex items-center justify-between p-5 text-left font-semibold text-sm sm:text-base text-[#E9EBEF] cursor-pointer gap-4"
               >
-                <span className="text-foreground">{faq.question}</span>
+                <span>{faq.question}</span>
                 {isOpen ? (
-                  <ChevronUp className="w-5 h-5 text-[var(--brand-primary)] flex-shrink-0" />
+                  <ChevronUp className="w-5 h-5 text-[#8FE3B0] flex-shrink-0" />
                 ) : (
-                  <ChevronDown className="w-5 h-5 text-muted-foreground flex-shrink-0" />
+                  <ChevronDown className="w-5 h-5 text-[#636B76] flex-shrink-0" />
                 )}
               </button>
               {isOpen && (
-                <div className="delete-account-faq-content text-muted-foreground border-t border-border/50">
+                <div className="px-5 pb-5 pt-1 text-sm text-[#AEB4BD] leading-relaxed border-t border-[rgba(244,245,247,0.06)]">
                   {faq.answer}
                 </div>
               )}
