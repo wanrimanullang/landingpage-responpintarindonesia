@@ -55,13 +55,13 @@ export function DeleteAccountFaq() {
         </div>
       </div>
 
-      <div className="pt-2 flex flex-col gap-3.5">
+      <div className="delete-account-faq-list" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
         {faqs.map((faq, index) => {
           const isOpen = openFaqIndex === index;
           return (
             <div
               key={index}
-              className="border border-border/80 rounded-2xl overflow-hidden bg-background transition-colors hover:border-[var(--brand-primary)]/40 shadow-sm"
+              className="delete-account-faq-item"
             >
               <button
                 type="button"

@@ -2526,14 +2526,14 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Delete Account Page Dedicated Styles */
 .delete-account-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2.75rem; /* 44px gap between sections */
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 3rem !important; /* 48px gap between all section boxes */
 }
 
 @media (min-width: 640px) {
   .delete-account-container {
-    gap: 3.5rem; /* 56px gap between sections on desktop */
+    gap: 4rem !important; /* 64px gap between all section boxes on desktop */
   }
 }
 
@@ -2546,6 +2546,63 @@ h1, h2, h3, h4, h5, h6 {
     padding: 2.25rem 2.25rem;
   }
 }
+
+/* Steps Grid */
+.delete-account-steps-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem; /* 24px gap between box A and B */
+}
+
+@media (min-width: 768px) {
+  .delete-account-steps-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem; /* 32px gap between box A and B */
+  }
+}
+
+/* Data List Grid */
+.delete-account-data-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem; /* 20px */
+}
+
+@media (min-width: 640px) {
+  .delete-account-data-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem; /* 24px */
+  }
+}
+
+@media (min-width: 1024px) {
+  .delete-account-data-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem; /* 24px */
+  }
+}
+
+/* FAQ List & Item Gaps */
+.delete-account-faq-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1rem !important; /* 16px explicit gap between each FAQ box */
+  padding-top: 0.5rem;
+}
+
+.delete-account-faq-item {
+  border: 1px solid var(--color-border, #27272a) !important;
+  border-radius: 1rem !important;
+  overflow: hidden !important;
+  background-color: var(--color-background, #121212) !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) !important;
+}
+
+.delete-account-faq-item:hover {
+  border-color: rgba(0, 200, 150, 0.4) !important;
+}
+
 
 .delete-account-form-input {
   width: 100% !important;

@@ -17,7 +17,7 @@ export function DeleteAccountSteps() {
       </div>
 
       {/* Grid of Steps */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 pt-2">
+      <div className="delete-account-steps-grid pt-2">
         {/* Metode A: Self Service via Dashboard */}
         <div className="bg-secondary/40 border border-border/80 rounded-2xl delete-account-card flex flex-col justify-between hover:border-[var(--brand-primary)]/50 transition-colors shadow-sm">
           <div className="space-y-6">
