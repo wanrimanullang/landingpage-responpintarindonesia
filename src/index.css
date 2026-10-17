@@ -2523,3 +2523,273 @@ h1, h2, h3, h4, h5, h6 {
 .animate-marquee:hover {
   animation-play-state: paused;
 }
+
+/* Delete Account Page Dedicated Styles */
+.delete-account-container {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 3rem !important; /* 48px gap between all section boxes */
+}
+
+@media (min-width: 640px) {
+  .delete-account-container {
+    gap: 4rem !important; /* 64px gap between all section boxes on desktop */
+  }
+}
+
+.delete-account-card {
+  padding: 1.75rem 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .delete-account-card {
+    padding: 2.25rem 2.25rem;
+  }
+}
+
+/* Steps Grid */
+.delete-account-steps-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem; /* 24px gap between box A and B */
+}
+
+@media (min-width: 768px) {
+  .delete-account-steps-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem; /* 32px gap between box A and B */
+  }
+}
+
+/* Data List Grid */
+.delete-account-data-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem; /* 20px */
+}
+
+@media (min-width: 640px) {
+  .delete-account-data-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem; /* 24px */
+  }
+}
+
+@media (min-width: 1024px) {
+  .delete-account-data-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem; /* 24px */
+  }
+}
+
+/* FAQ List & Item Gaps */
+.delete-account-faq-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1rem !important; /* 16px explicit gap between each FAQ box */
+  padding-top: 0.5rem;
+}
+
+.delete-account-faq-item {
+  border: 1px solid var(--color-border, #27272a) !important;
+  border-radius: 1rem !important;
+  overflow: hidden !important;
+  background-color: var(--color-background, #121212) !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) !important;
+}
+
+.delete-account-faq-item:hover {
+  border-color: rgba(0, 200, 150, 0.4) !important;
+}
+
+
+.delete-account-form-input {
+  width: 100% !important;
+  padding: 0.875rem 1.25rem !important; /* 14px top/bottom, 20px sides */
+  min-height: 52px !important;
+  border-radius: 0.75rem !important;
+  font-size: 0.9375rem !important; /* 15px */
+  line-height: 1.5 !important;
+  box-sizing: border-box !important;
+}
+
+.delete-account-form-textarea {
+  width: 100% !important;
+  padding: 1rem 1.25rem !important;
+  min-height: 128px !important;
+  border-radius: 0.75rem !important;
+  font-size: 0.9375rem !important;
+  line-height: 1.6 !important;
+  box-sizing: border-box !important;
+  resize: vertical;
+}
+
+.delete-account-submit-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.625rem !important;
+  padding: 0.875rem 2rem !important;
+  min-height: 52px !important;
+  border-radius: 0.75rem !important;
+  background-color: #dc2626 !important; /* red-600 */
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 0.9375rem !important;
+  transition: all 0.2s ease !important;
+  border: none !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.3) !important;
+}
+
+.delete-account-submit-btn:hover:not(:disabled) {
+  background-color: #b91c1c !important; /* red-700 */
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(220, 38, 38, 0.4) !important;
+}
+
+.delete-account-submit-btn:disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+}
+
+.delete-account-faq-trigger {
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 1.25rem 1.5rem !important; /* 20px top/bottom, 24px sides */
+  text-align: left !important;
+  font-weight: 600 !important;
+  font-size: 0.9375rem !important;
+  border: none !important;
+  background: transparent !important;
+  color: inherit !important;
+  cursor: pointer !important;
+  gap: 1rem !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.delete-account-faq-trigger:hover {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+.delete-account-faq-content {
+  padding: 0.25rem 1.5rem 1.5rem 1.5rem !important; /* 24px sides and bottom */
+  font-size: 0.875rem !important;
+  line-height: 1.65 !important;
+}
+
+/* Timeline Components */
+.timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-top: 0.5rem;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 1.25rem;
+  position: relative;
+}
+
+.timeline-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 24px;
+}
+
+.timeline-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background-color: var(--brand-primary, #00C896);
+  border: 3px solid #0a0a0a;
+  box-shadow: 0 0 0 2px var(--brand-primary, #00C896);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.timeline-line {
+  width: 2px;
+  flex-grow: 1;
+  background-color: rgba(0, 200, 150, 0.35);
+  margin-top: 6px;
+  margin-bottom: 6px;
+  min-height: 52px;
+}
+
+.timeline-content {
+  padding-bottom: 2.25rem;
+  flex: 1;
+}
+
+.timeline-title {
+  font-size: 1.0625rem !important;
+  font-weight: 700 !important;
+  color: var(--color-foreground, #ffffff) !important;
+  margin-bottom: 0.375rem !important;
+  line-height: 1.4 !important;
+}
+
+.timeline-desc {
+  font-size: 0.9375rem !important;
+  color: var(--muted-foreground, #a1a1aa) !important;
+  line-height: 1.6 !important;
+}
+
+/* Table Components */
+.delete-account-table-wrapper {
+  overflow-x: auto;
+  border-radius: 14px;
+  border: 1px solid var(--color-border, #27272a);
+  background-color: var(--color-background, #121212);
+}
+
+.delete-account-table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.delete-account-table th {
+  padding: 16px 20px !important;
+  font-size: 0.9375rem !important;
+  font-weight: 700 !important;
+  color: var(--color-foreground, #ffffff) !important;
+  background-color: rgba(255, 255, 255, 0.04) !important;
+  border-bottom: 1px solid var(--color-border, #27272a) !important;
+  white-space: nowrap;
+}
+
+.delete-account-table td {
+  padding: 18px 20px !important;
+  font-size: 0.9375rem !important;
+  color: var(--muted-foreground, #a1a1aa) !important;
+  border-bottom: 1px solid var(--color-border, #27272a) !important;
+  vertical-align: top;
+  line-height: 1.6 !important;
+}
+
+.delete-account-table tr:last-child td {
+  border-bottom: none !important;
+}
+
+.delete-account-retention-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background-color: rgba(0, 200, 150, 0.12);
+  color: var(--brand-primary, #00C896);
+  font-weight: 600;
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+

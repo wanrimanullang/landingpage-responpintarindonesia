@@ -80,6 +80,7 @@ export function Footer() {
               <li><Link to="/blog" style={{ color: '#666', fontSize: '14px', textDecoration: 'none', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#fff'} onMouseOut={(e) => e.currentTarget.style.color = '#666'}>Blog</Link></li>
               <li><Link to="/privacy" style={{ color: '#666', fontSize: '14px', textDecoration: 'none', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#fff'} onMouseOut={(e) => e.currentTarget.style.color = '#666'}>Privacy Policy</Link></li>
               <li><Link to="/terms" style={{ color: '#666', fontSize: '14px', textDecoration: 'none', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#fff'} onMouseOut={(e) => e.currentTarget.style.color = '#666'}>Terms of Service</Link></li>
+              <li><Link to="/delete-account" style={{ color: '#666', fontSize: '14px', textDecoration: 'none', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#fff'} onMouseOut={(e) => e.currentTarget.style.color = '#666'}>Hapus Akun</Link></li>
             </ul>
           </div>
 
@@ -135,6 +136,7 @@ export function Footer() {
         <div style={{ display: 'flex', gap: '24px' }}>
           <Link to="/privacy" style={{ color: '#444', fontSize: '13px', textDecoration: 'none', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#fff'} onMouseOut={(e) => e.currentTarget.style.color = '#444'}>Privacy</Link>
           <Link to="/terms" style={{ color: '#444', fontSize: '13px', textDecoration: 'none', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#fff'} onMouseOut={(e) => e.currentTarget.style.color = '#444'}>Terms</Link>
+          <Link to="/delete-account" style={{ color: '#444', fontSize: '13px', textDecoration: 'none', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#fff'} onMouseOut={(e) => e.currentTarget.style.color = '#444'}>Hapus Akun</Link>
         </div>
       </div>
 
