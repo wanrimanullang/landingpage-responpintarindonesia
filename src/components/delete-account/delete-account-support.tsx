@@ -2,7 +2,7 @@ import { Mail, Phone } from 'lucide-react';
 
 export function DeleteAccountSupport() {
   return (
-    <section className="bg-gradient-to-br from-secondary/80 to-secondary/30 border border-border rounded-2xl p-6 sm:p-10 shadow-sm">
+    <section className="bg-gradient-to-br from-secondary/80 to-secondary/30 border border-border rounded-2xl delete-account-card shadow-sm">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 sm:gap-8">
         <div className="space-y-2">
           <h2 className="text-xl sm:text-2xl font-bold text-foreground">Butuh Bantuan Lebih Lanjut?</h2>

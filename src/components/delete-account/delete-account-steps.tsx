@@ -2,7 +2,7 @@ import { FileText, ArrowRight, ExternalLink } from 'lucide-react';
 
 export function DeleteAccountSteps() {
   return (
-    <section className="bg-card border border-border rounded-2xl p-6 sm:p-10 space-y-8">
+    <section className="bg-card border border-border rounded-2xl delete-account-card space-y-8">
       {/* Section Header */}
       <div className="flex items-start gap-4 sm:gap-5">
         <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] flex items-center justify-center flex-shrink-0 shadow-sm">
@@ -19,7 +19,7 @@ export function DeleteAccountSteps() {
       {/* Grid of Steps */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 pt-2">
         {/* Metode A: Self Service via Dashboard */}
-        <div className="bg-secondary/40 border border-border/80 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-[var(--brand-primary)]/50 transition-colors shadow-sm">
+        <div className="bg-secondary/40 border border-border/80 rounded-2xl delete-account-card flex flex-col justify-between hover:border-[var(--brand-primary)]/50 transition-colors shadow-sm">
           <div className="space-y-6">
             <div className="flex items-center gap-3">
               <span className="w-8 h-8 rounded-xl bg-[var(--brand-primary)] text-white text-sm flex items-center justify-center font-bold shadow-sm">
@@ -98,7 +98,7 @@ export function DeleteAccountSteps() {
         </div>
 
         {/* Metode B: Request via Web Form */}
-        <div className="bg-secondary/40 border border-border/80 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-[var(--brand-primary)]/50 transition-colors shadow-sm">
+        <div className="bg-secondary/40 border border-border/80 rounded-2xl delete-account-card flex flex-col justify-between hover:border-[var(--brand-primary)]/50 transition-colors shadow-sm">
           <div className="space-y-6">
             <div className="flex items-center gap-3">
               <span className="w-8 h-8 rounded-xl bg-[var(--brand-primary)] text-white text-sm flex items-center justify-center font-bold shadow-sm">

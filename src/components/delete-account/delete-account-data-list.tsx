@@ -49,9 +49,9 @@ const deletedItems = [
 
 export function DeleteAccountDataList() {
   return (
-    <div className="space-y-10">
+    <div className="space-y-12">
       {/* Data yang Akan Dihapus */}
-      <section className="bg-card border border-border rounded-2xl p-6 sm:p-10 space-y-8 shadow-sm">
+      <section className="bg-card border border-border rounded-2xl delete-account-card space-y-8 shadow-sm">
         <div className="flex items-start gap-4 sm:gap-5">
           <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] flex items-center justify-center flex-shrink-0 shadow-sm">
             <User className="w-6 h-6 text-white" />
@@ -81,7 +81,7 @@ export function DeleteAccountDataList() {
       </section>
 
       {/* Data yang Tetap Disimpan */}
-      <section className="bg-card border border-border rounded-2xl p-6 sm:p-10 space-y-8 shadow-sm">
+      <section className="bg-card border border-border rounded-2xl delete-account-card space-y-8 shadow-sm">
         <div className="flex items-start gap-4 sm:gap-5">
           <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] flex items-center justify-center flex-shrink-0 shadow-sm">
             <Shield className="w-6 h-6 text-white" />

@@ -42,7 +42,7 @@ export function DeleteAccountFaq() {
   };
 
   return (
-    <section className="bg-card border border-border rounded-2xl p-6 sm:p-10 space-y-8 shadow-sm">
+    <section className="bg-card border border-border rounded-2xl delete-account-card space-y-8 shadow-sm">
       <div className="flex items-start gap-4 sm:gap-5">
         <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] flex items-center justify-center flex-shrink-0 shadow-sm">
           <HelpCircle className="w-6 h-6 text-white" />
@@ -55,7 +55,7 @@ export function DeleteAccountFaq() {
         </div>
       </div>
 
-      <div className="space-y-4 pt-2">
+      <div className="pt-2 flex flex-col gap-3.5">
         {faqs.map((faq, index) => {
           const isOpen = openFaqIndex === index;
           return (
@@ -66,7 +66,7 @@ export function DeleteAccountFaq() {
               <button
                 type="button"
                 onClick={() => toggleFaq(index)}
-                className="w-full flex items-center justify-between p-5 sm:p-6 text-left font-bold text-sm sm:text-base hover:bg-secondary/40 transition gap-4"
+                className="delete-account-faq-trigger"
               >
                 <span className="text-foreground">{faq.question}</span>
                 {isOpen ? (
@@ -76,7 +76,7 @@ export function DeleteAccountFaq() {
                 )}
               </button>
               {isOpen && (
-                <div className="px-5 sm:px-6 pb-6 pt-2 text-sm sm:text-base text-muted-foreground leading-relaxed border-t border-border/50">
+                <div className="delete-account-faq-content text-muted-foreground border-t border-border/50">
                   {faq.answer}
                 </div>
               )}

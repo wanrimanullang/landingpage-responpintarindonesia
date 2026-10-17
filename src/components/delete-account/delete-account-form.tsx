@@ -26,7 +26,7 @@ export function DeleteAccountForm() {
   };
 
   return (
-    <section id="request-form" className="bg-card border border-border rounded-2xl p-6 sm:p-10 space-y-8 scroll-mt-24 shadow-sm">
+    <section id="request-form" className="bg-card border border-border rounded-2xl delete-account-card space-y-8 scroll-mt-24 shadow-sm">
       {/* Section Header */}
       <div className="flex items-start gap-4 sm:gap-5">
         <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] flex items-center justify-center flex-shrink-0 shadow-sm">
@@ -74,7 +74,7 @@ export function DeleteAccountForm() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="nama@email.com"
-                className="w-full px-4 sm:px-5 py-3.5 sm:py-4 rounded-xl border border-border bg-background text-foreground text-sm sm:text-base placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)] focus:border-transparent transition-all shadow-sm"
+                className="delete-account-form-input border border-border bg-background text-foreground"
               />
             </div>
 
@@ -89,7 +89,7 @@ export function DeleteAccountForm() {
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 placeholder="+62 812-xxxx-xxxx"
-                className="w-full px-4 sm:px-5 py-3.5 sm:py-4 rounded-xl border border-border bg-background text-foreground text-sm sm:text-base placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)] focus:border-transparent transition-all shadow-sm"
+                className="delete-account-form-input border border-border bg-background text-foreground"
               />
             </div>
           </div>
@@ -103,7 +103,7 @@ export function DeleteAccountForm() {
               id="reason"
               value={reason}
               onChange={(e) => setReason(e.target.value)}
-              className="w-full px-4 sm:px-5 py-3.5 sm:py-4 rounded-xl border border-border bg-background text-foreground text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)] focus:border-transparent transition-all shadow-sm"
+              className="delete-account-form-input border border-border bg-background text-foreground"
             >
               <option value="">Pilih alasan penghapusan...</option>
               <option value="Tidak lagi membutuhkan layanan">Tidak lagi membutuhkan layanan</option>
@@ -126,19 +126,20 @@ export function DeleteAccountForm() {
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
               placeholder="Tuliskan informasi atau pertanyaan tambahan untuk tim verifikasi kami..."
-              className="w-full px-4 sm:px-5 py-3.5 sm:py-4 rounded-xl border border-border bg-background text-foreground text-sm sm:text-base placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)] focus:border-transparent transition-all shadow-sm resize-none min-h-[120px]"
+              className="delete-account-form-textarea border border-border bg-background text-foreground"
             />
           </div>
 
           {/* Consent Checkbox */}
-          <div className="p-5 sm:p-6 rounded-xl bg-secondary/40 border border-border/80">
+          <div className="rounded-xl bg-secondary/40 border border-border/80" style={{ padding: '20px 24px' }}>
             <label className="flex items-start gap-3.5 cursor-pointer select-none">
               <input
                 type="checkbox"
                 checked={confirmed}
                 onChange={(e) => setConfirmed(e.target.checked)}
                 required
-                className="mt-1 w-5 h-5 rounded border-border text-[var(--brand-primary)] focus:ring-[var(--brand-primary)] cursor-pointer flex-shrink-0"
+                style={{ width: '20px', height: '20px', marginTop: '2px', cursor: 'pointer', flexShrink: 0 }}
+                className="rounded border-border text-[var(--brand-primary)]"
               />
               <span className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                 Saya menyatakan secara sadar bahwa saya adalah pemilik sah akun di atas dan memahami bahwa seluruh data, konfigurasi bot, kontak, dan riwayat chat akan <strong className="text-foreground">dihapus secara permanen</strong> setelah masa tenggang berakhir serta tidak dapat dipulihkan kembali.
@@ -151,7 +152,7 @@ export function DeleteAccountForm() {
             <button
               type="submit"
               disabled={!confirmed}
-              className="px-8 py-3.5 sm:py-4 rounded-xl bg-red-600 hover:bg-red-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold text-sm sm:text-base transition-all duration-200 shadow-md hover:shadow-lg flex items-center justify-center gap-2"
+              className="delete-account-submit-btn"
             >
               <Send className="w-4 h-4" />
               <span>Kirim Permintaan Hapus Akun</span>

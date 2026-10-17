@@ -22,7 +22,7 @@ export default function DeleteAccountPage() {
 
   return (
     <main className="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto space-y-10">
+      <div className="max-w-4xl mx-auto delete-account-container space-y-12">
         {/* Header Section */}
         <DeleteAccountHeader />
 
