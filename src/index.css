@@ -2625,3 +2625,114 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.65 !important;
 }
 
+/* Timeline Components */
+.timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-top: 0.5rem;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 1.25rem;
+  position: relative;
+}
+
+.timeline-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 24px;
+}
+
+.timeline-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background-color: var(--brand-primary, #00C896);
+  border: 3px solid #0a0a0a;
+  box-shadow: 0 0 0 2px var(--brand-primary, #00C896);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.timeline-line {
+  width: 2px;
+  flex-grow: 1;
+  background-color: rgba(0, 200, 150, 0.35);
+  margin-top: 6px;
+  margin-bottom: 6px;
+  min-height: 52px;
+}
+
+.timeline-content {
+  padding-bottom: 2.25rem;
+  flex: 1;
+}
+
+.timeline-title {
+  font-size: 1.0625rem !important;
+  font-weight: 700 !important;
+  color: var(--color-foreground, #ffffff) !important;
+  margin-bottom: 0.375rem !important;
+  line-height: 1.4 !important;
+}
+
+.timeline-desc {
+  font-size: 0.9375rem !important;
+  color: var(--muted-foreground, #a1a1aa) !important;
+  line-height: 1.6 !important;
+}
+
+/* Table Components */
+.delete-account-table-wrapper {
+  overflow-x: auto;
+  border-radius: 14px;
+  border: 1px solid var(--color-border, #27272a);
+  background-color: var(--color-background, #121212);
+}
+
+.delete-account-table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.delete-account-table th {
+  padding: 16px 20px !important;
+  font-size: 0.9375rem !important;
+  font-weight: 700 !important;
+  color: var(--color-foreground, #ffffff) !important;
+  background-color: rgba(255, 255, 255, 0.04) !important;
+  border-bottom: 1px solid var(--color-border, #27272a) !important;
+  white-space: nowrap;
+}
+
+.delete-account-table td {
+  padding: 18px 20px !important;
+  font-size: 0.9375rem !important;
+  color: var(--muted-foreground, #a1a1aa) !important;
+  border-bottom: 1px solid var(--color-border, #27272a) !important;
+  vertical-align: top;
+  line-height: 1.6 !important;
+}
+
+.delete-account-table tr:last-child td {
+  border-bottom: none !important;
+}
+
+.delete-account-retention-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background-color: rgba(0, 200, 150, 0.12);
+  color: var(--brand-primary, #00C896);
+  font-weight: 600;
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+

@@ -33,8 +33,8 @@ export function DeleteAccountSteps() {
             </p>
 
             <ol className="space-y-4 text-sm text-muted-foreground">
-              <li className="flex items-start gap-3">
-                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-background border border-border flex items-center justify-center text-xs font-bold text-foreground mt-0.5">
+              <li className="flex items-start" style={{ gap: '14px' }}>
+                <span style={{ width: '24px', height: '24px', borderRadius: '9999px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '12px', fontWeight: 700, flexShrink: 0, marginTop: '2px', border: '1px solid var(--color-border, #27272a)', backgroundColor: 'var(--color-background, #121212)' }}>
                   1
                 </span>
                 <span className="leading-relaxed">
@@ -49,32 +49,32 @@ export function DeleteAccountSteps() {
                   </a>
                 </span>
               </li>
-              <li className="flex items-start gap-3">
-                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-background border border-border flex items-center justify-center text-xs font-bold text-foreground mt-0.5">
+              <li className="flex items-start" style={{ gap: '14px' }}>
+                <span style={{ width: '24px', height: '24px', borderRadius: '9999px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '12px', fontWeight: 700, flexShrink: 0, marginTop: '2px', border: '1px solid var(--color-border, #27272a)', backgroundColor: 'var(--color-background, #121212)' }}>
                   2
                 </span>
                 <span className="leading-relaxed">
                   Buka menu <strong className="text-foreground">Profil / Pengaturan Akun</strong> di pojok kanan atas.
                 </span>
               </li>
-              <li className="flex items-start gap-3">
-                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-background border border-border flex items-center justify-center text-xs font-bold text-foreground mt-0.5">
+              <li className="flex items-start" style={{ gap: '14px' }}>
+                <span style={{ width: '24px', height: '24px', borderRadius: '9999px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '12px', fontWeight: 700, flexShrink: 0, marginTop: '2px', border: '1px solid var(--color-border, #27272a)', backgroundColor: 'var(--color-background, #121212)' }}>
                   3
                 </span>
                 <span className="leading-relaxed">
                   Gulir ke bagian paling bawah pada menu <strong className="text-foreground">Zona Berbahaya (Danger Zone)</strong>.
                 </span>
               </li>
-              <li className="flex items-start gap-3">
-                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-background border border-border flex items-center justify-center text-xs font-bold text-foreground mt-0.5">
+              <li className="flex items-start" style={{ gap: '14px' }}>
+                <span style={{ width: '24px', height: '24px', borderRadius: '9999px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '12px', fontWeight: 700, flexShrink: 0, marginTop: '2px', border: '1px solid var(--color-border, #27272a)', backgroundColor: 'var(--color-background, #121212)' }}>
                   4
                 </span>
                 <span className="leading-relaxed">
                   Klik tombol <strong className="text-foreground">Hapus Akun Saya</strong> dan masukkan password akun untuk konfirmasi.
                 </span>
               </li>
-              <li className="flex items-start gap-3">
-                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-background border border-border flex items-center justify-center text-xs font-bold text-foreground mt-0.5">
+              <li className="flex items-start" style={{ gap: '14px' }}>
+                <span style={{ width: '24px', height: '24px', borderRadius: '9999px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '12px', fontWeight: 700, flexShrink: 0, marginTop: '2px', border: '1px solid var(--color-border, #27272a)', backgroundColor: 'var(--color-background, #121212)' }}>
                   5
                 </span>
                 <span className="leading-relaxed">
@@ -112,20 +112,20 @@ export function DeleteAccountSteps() {
             </p>
 
             <ul className="space-y-4 text-sm text-muted-foreground">
-              <li className="flex items-start gap-3">
-                <span className="text-[var(--brand-primary)] text-lg leading-none mt-0.5">•</span>
+              <li className="flex items-start" style={{ gap: '14px' }}>
+                <span style={{ color: 'var(--brand-primary, #00C896)', fontSize: '20px', lineHeight: 1, marginTop: '2px', flexShrink: 0 }}>•</span>
                 <span className="leading-relaxed">
                   Isi formulir pengajuan penghapusan akun yang tersedia di bagian bawah halaman ini.
                 </span>
               </li>
-              <li className="flex items-start gap-3">
-                <span className="text-[var(--brand-primary)] text-lg leading-none mt-0.5">•</span>
+              <li className="flex items-start" style={{ gap: '14px' }}>
+                <span style={{ color: 'var(--brand-primary, #00C896)', fontSize: '20px', lineHeight: 1, marginTop: '2px', flexShrink: 0 }}>•</span>
                 <span className="leading-relaxed">
                   Tim verifikasi kami akan mengirimkan email konfirmasi ke alamat email terdaftar dalam 1–3 hari kerja.
                 </span>
               </li>
-              <li className="flex items-start gap-3">
-                <span className="text-[var(--brand-primary)] text-lg leading-none mt-0.5">•</span>
+              <li className="flex items-start" style={{ gap: '14px' }}>
+                <span style={{ color: 'var(--brand-primary, #00C896)', fontSize: '20px', lineHeight: 1, marginTop: '2px', flexShrink: 0 }}>•</span>
                 <span className="leading-relaxed">
                   Setelah verifikasi kepemilikan akun berhasil, akun Anda akan dijadwalkan untuk dihapus secara permanen.
                 </span>

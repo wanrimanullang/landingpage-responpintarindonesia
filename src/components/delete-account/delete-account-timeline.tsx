@@ -38,14 +38,25 @@ export function DeleteAccountTimeline() {
         </div>
       </div>
 
-      <div className="relative border-l-2 border-[var(--brand-primary)]/40 ml-4 sm:ml-6 pl-6 sm:pl-8 space-y-8 pt-2">
-        {timelineSteps.map((item, idx) => (
-          <div key={idx} className="relative space-y-1.5">
-            <div className="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-[var(--brand-primary)] border-4 border-background" />
-            <h3 className="font-bold text-base sm:text-lg text-foreground">{item.step}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
-          </div>
-        ))}
+      <div className="timeline-list">
+        {timelineSteps.map((item, idx) => {
+          const isLast = idx === timelineSteps.length - 1;
+          return (
+            <div key={idx} className="timeline-item">
+              {/* Left Column: Dot & Connecting Line */}
+              <div className="timeline-indicator">
+                <div className="timeline-dot" />
+                {!isLast && <div className="timeline-line" />}
+              </div>
+
+              {/* Right Column: Step Title & Content */}
+              <div className="timeline-content">
+                <h3 className="timeline-title">{item.step}</h3>
+                <p className="timeline-desc">{item.description}</p>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </section>
   );

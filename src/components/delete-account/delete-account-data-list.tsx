@@ -94,36 +94,36 @@ export function DeleteAccountDataList() {
           </div>
         </div>
 
-        <div className="overflow-x-auto rounded-xl border border-border">
-          <table className="w-full text-left text-sm border-collapse">
+        <div className="delete-account-table-wrapper">
+          <table className="delete-account-table">
             <thead>
-              <tr className="border-b border-border bg-secondary/50">
-                <th className="py-4 px-5 font-semibold text-foreground text-sm sm:text-base">Jenis Data</th>
-                <th className="py-4 px-5 font-semibold text-foreground text-sm sm:text-base">Dasar Hukum & Alasan</th>
-                <th className="py-4 px-5 font-semibold text-foreground text-sm sm:text-base">Masa Retensi</th>
+              <tr>
+                <th style={{ width: '30%' }}>Jenis Data</th>
+                <th style={{ width: '52%' }}>Dasar Hukum & Alasan</th>
+                <th style={{ width: '18%', textAlign: 'center' }}>Masa Retensi</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-border bg-background">
+            <tbody>
               <tr>
-                <td className="py-4 px-5 font-semibold text-foreground text-sm sm:text-base">
+                <td style={{ fontWeight: 600, color: 'var(--color-foreground, #ffffff)' }}>
                   Catatan Transaksi & Faktur Pajak
                 </td>
-                <td className="py-4 px-5 text-muted-foreground text-sm sm:text-base leading-relaxed">
+                <td>
                   Kepatuhan terhadap UU Perpajakan Republik Indonesia dan kewajiban audit laporan keuangan resmi perusahaan.
                 </td>
-                <td className="py-4 px-5 text-muted-foreground text-sm sm:text-base whitespace-nowrap font-medium">
-                  5 Tahun
+                <td style={{ textAlign: 'center' }}>
+                  <span className="delete-account-retention-badge">5 Tahun</span>
                 </td>
               </tr>
               <tr>
-                <td className="py-4 px-5 font-semibold text-foreground text-sm sm:text-base">
+                <td style={{ fontWeight: 600, color: 'var(--color-foreground, #ffffff)' }}>
                   Log Akses Keamanan Teranonim
                 </td>
-                <td className="py-4 px-5 text-muted-foreground text-sm sm:text-base leading-relaxed">
+                <td>
                   Audit pencegahan serangan siber dan deteksi aktivitas mencurigakan (<em>fraud prevention</em>), tanpa menyimpan informasi identitas pribadi (PII).
                 </td>
-                <td className="py-4 px-5 text-muted-foreground text-sm sm:text-base whitespace-nowrap font-medium">
-                  12 Bulan
+                <td style={{ textAlign: 'center' }}>
+                  <span className="delete-account-retention-badge">12 Bulan</span>
                 </td>
               </tr>
             </tbody>
