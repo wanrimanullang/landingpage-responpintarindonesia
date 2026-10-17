@@ -30,10 +30,12 @@ export default function SignalBadge({
   className?: string;
 }) {
   const s = STYLES[variant] || STYLES.positive;
+  const hasDisplay = className.includes('hidden') || className.includes('flex') || className.includes('inline') || className.includes('block');
+  const baseDisplay = hasDisplay ? '' : 'inline-flex';
 
   return (
     <span
-      className={`inline-flex items-center gap-2 whitespace-nowrap border px-[10px] py-[4px] rounded-[6px] font-mono text-[12px] uppercase tracking-[0.08em] leading-tight select-none ${className}`}
+      className={`${baseDisplay} items-center gap-2 whitespace-nowrap border px-[10px] py-[4px] rounded-[6px] font-mono text-[12px] uppercase tracking-[0.08em] leading-tight select-none ${className}`}
       style={{ borderColor: s.border, color: s.color }}
     >
       <span

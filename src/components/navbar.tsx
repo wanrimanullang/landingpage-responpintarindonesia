@@ -21,16 +21,16 @@ export function Navbar({ theme, toggleTheme }: NavbarProps) {
         {/* Logo & Brand */}
         <Link
           to="/"
-          className="flex items-center gap-3 group text-[#E9EBEF] no-underline transition-opacity"
+          className="flex items-center gap-2 group text-[#E9EBEF] no-underline transition-opacity shrink-0"
         >
-          <div className="w-9 h-9 rounded-[6px] border border-[rgba(255,255,255,0.12)] bg-[#111214] p-1.5 flex items-center justify-center group-hover:border-[#8FE3B0]/50 transition-colors">
+          <div className="w-8 h-8 rounded-[6px] border border-[rgba(255,255,255,0.12)] bg-[#111214] p-1 flex items-center justify-center group-hover:border-[#8FE3B0]/50 transition-colors">
             <Logo />
           </div>
           <div className="flex flex-col">
-            <span className="font-bold tracking-tight text-base sm:text-lg text-[#E9EBEF] leading-tight">
+            <span className="font-bold tracking-tight text-xs sm:text-base text-[#E9EBEF] leading-tight whitespace-nowrap">
               Respon Pintar
             </span>
-            <span className="font-mono text-[9px] uppercase tracking-[0.16em] text-[#636B76]">
+            <span className="font-mono text-[9px] uppercase tracking-[0.16em] text-[#636B76] hidden sm:block whitespace-nowrap">
               Omnichannel Platform
             </span>
           </div>
@@ -66,18 +66,20 @@ export function Navbar({ theme, toggleTheme }: NavbarProps) {
         </div>
 
         {/* Right Actions */}
-        <div className="flex items-center gap-3">
-          <SignalBadge label="OMNICHANNEL LIVE" variant="positive" className="hidden lg:inline-flex" />
+        <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
+          <div className="hidden lg:block">
+            <SignalBadge label="OMNICHANNEL LIVE" variant="positive" />
+          </div>
 
           <button
             onClick={toggleTheme}
-            className="w-10 h-10 rounded-[6px] border border-[rgba(255,255,255,0.12)] bg-[#111214] text-[#AEB4BD] hover:text-[#E9EBEF] hover:border-[rgba(255,255,255,0.25)] flex items-center justify-center transition-all cursor-pointer"
+            className="w-8 h-8 sm:w-10 sm:h-10 rounded-[6px] border border-[rgba(255,255,255,0.12)] bg-[#111214] text-[#AEB4BD] hover:text-[#E9EBEF] hover:border-[rgba(255,255,255,0.25)] flex items-center justify-center transition-all cursor-pointer shrink-0"
             aria-label="Toggle theme"
           >
             {theme === 'light' ? (
-              <MoonIcon className="w-4 h-4 text-[#AEB4BD]" />
+              <MoonIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#AEB4BD]" />
             ) : (
-              <SunIcon className="w-4 h-4 text-[#AEB4BD]" />
+              <SunIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#AEB4BD]" />
             )}
           </button>
 
@@ -85,9 +87,10 @@ export function Navbar({ theme, toggleTheme }: NavbarProps) {
             href="https://crm.responpintar.com/auth/login"
             target="_blank"
             rel="noopener noreferrer"
-            className="landing-btn-primary"
+            className="landing-btn-primary !min-h-[44px] !px-2.5 sm:!px-5 shrink-0 !text-[11px] sm:!text-xs !tracking-normal sm:!tracking-[0.08em]"
           >
-            Mulai Sekarang →
+            <span>Mulai Sekarang</span>
+            <span className="hidden sm:inline"> →</span>
           </a>
         </div>
       </div>

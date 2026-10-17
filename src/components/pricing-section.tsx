@@ -52,7 +52,7 @@ export function PricingSection() {
 
         {/* Pricing Widget Container (embedded from API) */}
         <ScrollReveal delay={180}>
-          <div className="w-full mb-16">
+          <div className="w-full mb-16 overflow-x-auto">
             <div className="w-full text-[#E9EBEF]" data-wapi-snippet="36058ade7948a5937101b838" />
           </div>
         </ScrollReveal>

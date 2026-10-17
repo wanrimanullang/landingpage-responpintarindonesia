@@ -100,9 +100,9 @@ export function HeroSection() {
             <ScrollReveal delay={120}>
               <div className="landing-card shadow-2xl">
                 {/* Header kartu dipisah garis tipis (border-bottom) dengan padding-bottom 16px */}
-                <div className="landing-card-header">
+                <div className="landing-card-header flex-wrap gap-3">
                   <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-[6px] border border-[rgba(255,255,255,0.12)] bg-[#1a1c1f] flex items-center justify-center text-[#8FE3B0]">
+                    <div className="w-9 h-9 rounded-[6px] border border-[rgba(255,255,255,0.12)] bg-[#1a1c1f] flex items-center justify-center text-[#8FE3B0] shrink-0">
                       <ChatBubbleLeftRightIcon className="w-5 h-5" />
                     </div>
                     <div>

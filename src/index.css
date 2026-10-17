@@ -3023,6 +3023,12 @@ h1, h2, h3, h4, h5, h6 {
   --signal-pos: #8FE3B0;
 }
 
+/* Global Box Model & Overflow-X Prevention */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 /* Container Utility (max-width 1280px, margin auto, padding-inline 24px mobile / 32px desktop) */
 .landing-container {
   width: 100%;
