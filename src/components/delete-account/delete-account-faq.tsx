@@ -1,0 +1,89 @@
+import { useState } from 'react';
+import { HelpCircle, ChevronDown, ChevronUp } from 'lucide-react';
+
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+const faqs: FaqItem[] = [
+  {
+    question: 'Apakah akun yang sudah dihapus dapat dipulihkan kembali?',
+    answer:
+      'Akun yang diajukan untuk dihapus memiliki masa tenggang (grace period) selama 14 hari. Dalam kurun waktu tersebut, Anda dapat membatalkan proses penghapusan dengan cara login kembali ke dashboard Respon Pintar atau menghubungi tim support. Setelah 14 hari, seluruh data akun akan dihapus permanen dan tidak dapat dipulihkan kembali.',
+  },
+  {
+    question: 'Berapa lama proses penghapusan data secara menyeluruh?',
+    answer:
+      'Penghapusan data dari sistem produksi aktif dilakukan tepat setelah masa tenggang 14 hari berakhir. Untuk salinan cadangan (encrypted backup archives), data akan terhapus dan ditimpa secara otomatis dalam kurun waktu 30 hingga 90 hari sesuai siklus retensi backup.',
+  },
+  {
+    question: 'Apakah data kontak dan pelanggan saya juga ikut terhapus?',
+    answer:
+      'Ya. Seluruh data kontak pelanggan, riwayat percakapan (chat logs), tag kontak, dan variabel kustom yang Anda simpan di Respon Pintar akan ikut terhapus secara permanen dari server kami.',
+  },
+  {
+    question: 'Bagaimana dengan sisa masa aktif langganan atau kuota pesan saya?',
+    answer:
+      'Sesuai Ketentuan Layanan (Terms of Service), sisa masa aktif paket berlangganan atau kuota pesan yang belum terpakai akan otomatis hangus saat akun dihapus dan tidak dapat dikembalikan atau diuangkan (non-refundable).',
+  },
+  {
+    question: 'Apakah koneksi WhatsApp Business saya akan langsung terputus?',
+    answer:
+      'Ya. Sesi integrasi WhatsApp API / QR session akan langsung dinonaktifkan seketika proses penghapusan akun dimulai, sehingga bot otomatis dan alur kerja (workflow) tidak akan lagi merespons pesan masuk dari pelanggan Anda.',
+  },
+];
+
+export function DeleteAccountFaq() {
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+
+  const toggleFaq = (index: number) => {
+    setOpenFaqIndex(openFaqIndex === index ? null : index);
+  };
+
+  return (
+    <section className="bg-card border border-border rounded-2xl p-6 sm:p-8 space-y-6">
+      <div className="flex items-start gap-4">
+        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] flex items-center justify-center flex-shrink-0">
+          <HelpCircle className="w-5 h-5 text-white" />
+        </div>
+        <div>
+          <h2 className="text-2xl font-bold mb-1">Pertanyaan yang Sering Diajukan (FAQ)</h2>
+          <p className="text-muted-foreground text-sm">
+            Jawaban seputar kebijakan penghapusan akun dan retensi data di Respon Pintar.
+          </p>
+        </div>
+      </div>
+
+      <div className="space-y-3 pt-2">
+        {faqs.map((faq, index) => {
+          const isOpen = openFaqIndex === index;
+          return (
+            <div
+              key={index}
+              className="border border-border rounded-xl overflow-hidden bg-background transition"
+            >
+              <button
+                type="button"
+                onClick={() => toggleFaq(index)}
+                className="w-full flex items-center justify-between p-4 text-left font-semibold text-sm hover:bg-secondary/40 transition gap-4"
+              >
+                <span>{faq.question}</span>
+                {isOpen ? (
+                  <ChevronUp className="w-4 h-4 text-muted-foreground flex-shrink-0" />
+                ) : (
+                  <ChevronDown className="w-4 h-4 text-muted-foreground flex-shrink-0" />
+                )}
+              </button>
+              {isOpen && (
+                <div className="p-4 pt-0 text-xs sm:text-sm text-muted-foreground leading-relaxed border-t border-border/40 mt-1">
+                  {faq.answer}
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  );
+}

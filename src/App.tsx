@@ -13,7 +13,7 @@ import BlogPostPage from './pages/blog-post';
 import DemoPage from './pages/demo';
 import TutorialConnectedWhatsappPage from './pages/tutorial-connected-whatsapp';
 import TutorialSetupWorkflowPage from './pages/tutorial-setup-workflow';
-import { useChatwoot } from './hooks/useChatwoot';
+import DeleteAccountPage from './pages/delete-account';
 import { ChatbotDemoModalProvider } from './context/chatbot-demo-context';
 
 export default function App() {
@@ -40,13 +40,6 @@ export default function App() {
     localStorage.setItem('theme', newTheme);
   };
 
-  // Initialize Chatwoot chatbot
-  useChatwoot({
-    websiteToken: 'AH84MtFe5Ux2XxicvHdu77PX',
-    baseUrl: 'https://chat.responpintar.com',
-    position: 'right',
-    locale: 'en',
-  });
 
   return (
     <Router>
@@ -62,6 +55,7 @@ export default function App() {
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/:slug" element={<BlogPostPage />} />
             <Route path="/demo" element={<DemoPage />} />
+            <Route path="/delete-account" element={<DeleteAccountPage />} />
             <Route path="/tutorial/connected-whatsapp" element={<TutorialConnectedWhatsappPage />} />
             <Route path="/tutorial/setup-workflow" element={<TutorialSetupWorkflowPage />} />
           </Routes>
