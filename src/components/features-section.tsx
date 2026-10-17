@@ -1,84 +1,136 @@
 'use client';
 
-import { CpuChipIcon, BoltIcon, ShareIcon, ArrowTrendingUpIcon, ShieldCheckIcon, ClockIcon, SparklesIcon } from '@heroicons/react/24/outline';
+import React from 'react';
+import {
+  CpuChipIcon,
+  BoltIcon,
+  ShareIcon,
+  ArrowTrendingUpIcon,
+  ShieldCheckIcon,
+  ClockIcon,
+} from '@heroicons/react/24/outline';
+import MoatPanel from './showcase/MoatPanel';
+import ScrollReveal from './showcase/ScrollReveal';
+import SignalBadge from './showcase/SignalBadge';
 
 const features = [
   {
     icon: CpuChipIcon,
-    title: 'Smart AI Chatbot',
-    description: 'An AI-powered chatbot that understands context and delivers natural, human-like responses.',
+    number: '01',
+    badge: 'HYBRID RAG',
+    title: 'Smart AI Context Engine',
+    description:
+      'Mesin pemahaman semantik multimodal yang memahami intonasi dan bahasa percakapan lokal Indonesia tanpa halusinasi inventaris.',
   },
   {
     icon: BoltIcon,
-    title: 'Instant Automation',
-    description: 'Quick setup in minutes. Start serving your customers 24/7 right away.',
+    number: '02',
+    badge: 'SUB-SECOND',
+    title: 'Instant Autonomous Routing',
+    description:
+      'Setup cepat dalam hitungan menit. Alihkan 90%+ tiket berulang ke agen otonom dengan SLA latensi terjamin di bawah 400ms.',
   },
   {
     icon: ShareIcon,
-    title: 'Multi-Channel Support',
-    description: 'Integrate with WhatsApp, Instagram, Facebook, and other platforms in a single dashboard.',
+    number: '03',
+    badge: 'OMNICHANNEL',
+    title: 'Unified Channel State Machine',
+    description:
+      'Satu orkestrasi sentral untuk WhatsApp Cloud API, Instagram DM, Telegram, dan Web Widget tanpa kehilangan riwayat obrolan.',
   },
   {
     icon: ArrowTrendingUpIcon,
-    title: 'In-Depth Analytics',
-    description: 'Analytics dashboard for tracking performance, customer satisfaction, and business insights.',
+    number: '04',
+    badge: 'REALTIME',
+    title: 'ClickHouse Live Analytics',
+    description:
+      'Dashboard analitik performa resolusi tiket, metrik CSAT, deteksi tren keluhan, dan analisis sentimen real-time berbasis data.',
   },
   {
     icon: ShieldCheckIcon,
-    title: 'Guaranteed Security',
-    description: 'End-to-end encryption and international compliance standards to protect your data.',
+    number: '05',
+    badge: 'ISO 27001',
+    title: 'Zero-Trust Data Guardrails',
+    description:
+      'Enkripsi end-to-end dengan filter PII otomatis dan audit trail kriptografis siap kepatuhan regulasi data perbankan.',
   },
   {
     icon: ClockIcon,
-    title: 'Real-time Response',
-    description: 'Response time under 1 second. Your customers never have to wait long.',
+    number: '06',
+    badge: '24/7/365',
+    title: 'High-Availability Ingest',
+    description:
+      'Arsitektur Redis 7.2 Stream tahan lonjakan jutaan pesan promosi tanpa risiko webhook timeout atau pesan hilang.',
   },
 ];
 
 export function FeaturesSection() {
   return (
-    <section id="features" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
-      <div className="max-w-7xl mx-auto">
+    <section id="features" className="py-24 sm:py-32 px-4 sm:px-6 lg:px-12 border-b border-[rgba(244,245,247,0.08)] relative">
+      <div className="max-w-[1400px] mx-auto">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border">
-            <SparklesIcon className="w-4 h-4 text-[var(--brand-primary)]" />
-            <span className="text-sm">Key Features</span>
-          </div>
+        <div className="max-w-3xl mb-16 space-y-4">
+          <ScrollReveal>
+            <div className="flex items-center gap-3">
+              <p className="label-mono text-[#8FE3B0]">
+                02 · CORE CAPABILITIES
+              </p>
+              <SignalBadge label="PRODUCTION READY" variant="positive" />
+            </div>
+          </ScrollReveal>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl">
-            Everything You Need for{' '}
-            <span className="bg-gradient-to-r from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] bg-clip-text text-transparent">
-              Customer Service Automation
-            </span>
-          </h2>
+          <ScrollReveal delay={80}>
+            <h2 className="text-display font-bold tracking-tight text-[#E9EBEF]">
+              Everything you need for{' '}
+              <span className="chrome-text block">Autonomous Customer Ops.</span>
+            </h2>
+          </ScrollReveal>
 
-          <p className="text-lg text-muted-foreground">
-            A complete platform with powerful features designed to maximize your efficiency and customer satisfaction.
-          </p>
+          <ScrollReveal delay={160}>
+            <p className="text-base sm:text-lg text-[#AEB4BD] font-normal leading-relaxed max-w-2xl">
+              Platform orkestrasi lengkap dengan kapabilitas tingkat lanjut untuk efisiensi
+              maksimal, kehandalan tanpa kompromi, dan kepuasan pelanggan sejati.
+            </p>
+          </ScrollReveal>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Features Grid with MoatPanels */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
-              <div
-                key={index}
-                className="group bg-card border border-border rounded-2xl p-6 hover:shadow-xl hover:shadow-[var(--brand-primary)]/5 hover:-translate-y-1 transition-all duration-300 cursor-pointer"
-              >
-                {/* Icon Container - Tech Website Style */}
-                <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-5 group-hover:scale-110 transition-all duration-300 relative">
-                  <div className="absolute inset-0 bg-primary/20 blur-xl rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <Icon className="w-6 h-6 text-primary relative z-10" />
-                </div>
+              <ScrollReveal key={feature.number} delay={index * 80}>
+                <MoatPanel className="p-7 sm:p-8 flex flex-col justify-between h-full border border-[rgba(244,245,247,0.08)]">
+                  <div>
+                    {/* Top Tag & Number */}
+                    <div className="flex items-center justify-between mb-6 font-mono text-[11px]">
+                      <span className="text-[#636B76]">{feature.number} // CAPABILITY</span>
+                      <span className="border border-[rgba(244,245,247,0.12)] px-2 py-0.5 text-[#8FE3B0] bg-[#8FE3B0]/5 uppercase tracking-wider text-[10px]">
+                        {feature.badge}
+                      </span>
+                    </div>
 
-                {/* Content */}
-                <h3 className="mb-2">{feature.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {feature.description}
-                </p>
-              </div>
+                    {/* Icon */}
+                    <div className="w-10 h-10 rounded border border-[rgba(244,245,247,0.14)] bg-[#1a1c1f] flex items-center justify-center text-[#E9EBEF] mb-5">
+                      <Icon className="w-5 h-5 text-[#8FE3B0]" />
+                    </div>
+
+                    {/* Content */}
+                    <h3 className="text-xl font-bold text-[#E9EBEF] mb-3">
+                      {feature.title}
+                    </h3>
+                    <p className="text-sm text-[#AEB4BD] leading-relaxed font-normal">
+                      {feature.description}
+                    </p>
+                  </div>
+
+                  {/* Card Bottom status */}
+                  <div className="pt-6 mt-6 border-t border-[rgba(244,245,247,0.06)] flex items-center justify-between text-[10px] font-mono text-[#636B76]">
+                    <span>STATUS: ACTIVE</span>
+                    <span className="text-[#8A9099]">GROUNDED</span>
+                  </div>
+                </MoatPanel>
+              </ScrollReveal>
             );
           })}
         </div>

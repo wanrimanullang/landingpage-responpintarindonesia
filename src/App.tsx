@@ -14,6 +14,8 @@ import DemoPage from './pages/demo';
 import TutorialConnectedWhatsappPage from './pages/tutorial-connected-whatsapp';
 import TutorialSetupWorkflowPage from './pages/tutorial-setup-workflow';
 import DeleteAccountPage from './pages/delete-account';
+import ShowcasePage from './pages/showcase';
+import ServicesNewPage from './pages/services-new';
 import { ChatbotDemoModalProvider } from './context/chatbot-demo-context';
 
 export default function App() {
@@ -44,7 +46,7 @@ export default function App() {
   return (
     <Router>
       <ChatbotDemoModalProvider>
-        <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
+        <div className="jamie-root min-h-screen bg-[#0B0C0E] text-[#E9EBEF] relative font-sans selection:bg-[#8FE3B0]/20 selection:text-[#8FE3B0]">
           <Navbar theme={theme} toggleTheme={toggleTheme} />
 
           <Routes>
@@ -56,6 +58,10 @@ export default function App() {
             <Route path="/blog/:slug" element={<BlogPostPage />} />
             <Route path="/demo" element={<DemoPage />} />
             <Route path="/delete-account" element={<DeleteAccountPage />} />
+            <Route path="/showcase" element={<ShowcasePage />} />
+            <Route path="/work" element={<ShowcasePage />} />
+            <Route path="/services" element={<ServicesNewPage />} />
+            <Route path="/services-new" element={<ServicesNewPage />} />
             <Route path="/tutorial/connected-whatsapp" element={<TutorialConnectedWhatsappPage />} />
             <Route path="/tutorial/setup-workflow" element={<TutorialSetupWorkflowPage />} />
           </Routes>

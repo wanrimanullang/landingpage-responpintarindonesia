@@ -2792,4 +2792,308 @@ h1, h2, h3, h4, h5, h6 {
   white-space: nowrap;
 }
 
+/* ==========================================================================
+   JAMIE MCKAYE SHOWCASE DESIGN TOKENS & SYSTEM
+   ========================================================================== */
+
+.jamie-dark-theme {
+  background-color: #0b0c0e;
+  color: #f4f5f7;
+  color-scheme: dark;
+}
+
+.jamie-grid-bg {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.jamie-grid-dots {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.jamie-panel {
+  position: relative;
+  background: rgba(13, 15, 18, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  transition: border-color 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.25s ease;
+  overflow: hidden;
+}
+
+.jamie-panel:hover {
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 0 35px -8px rgba(0, 200, 150, 0.18);
+  background: rgba(18, 21, 26, 0.82);
+}
+
+.jamie-tick-tl {
+  position: absolute;
+  top: 5px;
+  left: 6px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+  font-size: 11px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.22);
+  pointer-events: none;
+  user-select: none;
+}
+
+.jamie-tick-tr {
+  position: absolute;
+  top: 5px;
+  right: 6px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+  font-size: 11px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.22);
+  pointer-events: none;
+  user-select: none;
+}
+
+.jamie-tick-bl {
+  position: absolute;
+  bottom: 5px;
+  left: 6px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+  font-size: 11px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.22);
+  pointer-events: none;
+  user-select: none;
+}
+
+.jamie-tick-br {
+  position: absolute;
+  bottom: 5px;
+  right: 6px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+  font-size: 11px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.22);
+  pointer-events: none;
+  user-select: none;
+}
+
+.jamie-sheen {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -70%;
+  width: 50%;
+  transform: skewX(-20deg);
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.08) 50%, transparent 100%);
+  pointer-events: none;
+  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.group:hover .jamie-sheen {
+  transform: skewX(-20deg) translateX(360%);
+}
+
+.chrome-text {
+  background: linear-gradient(180deg, #FFFFFF 0%, #D4D4D8 60%, #8A8A93 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.emerald-glow-text {
+  color: #00E5A3;
+  text-shadow: 0 0 16px rgba(0, 229, 163, 0.45);
+}
+
+.mono-tag {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.78);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  line-height: 1.2;
+}
+
+.signal-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 9999px;
+  background-color: #00E5A3;
+  box-shadow: 0 0 8px #00E5A3;
+  display: inline-block;
+  animation: pulse-signal 2.2s infinite ease-in-out;
+}
+
+@keyframes pulse-signal {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 8px #00E5A3;
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(0.85);
+    box-shadow: 0 0 2px #00E5A3;
+  }
+}
+
+.metric-tabular {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.04em;
+}
+
+.hairline-border {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hairline-divider {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hairline-divider-line {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ============================================
+   JAMIE McKAYE DESIGN SYSTEM — Design Tokens
+   ============================================ */
+
+:root {
+  --ink-0: #0B0C0E;
+  --ink-1: #111214;
+  --ink-2: #1a1c1f;
+  --paper-0: #E9EBEF;
+  --paper-1: #AEB4BD;
+  --paper-2: #636B76;
+  --chrome-lo: #5A6070;
+  --chrome-mid: #8A9099;
+  --chrome-hi: #C8CDD5;
+  --hairline: rgba(244,245,247,0.08);
+  --hairline-strong: rgba(244,245,247,0.14);
+  --signal-pos: #8FE3B0;
+}
+
+/* Monospaced label — dipakai di seluruh halaman */
+.label-mono {
+  font-family: 'JetBrains Mono', 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+/* Chrome/silver gradient text */
+.chrome-text {
+  background: linear-gradient(180deg, #FFFFFF 0%, #E2E6EE 35%, #949BA6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Base theme container for Jamie McKaye pages */
+.jamie-root {
+  background-color: #0B0C0E !important;
+  color: #E9EBEF !important;
+}
+
+.jamie-root h1,
+.jamie-root h2,
+.jamie-root h3,
+.jamie-root h4 {
+  color: #E9EBEF;
+}
+
+/* Display heading */
+.text-display {
+  font-size: clamp(2.8rem, 1rem + 5vw, 6rem);
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  color: #E9EBEF;
+}
+
+/* Editorial/card heading */
+.text-editorial {
+  font-size: clamp(1.4rem, 1rem + 1.5vw, 2.2rem);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  color: #E9EBEF;
+}
+
+/* Panel base */
+.panel-jamie {
+  background: rgba(17, 18, 20, 0.85);
+  border: 1px solid rgba(244, 245, 247, 0.08);
+}
+
+/* Corner ticks */
+.ticks-jamie::before,
+.ticks-jamie::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-style: solid;
+  border-color: rgba(244, 245, 247, 0.18);
+  transition: border-color 300ms;
+  z-index: 10;
+  pointer-events: none;
+}
+.ticks-jamie::before { top: 0; left: 0; border-width: 1px 0 0 1px; }
+.ticks-jamie::after { bottom: 0; right: 0; border-width: 0 1px 1px 0; }
+.ticks-jamie:hover::before,
+.ticks-jamie:hover::after { border-color: rgba(200, 205, 213, 0.4); }
+
+/* Chrome rule */
+.chrome-rule {
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(90, 96, 112, 0.5) 20%,
+    rgba(200, 205, 213, 0.35) 50%,
+    rgba(90, 96, 112, 0.5) 80%,
+    transparent 100%
+  );
+}
+
+/* Terminal caret blinking */
+.terminal-caret::after {
+  content: '▊';
+  animation: terminalBlink 1.2s step-end infinite;
+  color: #C8CDD5;
+  font-size: 11px;
+  margin-left: 4px;
+}
+
+/* Keyframe animations */
+@keyframes expandBar {
+  0% { width: 0%; opacity: 0; }
+  15% { opacity: 1; }
+  70%, 100% { opacity: 1; }
+}
+
+@keyframes fadeIn {
+  0%, 25% { opacity: 0; }
+  45%, 100% { opacity: 1; }
+}
+
+@keyframes terminalBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+
+
 

@@ -1,36 +1,29 @@
+import React from 'react';
 import { HeroSection } from '../components/hero-section';
 import { FeaturesSection } from '../components/features-section';
 import { UseCasesSection } from '../components/use-cases-section';
 import { PricingSection } from '../components/pricing-section';
-// import { TestimonialsSection } from '../components/testimonials-section';
 import { OurClientsSection } from '../components/our-clients-section';
-import { AnimatedSection } from '../components/animated-section';
 import { ChatbotDemoModal } from '../components/chatbot-demo-modal';
+import BackgroundScene from '../components/showcase/BackgroundScene';
 
 export default function HomePage() {
   return (
-    <main>
-      <HeroSection />
+    <main className="jamie-root min-h-screen bg-[#0B0C0E] text-[#E9EBEF] relative overflow-hidden font-sans selection:bg-[#8FE3B0]/20 selection:text-[#8FE3B0]">
+      {/* Background Interactive Particle Field & Fixed Ambient Grid */}
+      <BackgroundScene />
 
-      <AnimatedSection animation="fade-up" delay={100}>
+      {/* Main Content Sections Layer */}
+      <div className="relative z-10 w-full">
+        <HeroSection />
         <OurClientsSection />
-      </AnimatedSection>
-
-      <AnimatedSection animation="fade-up" delay={1000}>
         <FeaturesSection />
-      </AnimatedSection>
-
-      <AnimatedSection animation="fade-up" delay={150}>
         <UseCasesSection />
-      </AnimatedSection>
-
-      <AnimatedSection animation="fade-up" delay={100}>
         <PricingSection />
-      </AnimatedSection>
 
-      {/* Global chatbot demo modal — triggered from anywhere */}
-      <ChatbotDemoModal />
+        {/* Global Chatbot Demo Modal */}
+        <ChatbotDemoModal />
+      </div>
     </main>
   );
 }
-
