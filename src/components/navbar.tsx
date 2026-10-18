@@ -1,83 +1,84 @@
 'use client';
 
-import { MoonIcon, SunIcon } from '@heroicons/react/24/outline';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button } from './ui/button';
 import Logo from '../imports/Logo';
 import { useChatbotDemoModal } from '../context/chatbot-demo-context';
+import SignalBadge from './showcase/SignalBadge';
 
 interface NavbarProps {
-  theme: 'light' | 'dark';
-  toggleTheme: () => void;
+  theme?: 'light' | 'dark';
+  toggleTheme?: () => void;
 }
 
-export function Navbar({ theme, toggleTheme }: NavbarProps) {
+export function Navbar({ theme = 'dark', toggleTheme }: NavbarProps = {}) {
   const { openModal } = useChatbotDemoModal();
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <div className="w-8 h-8">
-              <Logo />
-            </div>
-            <span className="text-lg">Respon Pintar</span>
-          </Link>
+    <nav className="fixed top-0 left-0 right-0 z-50 h-16 bg-[#0B0C0E]/92 backdrop-blur-md border-b border-[rgba(255,255,255,0.12)] transition-all duration-300 flex items-center">
+      <div className="landing-container flex items-center justify-between h-16">
+        {/* Logo & Brand */}
+        <Link
+          to="/"
+          className="flex items-center gap-2 group text-[#E9EBEF] no-underline transition-opacity shrink-0"
+        >
+          <div className="w-8 h-8 rounded-[6px] border border-[rgba(255,255,255,0.12)] bg-[#111214] p-1 flex items-center justify-center group-hover:border-[#8FE3B0]/50 transition-colors">
+            <Logo />
+          </div>
+          <div className="flex flex-col">
+            <span className="font-bold tracking-tight text-xs sm:text-base text-[#E9EBEF] leading-tight whitespace-nowrap">
+              Respon Pintar
+            </span>
+            <span className="font-mono text-[9px] uppercase tracking-[0.16em] text-[#636B76] hidden sm:block whitespace-nowrap">
+              Omnichannel Platform
+            </span>
+          </div>
+        </Link>
 
-          {/* Navigation Links */}
-          <div className="hidden md:flex items-center gap-8">
-            <Link to="/#features" className="text-muted-foreground hover:text-foreground transition-colors">
-              Features
-            </Link>
-            <Link to="/about" className="text-muted-foreground hover:text-foreground transition-colors">
-              About
-            </Link>
-            <Link to="/blog" className="text-muted-foreground hover:text-foreground transition-colors">
-              Blog
-            </Link>
-            <button
-              onClick={openModal}
-              className="text-muted-foreground hover:text-[var(--brand-primary)] font-medium transition-colors text-sm"
-            >
-              Try Demo
-            </button>
+        {/* Navigation Links */}
+        <div className="hidden md:flex items-center gap-8 font-mono text-[12px] uppercase tracking-[0.12em]">
+          <a
+            href="/#features"
+            className="text-[#AEB4BD] hover:text-[#E9EBEF] transition-colors"
+          >
+            Features
+          </a>
+          <a
+            href="/#use-cases"
+            className="text-[#AEB4BD] hover:text-[#E9EBEF] transition-colors"
+          >
+            Use Cases
+          </a>
+          <a
+            href="/#pricing"
+            className="text-[#AEB4BD] hover:text-[#E9EBEF] transition-colors"
+          >
+            Pricing
+          </a>
+          <button
+            onClick={openModal}
+            className="text-[#8FE3B0] hover:text-[#8FE3B0]/80 transition-colors cursor-pointer flex items-center gap-1 font-mono text-[12px] uppercase tracking-[0.12em]"
+          >
+            <span>Try Demo</span>
+            <span>▸</span>
+          </button>
+        </div>
+
+        {/* Right Actions */}
+        <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
+          <div className="hidden lg:block">
+            <SignalBadge label="OMNICHANNEL LIVE" variant="positive" />
           </div>
 
-          {/* CTA & Theme Toggle */}
-          <div className="flex items-center gap-4">
-            <button
-              onClick={toggleTheme}
-              className="w-9 h-9 rounded-lg bg-secondary hover:bg-accent flex items-center justify-center transition-all hover:scale-105"
-              aria-label="Toggle theme"
-            >
-              {theme === 'light' ? (
-                <MoonIcon className="w-5 h-5 text-foreground" />
-              ) : (
-                <SunIcon className="w-5 h-5 text-foreground" />
-              )}
-            </button>
-
-            {/* <Button
-              variant="ghost"
-              className="hidden sm:inline-flex text-foreground hover:text-foreground"
-            >
-              Login
-            </Button> */}
-
-            <Button
-              asChild
-              className="bg-gradient-to-r from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] hover:opacity-90 transition-all hover:scale-105 hover:shadow-lg shadow-[var(--brand-primary)]/20"
-            >
-              <a
-                href="https://crm.responpintar.com/auth/login"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Try Now
-              </a>
-            </Button>
-          </div>
+          <a
+            href="https://crm.responpintar.com/auth/login"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="landing-btn-primary !min-h-[44px] !px-2.5 sm:!px-5 shrink-0 !text-[11px] sm:!text-xs !tracking-normal sm:!tracking-[0.08em]"
+          >
+            <span>Mulai Sekarang</span>
+            <span className="hidden sm:inline"> →</span>
+          </a>
         </div>
       </div>
     </nav>

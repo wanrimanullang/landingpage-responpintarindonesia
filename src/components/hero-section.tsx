@@ -1,174 +1,197 @@
 'use client';
 
-import { ArrowRightIcon, SparklesIcon, BoltIcon } from '@heroicons/react/24/outline';
-import { Button } from './ui/button';
+import React from 'react';
+import { ChatBubbleLeftRightIcon, CheckCircleIcon } from '@heroicons/react/24/outline';
 import { useChatbotDemoModal } from '../context/chatbot-demo-context';
+import SignalBadge from './showcase/SignalBadge';
+import ScrollReveal from './showcase/ScrollReveal';
 
 export function HeroSection() {
   const { openModal } = useChatbotDemoModal();
-  return (
-    <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-      {/* Background gradient effects */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[var(--brand-primary)]/10 rounded-full blur-3xl -z-10" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[var(--brand-gradient-end)]/10 rounded-full blur-3xl -z-10" />
 
-      <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left: Text Content */}
-          <div className="space-y-8">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 border border-border">
-              <SparklesIcon className="w-4 h-4 text-[var(--brand-primary)]" />
-              <span className="text-sm">SaaS Platform for Response Automation</span>
-            </div>
+  return (
+    <section className="landing-hero">
+      <div className="landing-container">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Left Column: Heading, Subtitle, Button Trio */}
+          <div>
+            {/* Top Category Label */}
+            <ScrollReveal>
+              <div className="flex flex-wrap items-center gap-3 mb-4">
+                <p className="font-mono text-xs uppercase tracking-[0.14em] text-[#8A9099]">
+                  Respon Pintar / Platform Omnichannel
+                </p>
+                <SignalBadge label="LIVE SYNC" variant="positive" />
+              </div>
+            </ScrollReveal>
 
             {/* Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl !leading-tight">
-              Boost Customer Response with{' '}
-              <span className="bg-gradient-to-r from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] bg-clip-text text-transparent">
-                AI Technology
-              </span>
-            </h1>
+            <ScrollReveal delay={80}>
+              <h1 className="text-display font-bold tracking-tight text-[#E9EBEF] mb-4">
+                Satu Inbox.{' '}
+                <span className="chrome-text block">Semua Percakapan.</span>
+              </h1>
+            </ScrollReveal>
 
             {/* Subheadline */}
-            <p className="text-lg text-muted-foreground !leading-relaxed">
-              Automate customer responses, increase satisfaction, and save up to 70% of your time with an easy-to-use AI-powered chatbot platform.
-            </p>
+            <ScrollReveal delay={160}>
+              <p className="text-base sm:text-lg text-[#AEB4BD] font-normal leading-relaxed max-w-xl mb-8">
+                Kelola pesan WhatsApp Business, Instagram DM, Telegram, dan Live Chat dalam
+                satu sistem terpusat. Respon pelanggan lebih cepat, delegasi tim CS otomatis,
+                dan tingkatkan konversi penjualan bisnis Anda.
+              </p>
+            </ScrollReveal>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] hover:opacity-90 transition-all hover:scale-105 hover:shadow-lg shadow-[var(--brand-primary)]/20 group"
-              >
-                <a href="https://crm.responpintar.com/auth/login">Start Free</a>
-                <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
-
-              <button onClick={openModal}>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-border hover:bg-accent hover:scale-105 transition-all"
+            {/* Action Buttons Trio — exactly matching the token specification */}
+            <ScrollReveal delay={240}>
+              <div className="flex flex-wrap items-center gap-4 pt-2">
+                {/* Button 1: Primary (terang + teks gelap) */}
+                <a
+                  href="https://crm.responpintar.com/auth/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="landing-btn-primary"
                 >
-                  View Demo
-                </Button>
-              </button>
-            </div>
+                  Mulai Sekarang
+                </a>
 
-            {/* Stats */}
-            <div className="flex flex-wrap gap-8 pt-4">
-              <div>
-                <div className="flex items-baseline gap-1">
-                  <span className="text-3xl bg-gradient-to-r from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] bg-clip-text text-transparent">
-                    10K+
-                  </span>
-                </div>
-                <p className="text-sm text-muted-foreground">Active Users</p>
+                {/* Button 2: Secondary (transparan + border) */}
+                <button
+                  onClick={openModal}
+                  className="landing-btn-secondary"
+                >
+                  Coba Demo
+                </button>
+
+                {/* Button 3: Tertiary (teks dengan underline) */}
+                <a
+                  href="#features"
+                  className="landing-btn-tertiary"
+                >
+                  Pelajari fitur
+                </a>
               </div>
-              <div>
-                <div className="flex items-baseline gap-1">
-                  <span className="text-3xl bg-gradient-to-r from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] bg-clip-text text-transparent">
-                    98%
-                  </span>
+            </ScrollReveal>
+
+            {/* Stats Telemetry Readout (e: gap 32px, angka besar, label kecil mt-4px) */}
+            <ScrollReveal delay={320}>
+              <div className="landing-stats-grid mt-8">
+                <div>
+                  <div className="landing-stat-value">100%</div>
+                  <div className="landing-stat-label">Channels Synced</div>
+                  <div className="landing-stat-sub">real-time webhook</div>
                 </div>
-                <p className="text-sm text-muted-foreground">Customer Satisfaction</p>
-              </div>
-              <div>
-                <div className="flex items-baseline gap-1">
-                  <span className="text-3xl bg-gradient-to-r from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] bg-clip-text text-transparent">
-                    24/7
-                  </span>
+                <div>
+                  <div className="landing-stat-value !text-[#8FE3B0]">&lt; 45s</div>
+                  <div className="landing-stat-label">Avg First Reply</div>
+                  <div className="landing-stat-sub">multi-agent speed</div>
                 </div>
-                <p className="text-sm text-muted-foreground">Automated Support</p>
+                <div>
+                  <div className="landing-stat-value">99.98%</div>
+                  <div className="landing-stat-label">System Uptime</div>
+                  <div className="landing-stat-sub">SLA production</div>
+                </div>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
 
-          {/* Right: Mockup/Preview */}
-          <div className="relative">
-            {/* Glow effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] opacity-20 blur-3xl rounded-3xl" />
-
-            {/* Main mockup card */}
-            <div className="relative bg-card border border-border rounded-2xl shadow-2xl p-6 space-y-4">
-              {/* Header */}
-              <div className="flex items-center justify-between pb-4 border-b border-border">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] flex items-center justify-center">
-                    <BoltIcon className="w-5 h-5 text-white" />
-                  </div>
-                  <div>
-                    <p className="text-sm">Respon Pintar AI</p>
-                    <p className="text-xs text-muted-foreground">Online</p>
-                  </div>
-                </div>
-                <div className="flex gap-1">
-                  <div className="w-3 h-3 rounded-full bg-green-500" />
-                  <div className="w-3 h-3 rounded-full bg-yellow-500" />
-                  <div className="w-3 h-3 rounded-full bg-red-500" />
-                </div>
-              </div>
-
-              {/* Chat messages */}
-              <div className="space-y-4">
-                {/* User message */}
-                <div className="flex justify-end">
-                  <div className="bg-gradient-to-r from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] text-white px-4 py-2 rounded-2xl rounded-tr-sm max-w-[80%]">
-                    <p className="text-sm">How do I use the automation feature?</p>
-                  </div>
-                </div>
-
-                {/* AI response */}
-                <div className="flex gap-2">
-                  <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center flex-shrink-0">
-                    <BoltIcon className="w-4 h-4 text-[var(--brand-primary)]" />
-                  </div>
-                  <div className="bg-secondary px-4 py-2 rounded-2xl rounded-tl-sm max-w-[80%]">
-                    <p className="text-sm">Our automation feature is super easy! Just set up your response templates, and the AI will handle the rest automatically 24/7.</p>
-                  </div>
-                </div>
-
-                {/* Typing indicator */}
-                <div className="flex gap-2">
-                  <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center flex-shrink-0">
-                    <BoltIcon className="w-4 h-4 text-[var(--brand-primary)]" />
-                  </div>
-                  <div className="bg-secondary px-4 py-2 rounded-2xl">
-                    <div className="flex gap-1">
-                      <div className="w-2 h-2 rounded-full bg-muted-foreground/50 animate-bounce" style={{ animationDelay: '0ms' }} />
-                      <div className="w-2 h-2 rounded-full bg-muted-foreground/50 animate-bounce" style={{ animationDelay: '150ms' }} />
-                      <div className="w-2 h-2 rounded-full bg-muted-foreground/50 animate-bounce" style={{ animationDelay: '300ms' }} />
+          {/* Right Column: Omnichannel Live Simulation Mockup (Card Token c) */}
+          <div>
+            <ScrollReveal delay={120}>
+              <div className="landing-card shadow-2xl">
+                {/* Header kartu dipisah garis tipis (border-bottom) dengan padding-bottom 16px */}
+                <div className="landing-card-header flex-wrap gap-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-9 h-9 rounded-[6px] border border-[rgba(255,255,255,0.12)] bg-[#1a1c1f] flex items-center justify-center text-[#8FE3B0] shrink-0">
+                      <ChatBubbleLeftRightIcon className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold text-[#E9EBEF]">Respon Pintar Omnichannel Desk</p>
+                      <div className="flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#8FE3B0] animate-pulse" />
+                        <p className="font-mono text-xs text-[#8FE3B0] uppercase tracking-wider">
+                          4 Channels Active · WhatsApp / IG / TG / Web
+                        </p>
+                      </div>
                     </div>
                   </div>
+                  <div className="landing-badge">
+                    <span>MULTI-AGENT</span>
+                  </div>
+                </div>
+
+                {/* Omnichannel Channel Selector Pills (Row gap 16px) */}
+                <div className="flex flex-wrap items-center gap-2 pb-2 border-b border-[rgba(255,255,255,0.08)] font-mono text-xs">
+                  <span className="px-2.5 py-1 bg-[#8FE3B0]/15 text-[#8FE3B0] border border-[#8FE3B0]/30 rounded-[6px] font-semibold">
+                    WhatsApp (+62 821-xxxx)
+                  </span>
+                  <span className="px-2.5 py-1 text-[#636B76] border border-transparent rounded-[6px]">
+                    Instagram Direct
+                  </span>
+                  <span className="px-2.5 py-1 text-[#636B76] border border-transparent rounded-[6px]">
+                    Telegram
+                  </span>
+                  <span className="px-2.5 py-1 text-[#636B76] border border-transparent rounded-[6px]">
+                    Live Chat
+                  </span>
+                </div>
+
+                {/* Chat Messages Simulation */}
+                <div className="space-y-4 font-mono text-xs">
+                  {/* Incoming Customer Message */}
+                  <div className="flex justify-start">
+                    <div className="border border-[rgba(255,255,255,0.12)] bg-[#1a1c1f] text-[#E9EBEF] p-4 rounded-[8px] max-w-[85%] space-y-1">
+                      <div className="flex items-center justify-between text-xs text-[#636B76] gap-4">
+                        <span>Customer (Budi Santoso)</span>
+                        <span>14:02 WIB</span>
+                      </div>
+                      <p className="text-xs leading-relaxed font-sans text-[#AEB4BD]">
+                        Halo kak, mau tanya nomor resi untuk pesanan #RP-9921 kemarin sudah dikirimkan belum ya?
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Agent Response */}
+                  <div className="flex justify-end">
+                    <div className="border border-[#8FE3B0]/30 bg-[#0B0C0E] p-4 rounded-[8px] text-[#E9EBEF] max-w-[88%] space-y-2">
+                      <div className="flex items-center justify-between text-xs text-[#8FE3B0] border-b border-[rgba(255,255,255,0.08)] pb-1.5 gap-4">
+                        <span className="flex items-center gap-1">
+                          <CheckCircleIcon className="w-3.5 h-3.5 text-[#8FE3B0]" />
+                          <span>Agent Sarah (CS Tim 1)</span>
+                        </span>
+                        <span>14:02 WIB</span>
+                      </div>
+                      <p className="text-xs text-[#E9EBEF] leading-relaxed font-sans">
+                        Halo Pak Budi! Pesanan #RP-9921 sudah dikirim via J&amp;T dengan nomor resi <strong className="text-[#8FE3B0]">JT881928301</strong>. Paket dalam perjalanan dan estimasi tiba esok siang ya.
+                      </p>
+                      <div className="flex gap-2 pt-1 font-mono">
+                        <span className="text-[10px] uppercase px-2 py-0.5 border border-[#8FE3B0]/30 text-[#8FE3B0] bg-[#8FE3B0]/5 rounded-[4px]">
+                          Auto-Track J&amp;T
+                        </span>
+                        <span className="text-[10px] uppercase px-2 py-0.5 border border-[rgba(255,255,255,0.12)] text-[#8A9099] rounded-[4px]">
+                          CRM Sync OK
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Diagnostic / Queue status */}
+                  <div className="flex items-center justify-between text-[#636B76] text-xs">
+                    <div className="flex items-center gap-1.5">
+                      <span className="terminal-caret" aria-hidden="true" />
+                      <span>Delegasi otomatis: Sesuai giliran agen aktif</span>
+                    </div>
+                    <span className="text-[#8FE3B0] font-mono">Respon: 24 detik</span>
+                  </div>
+                </div>
+
+                {/* Card Footer */}
+                <div className="pt-3 border-t border-[rgba(255,255,255,0.08)] flex items-center justify-between text-xs font-mono text-[#636B76]">
+                  <span>OMNICHANNEL DESK</span>
+                  <span className="text-[#8A9099]">SINGLE INBOX · ZERO CHAT LOSS</span>
                 </div>
               </div>
-
-              {/* Input area */}
-              <div className="flex gap-2 pt-4 border-t border-border">
-                <div className="flex-1 bg-secondary px-4 py-2 rounded-lg">
-                  <p className="text-sm text-muted-foreground">Type a message...</p>
-                </div>
-                <button className="w-10 h-10 rounded-lg bg-gradient-to-r from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] flex items-center justify-center">
-                  <ArrowRightIcon className="w-5 h-5 text-white" />
-                </button>
-              </div>
-            </div>
-
-            {/* Floating elements */}
-            <div className="absolute -top-4 -right-4 bg-card border border-border rounded-xl shadow-lg p-3 animate-pulse">
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-green-500" />
-                <span className="text-xs">AI Active</span>
-              </div>
-            </div>
-
-            <div className="absolute -bottom-4 -left-4 bg-card border border-border rounded-xl shadow-lg p-3">
-              <div className="flex items-center gap-2">
-                <SparklesIcon className="w-4 h-4 text-[var(--brand-primary)]" />
-                <span className="text-xs">Smart Response</span>
-              </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </div>

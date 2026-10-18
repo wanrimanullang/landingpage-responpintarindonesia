@@ -1,89 +1,147 @@
 'use client';
 
-import { BriefcaseIcon, ShoppingBagIcon, AcademicCapIcon, HeartIcon, RocketLaunchIcon } from '@heroicons/react/24/outline';
+import React from 'react';
+import {
+  BriefcaseIcon,
+  ShoppingBagIcon,
+  AcademicCapIcon,
+  HeartIcon,
+} from '@heroicons/react/24/outline';
+import ScrollReveal from './showcase/ScrollReveal';
 
 const useCases = [
   {
     icon: ShoppingBagIcon,
-    title: 'E-Commerce',
-    description: 'Automatically handle product inquiries, order tracking, and customer complaints.',
-    benefits: ['Increase conversion by 40%', 'Reduce cart abandonment', '24/7 support at no extra cost'],
+    number: '01',
+    industry: 'RETAIL & E-COMMERCE',
+    title: 'Automasi Pesanan & Cek Resi Cepat',
+    description:
+      'Terima pesanan dari Instagram DM dan WhatsApp dalam 1 inbox. Kirim update resi ekspedisi dan notifikasi pembayaran otomatis tanpa ketik manual satu per satu.',
+    benefits: [
+      'Peningkatan konversi checkout hingga +40%',
+      'Eliminasi antrean chat saat flash sale & promo tanggal kembar',
+      'Integrasi langsung ke sistem pesanan dan katalog produk',
+    ],
   },
   {
     icon: BriefcaseIcon,
-    title: 'Business & Corporate',
-    description: 'Automate customer support, lead generation, and internal communication.',
-    benefits: ['Save 60% on operational costs', 'Faster response times', 'Boost team productivity'],
+    number: '02',
+    industry: 'FINANCE & CORPORATE',
+    title: 'Kualifikasi Prospek & Eskalasi Tiket',
+    description:
+      'Saring pesan masuk dari website dan Telegram, lalu delegasikan prospek bernilai tinggi langsung ke account manager dengan pembagian tugas yang adil.',
+    benefits: [
+      'Hemat hingga 60% biaya operasional customer service',
+      'Waktu respon pertama kurang dari 45 detik',
+      'Keamanan data pelanggan dengan enkripsi standar enterprise',
+    ],
   },
   {
     icon: AcademicCapIcon,
-    title: 'Education',
-    description: 'Answer student questions, provide enrollment information, and learning guidance.',
-    benefits: ['Serve thousands of students at once', 'Accurate info 24/7', 'Increase engagement'],
+    number: '03',
+    industry: 'EDUCATION & KURSUS',
+    title: 'Informasi Pendaftaran & Konseling',
+    description:
+      'Layanan calon siswa baru via WhatsApp dan Live Chat website. Bagikan informasi biaya studi, jadwal pendaftaran, dan reminder seleksi secara massal.',
+    benefits: [
+      'Layani ribuan pendaftar bersamaan tanpa kendala nomor diblokir',
+      'Multi-admin CS dapat menjawab dari perangkat berbeda',
+      'Follow-up otomatis calon pendaftar via WhatsApp blast resmi',
+    ],
   },
   {
     icon: HeartIcon,
-    title: 'Healthcare',
-    description: 'Schedule appointments, provide service information, and answer common medical FAQs.',
-    benefits: ['Reduce admin workload', 'Automatic appointment management', 'More efficient service'],
+    number: '04',
+    industry: 'KLINIK & HEALTHCARE',
+    title: 'Reservasi Jadwal & Pengingat Pasien',
+    description:
+      'Kelola booking jadwal dokter dan kirim pengingat konsultasi otomatis sebelum hari pemeriksaan untuk mencegah pasien lupa atau terlambat datang.',
+    benefits: [
+      'Turunkan angka no-show pasien hingga 35%',
+      'Manajemen antrean janji temu lebih teratur dan rapi',
+      'Respon cepat pertanyaan jadwal praktek dan fasilitas klinik',
+    ],
   },
 ];
 
 export function UseCasesSection() {
   return (
-    <section id="use-cases" className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border">
-            <RocketLaunchIcon className="w-4 h-4 text-[var(--brand-primary)]" />
-            <span className="text-sm">Use Cases</span>
-          </div>
+    <section id="use-cases" className="landing-section">
+      <div className="landing-container">
+        {/* Section Header (g: label margin-bottom 16px from title) */}
+        <div className="landing-section-header">
+          <ScrollReveal>
+            <div className="landing-section-label">
+              <span>02 · INDUSTRY BLUEPRINTS</span>
+            </div>
+          </ScrollReveal>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl">
-            Solutions for{' '}
-            <span className="bg-gradient-to-r from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] bg-clip-text text-transparent">
-              Various Industries
-            </span>
-          </h2>
+          <ScrollReveal delay={80}>
+            <h2 className="text-display font-bold tracking-tight text-[#E9EBEF] landing-section-title">
+              Solusi Tepat untuk{' '}
+              <span className="chrome-text block">Berbagai Industri.</span>
+            </h2>
+          </ScrollReveal>
 
-          <p className="text-lg text-muted-foreground">
-            From startups to enterprises, Respon Pintar helps businesses across sectors improve their customer experience.
-          </p>
+          <ScrollReveal delay={160}>
+            <p className="text-base sm:text-lg text-[#AEB4BD] font-normal leading-relaxed max-w-2xl">
+              Dari UMKM berkembang hingga korporasi besar, Respon Pintar membantu tim CS Anda
+              melayani pelanggan lebih cepat, teratur, dan profesional.
+            </p>
+          </ScrollReveal>
         </div>
 
-        {/* Use Cases Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        {/* Use Cases Grid with Cards (Token c: padding 24px, border 1px, radius 12px, gap antar baris 16px) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {useCases.map((useCase, index) => {
             const Icon = useCase.icon;
             return (
-              <div
-                key={index}
-                className="group bg-card border border-border rounded-2xl p-8 hover:shadow-xl hover:shadow-[var(--brand-primary)]/5 hover:border-[var(--brand-primary)]/20 transition-all duration-300"
-              >
-                {/* Icon & Title */}
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                    <Icon className="w-7 h-7 text-white" />
-                  </div>
+              <ScrollReveal key={useCase.number} delay={index * 90}>
+                <div className="landing-card justify-between h-full">
                   <div>
-                    <h3 className="mb-2">{useCase.title}</h3>
-                    <p className="text-sm text-muted-foreground">
-                      {useCase.description}
-                    </p>
+                    {/* Header kartu dipisah garis tipis (border-bottom) dengan padding-bottom 16px */}
+                    <div className="landing-card-header mb-4">
+                      <span className="text-[#636B76] font-mono text-xs">{useCase.number} // BLUEPRINT</span>
+                      <span className="landing-badge text-[#AEB4BD] bg-white/[0.02]">
+                        {useCase.industry}
+                      </span>
+                    </div>
+
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className="w-10 h-10 rounded-[6px] border border-[rgba(255,255,255,0.12)] bg-[#1a1c1f] flex items-center justify-center text-[#8FE3B0] shrink-0">
+                        <Icon className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl sm:text-2xl font-bold text-[#E9EBEF] mb-2">
+                          {useCase.title}
+                        </h3>
+                        <p className="text-sm text-[#AEB4BD] leading-relaxed font-normal">
+                          {useCase.description}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Divider line separating description from benefits */}
+                    <div className="border-b border-[rgba(255,255,255,0.08)] my-4" />
+
+                    {/* Benefits List */}
+                    <div className="space-y-3 font-mono text-xs">
+                      {useCase.benefits.map((benefit, idx) => (
+                        <div key={idx} className="flex items-center gap-2.5 text-[#AEB4BD]">
+                          <span className="text-[#8FE3B0] font-bold select-none">▸</span>
+                          <span>{benefit}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Card Footer */}
+                  <div className="pt-4 mt-6 border-t border-[rgba(255,255,255,0.08)] flex items-center justify-between text-xs font-mono text-[#636B76]">
+                    <span>IMPLEMENTASI CEPAT</span>
+                    <span className="text-[#8FE3B0]">OMNICHANNEL CS</span>
                   </div>
                 </div>
-
-                {/* Benefits */}
-                <div className="space-y-2 mt-6 pt-6 border-t border-border">
-                  {useCase.benefits.map((benefit, idx) => (
-                    <div key={idx} className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[var(--brand-gradient-start)] to-[var(--brand-gradient-end)]" />
-                      <p className="text-sm text-muted-foreground">{benefit}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              </ScrollReveal>
             );
           })}
         </div>
