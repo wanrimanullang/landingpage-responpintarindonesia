@@ -1,18 +1,17 @@
 'use client';
 
 import React from 'react';
-import { MoonIcon, SunIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-router-dom';
 import Logo from '../imports/Logo';
 import { useChatbotDemoModal } from '../context/chatbot-demo-context';
 import SignalBadge from './showcase/SignalBadge';
 
 interface NavbarProps {
-  theme: 'light' | 'dark';
-  toggleTheme: () => void;
+  theme?: 'light' | 'dark';
+  toggleTheme?: () => void;
 }
 
-export function Navbar({ theme, toggleTheme }: NavbarProps) {
+export function Navbar({ theme = 'dark', toggleTheme }: NavbarProps = {}) {
   const { openModal } = useChatbotDemoModal();
 
   return (
@@ -70,18 +69,6 @@ export function Navbar({ theme, toggleTheme }: NavbarProps) {
           <div className="hidden lg:block">
             <SignalBadge label="OMNICHANNEL LIVE" variant="positive" />
           </div>
-
-          <button
-            onClick={toggleTheme}
-            className="w-8 h-8 sm:w-10 sm:h-10 rounded-[6px] border border-[rgba(255,255,255,0.12)] bg-[#111214] text-[#AEB4BD] hover:text-[#E9EBEF] hover:border-[rgba(255,255,255,0.25)] flex items-center justify-center transition-all cursor-pointer shrink-0"
-            aria-label="Toggle theme"
-          >
-            {theme === 'light' ? (
-              <MoonIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#AEB4BD]" />
-            ) : (
-              <SunIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#AEB4BD]" />
-            )}
-          </button>
 
           <a
             href="https://crm.responpintar.com/auth/login"

@@ -15,37 +15,20 @@ import TutorialConnectedWhatsappPage from './pages/tutorial-connected-whatsapp';
 import TutorialSetupWorkflowPage from './pages/tutorial-setup-workflow';
 import DeleteAccountPage from './pages/delete-account';
 import { ChatbotDemoModalProvider } from './context/chatbot-demo-context';
+import { ChatbotDemoModal } from './components/chatbot-demo-modal';
 
 export default function App() {
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
-
-  // Load theme from localStorage on mount (default: dark for Jamie McKaye obsidian aesthetic)
+  // Always enforce dark mode as the default project aesthetic
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
-    if (savedTheme) {
-      setTheme(savedTheme);
-      document.documentElement.classList.toggle('dark', savedTheme === 'dark');
-    } else {
-      // Default to dark mode
-      setTheme('dark');
-      document.documentElement.classList.add('dark');
-    }
+    document.documentElement.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
   }, []);
-
-  // Toggle theme function
-  const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    document.documentElement.classList.toggle('dark', newTheme === 'dark');
-    localStorage.setItem('theme', newTheme);
-  };
-
 
   return (
     <Router>
       <ChatbotDemoModalProvider>
         <div className="jamie-root min-h-screen bg-[#0B0C0E] text-[#E9EBEF] relative font-sans selection:bg-[#8FE3B0]/20 selection:text-[#8FE3B0]">
-          <Navbar theme={theme} toggleTheme={toggleTheme} />
+          <Navbar />
 
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -61,6 +44,7 @@ export default function App() {
           </Routes>
 
           <Footer />
+          <ChatbotDemoModal />
         </div>
       </ChatbotDemoModalProvider>
     </Router>
