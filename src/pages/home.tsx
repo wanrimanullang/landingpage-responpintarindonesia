@@ -1,9 +1,9 @@
 import React from 'react';
 import { HeroSection } from '../components/hero-section';
+import { LogoStrip } from '../components/logo-strip';
 import { FeaturesSection } from '../components/features-section';
 import { UseCasesSection } from '../components/use-cases-section';
 import { PricingSection } from '../components/pricing-section';
-import { ChatbotDemoModal } from '../components/chatbot-demo-modal';
 import BackgroundScene from '../components/showcase/BackgroundScene';
 
 export default function HomePage() {
@@ -15,12 +15,10 @@ export default function HomePage() {
       {/* Main Content Sections Layer */}
       <div className="relative z-10 w-full">
         <HeroSection />
+        <LogoStrip />
         <FeaturesSection />
         <UseCasesSection />
         <PricingSection />
-
-        {/* Global Chatbot Demo Modal */}
-        <ChatbotDemoModal />
       </div>
     </main>
   );
