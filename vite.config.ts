@@ -49,6 +49,7 @@
         '@': path.resolve(__dirname, './src'),
       },
     },
+    envPrefix: ['VITE_', 'NEXT_PUBLIC_'],
     build: {
       target: 'esnext',
       outDir: 'build',
