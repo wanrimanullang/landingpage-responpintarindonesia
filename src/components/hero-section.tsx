@@ -1,10 +1,10 @@
 'use client';
 
 import React from 'react';
-import { ChatBubbleLeftRightIcon, CheckCircleIcon } from '@heroicons/react/24/outline';
 import { useChatbotDemoModal } from '../context/chatbot-demo-context';
 import SignalBadge from './showcase/SignalBadge';
 import ScrollReveal from './showcase/ScrollReveal';
+import { OmnichannelCard3D } from './hero/OmnichannelCard3D';
 
 export function HeroSection() {
   const { openModal } = useChatbotDemoModal();
@@ -95,102 +95,10 @@ export function HeroSection() {
             </ScrollReveal>
           </div>
 
-          {/* Right Column: Omnichannel Live Simulation Mockup (Card Token c) */}
-          <div>
+          {/* Right Column: Omnichannel Live Simulation Mockup (Card Token c with 3D Tilt) */}
+          <div className="w-full">
             <ScrollReveal delay={120}>
-              <div className="landing-card shadow-2xl">
-                {/* Header kartu dipisah garis tipis (border-bottom) dengan padding-bottom 16px */}
-                <div className="landing-card-header flex-wrap gap-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-[6px] border border-[rgba(255,255,255,0.12)] bg-[#1a1c1f] flex items-center justify-center text-[#8FE3B0] shrink-0">
-                      <ChatBubbleLeftRightIcon className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-[#E9EBEF]">Respon Pintar Omnichannel Desk</p>
-                      <div className="flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#8FE3B0] animate-pulse" />
-                        <p className="font-mono text-xs text-[#8FE3B0] uppercase tracking-wider">
-                          4 Channels Active · WhatsApp / IG / TG / Web
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="landing-badge">
-                    <span>MULTI-AGENT</span>
-                  </div>
-                </div>
-
-                {/* Omnichannel Channel Selector Pills (Row gap 16px) */}
-                <div className="flex flex-wrap items-center gap-2 pb-2 border-b border-[rgba(255,255,255,0.08)] font-mono text-xs">
-                  <span className="px-2.5 py-1 bg-[#8FE3B0]/15 text-[#8FE3B0] border border-[#8FE3B0]/30 rounded-[6px] font-semibold">
-                    WhatsApp (+62 821-xxxx)
-                  </span>
-                  <span className="px-2.5 py-1 text-[#636B76] border border-transparent rounded-[6px]">
-                    Instagram Direct
-                  </span>
-                  <span className="px-2.5 py-1 text-[#636B76] border border-transparent rounded-[6px]">
-                    Telegram
-                  </span>
-                  <span className="px-2.5 py-1 text-[#636B76] border border-transparent rounded-[6px]">
-                    Live Chat
-                  </span>
-                </div>
-
-                {/* Chat Messages Simulation */}
-                <div className="space-y-4 font-mono text-xs">
-                  {/* Incoming Customer Message */}
-                  <div className="flex justify-start">
-                    <div className="border border-[rgba(255,255,255,0.12)] bg-[#1a1c1f] text-[#E9EBEF] p-4 rounded-[8px] max-w-[85%] space-y-1">
-                      <div className="flex items-center justify-between text-xs text-[#636B76] gap-4">
-                        <span>Customer (Budi Santoso)</span>
-                        <span>14:02 WIB</span>
-                      </div>
-                      <p className="text-xs leading-relaxed font-sans text-[#AEB4BD]">
-                        Halo kak, mau tanya nomor resi untuk pesanan #RP-9921 kemarin sudah dikirimkan belum ya?
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Agent Response */}
-                  <div className="flex justify-end">
-                    <div className="border border-[#8FE3B0]/30 bg-[#0B0C0E] p-4 rounded-[8px] text-[#E9EBEF] max-w-[88%] space-y-2">
-                      <div className="flex items-center justify-between text-xs text-[#8FE3B0] border-b border-[rgba(255,255,255,0.08)] pb-1.5 gap-4">
-                        <span className="flex items-center gap-1">
-                          <CheckCircleIcon className="w-3.5 h-3.5 text-[#8FE3B0]" />
-                          <span>Agent Sarah (CS Tim 1)</span>
-                        </span>
-                        <span>14:02 WIB</span>
-                      </div>
-                      <p className="text-xs text-[#E9EBEF] leading-relaxed font-sans">
-                        Halo Pak Budi! Pesanan #RP-9921 sudah dikirim via J&amp;T dengan nomor resi <strong className="text-[#8FE3B0]">JT881928301</strong>. Paket dalam perjalanan dan estimasi tiba esok siang ya.
-                      </p>
-                      <div className="flex gap-2 pt-1 font-mono">
-                        <span className="text-[10px] uppercase px-2 py-0.5 border border-[#8FE3B0]/30 text-[#8FE3B0] bg-[#8FE3B0]/5 rounded-[4px]">
-                          Auto-Track J&amp;T
-                        </span>
-                        <span className="text-[10px] uppercase px-2 py-0.5 border border-[rgba(255,255,255,0.12)] text-[#8A9099] rounded-[4px]">
-                          CRM Sync OK
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Diagnostic / Queue status */}
-                  <div className="flex items-center justify-between text-[#636B76] text-xs">
-                    <div className="flex items-center gap-1.5">
-                      <span className="terminal-caret" aria-hidden="true" />
-                      <span>Delegasi otomatis: Sesuai giliran agen aktif</span>
-                    </div>
-                    <span className="text-[#8FE3B0] font-mono">Respon: 24 detik</span>
-                  </div>
-                </div>
-
-                {/* Card Footer */}
-                <div className="pt-3 border-t border-[rgba(255,255,255,0.08)] flex items-center justify-between text-xs font-mono text-[#636B76]">
-                  <span>OMNICHANNEL DESK</span>
-                  <span className="text-[#8A9099]">SINGLE INBOX · ZERO CHAT LOSS</span>
-                </div>
-              </div>
+              <OmnichannelCard3D />
             </ScrollReveal>
           </div>
         </div>

@@ -4085,4 +4085,357 @@ html, body {
   list-style: none;
 }
 
+/* ========================================================
+   HERO 3D OMNICHANNEL DESK CARD
+   ======================================================== */
+.hero-3d-stage {
+  perspective: 1200px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-3d-card {
+  width: 100%;
+  transform-style: preserve-3d;
+  will-change: transform;
+  border-radius: 16px;
+  position: relative;
+  overflow: visible !important;
+  background-color: #111214;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 
+    0 30px 60px -12px rgba(0, 0, 0, 0.75),
+    0 18px 36px -18px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 20px 40px -15px rgba(143, 227, 176, 0.08);
+}
+
+:root:not(.dark) .hero-3d-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 
+    0 30px 60px -12px rgba(15, 23, 42, 0.12),
+    0 18px 36px -18px rgba(15, 23, 42, 0.08),
+    0 0 0 1px rgba(0, 0, 0, 0.04),
+    0 20px 40px -15px rgba(20, 149, 111, 0.08);
+}
+
+/* Floating Badges with translateZ */
+.hero-floating-badge-top {
+  position: absolute;
+  top: -18px;
+  left: 20px;
+  z-index: 20;
+  pointer-events: none;
+  animation: heroFloatBob1 7s ease-in-out infinite;
+}
+
+.hero-floating-badge-bottom {
+  position: absolute;
+  bottom: -18px;
+  right: 24px;
+  z-index: 20;
+  pointer-events: none;
+  animation: heroFloatBob2 6.5s ease-in-out infinite 0.8s;
+}
+
+@media (max-width: 639px) {
+  .hero-floating-badge-top {
+    top: -20px;
+    left: 50%;
+    transform-origin: center;
+    scale: 0.88;
+    animation: heroFloatBobMobile1 7s ease-in-out infinite;
+  }
+  .hero-floating-badge-bottom {
+    bottom: -18px;
+    right: 16px;
+    scale: 0.85;
+    transform-origin: bottom right;
+  }
+}
+
+.hero-floating-badge-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  border-radius: 9999px;
+  background-color: #1a1c1f;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 
+    0 20px 35px -8px rgba(0, 0, 0, 0.7),
+    0 8px 16px -4px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.hero-floating-badge-bottom .hero-floating-badge-card {
+  background-color: #121417;
+  border: 1px solid rgba(143, 227, 176, 0.4);
+  box-shadow: 
+    0 20px 35px -8px rgba(0, 0, 0, 0.7),
+    0 8px 16px -4px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(143, 227, 176, 0.15);
+}
+
+:root:not(.dark) .hero-floating-badge-card {
+  background-color: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  box-shadow: 
+    0 20px 35px -8px rgba(15, 23, 42, 0.15),
+    0 8px 16px -4px rgba(15, 23, 42, 0.08),
+    0 0 0 1px rgba(0, 0, 0, 0.04);
+}
+
+:root:not(.dark) .hero-floating-badge-bottom .hero-floating-badge-card {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(20, 149, 111, 0.35);
+  box-shadow: 
+    0 20px 35px -8px rgba(15, 23, 42, 0.15),
+    0 8px 16px -4px rgba(15, 23, 42, 0.08),
+    0 0 0 1px rgba(20, 149, 111, 0.1);
+}
+
+.hero-badge-title-dark {
+  color: #E9EBEF;
+}
+:root:not(.dark) .hero-badge-title-dark {
+  color: #0F172A;
+}
+
+.hero-badge-sub-dark {
+  color: #AEB4BD;
+}
+:root:not(.dark) .hero-badge-sub-dark {
+  color: #64748B;
+}
+
+.hero-badge-title-green {
+  color: #8FE3B0;
+}
+:root:not(.dark) .hero-badge-title-green {
+  color: #14956F;
+}
+
+/* Card Header elements */
+.hero-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+:root:not(.dark) .hero-card-header {
+  border-bottom-color: #E2E8F0;
+}
+
+.hero-card-icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a1c1f;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #8FE3B0;
+  flex-shrink: 0;
+}
+:root:not(.dark) .hero-card-icon-box {
+  background-color: #F1F5F9;
+  border-color: #E2E8F0;
+  color: #14956F;
+}
+
+.hero-card-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #E9EBEF;
+}
+:root:not(.dark) .hero-card-title {
+  color: #0F172A;
+}
+
+.hero-card-sub {
+  font-size: 12px;
+  font-family: var(--font-mono, monospace);
+  color: #8FE3B0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+:root:not(.dark) .hero-card-sub {
+  color: #14956F;
+}
+
+/* Pill badges: padding 4px 10px, radius pill */
+.hero-pill-badge {
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-family: var(--font-mono, monospace);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.hero-pill-badge-outline {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #AEB4BD;
+  background-color: rgba(255, 255, 255, 0.04);
+}
+:root:not(.dark) .hero-pill-badge-outline {
+  border-color: #CBD5E1;
+  color: #475569;
+  background-color: #F8FAFC;
+}
+
+.hero-pill-badge-green {
+  border: 1px solid rgba(143, 227, 176, 0.35);
+  color: #8FE3B0;
+  background-color: rgba(143, 227, 176, 0.1);
+}
+:root:not(.dark) .hero-pill-badge-green {
+  border-color: rgba(20, 149, 111, 0.35);
+  color: #14956F;
+  background-color: rgba(20, 149, 111, 0.1);
+}
+
+/* Channel Tabs: padding 6px 12px, radius 8px, gap 8px */
+.hero-channel-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: var(--font-mono, monospace);
+  font-size: 12px;
+}
+:root:not(.dark) .hero-channel-tabs {
+  border-bottom-color: #E2E8F0;
+}
+
+.hero-channel-tab-active {
+  padding: 6px 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: rgba(143, 227, 176, 0.15);
+  color: #8FE3B0;
+  border: 1px solid rgba(143, 227, 176, 0.4);
+  font-weight: 600;
+}
+:root:not(.dark) .hero-channel-tab-active {
+  background-color: rgba(20, 149, 111, 0.1);
+  color: #14956F;
+  border-color: rgba(20, 149, 111, 0.35);
+}
+
+.hero-channel-tab-inactive {
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: #636B76;
+  border: 1px solid transparent;
+  transition: color 0.15s ease;
+}
+:root:not(.dark) .hero-channel-tab-inactive {
+  color: #64748B;
+}
+.hero-channel-tab-inactive:hover {
+  color: #AEB4BD;
+}
+:root:not(.dark) .hero-channel-tab-inactive:hover {
+  color: #0F172A;
+}
+
+/* Chat Bubbles: padding 12px 16px, radius 12px */
+.hero-customer-bubble {
+  padding: 12px 16px;
+  border-radius: 12px;
+  max-width: 88%;
+  background-color: #1a1c1f;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #E9EBEF;
+}
+:root:not(.dark) .hero-customer-bubble {
+  background-color: #F8FAFC;
+  border-color: #E2E8F0;
+  color: #0F172A;
+}
+
+.hero-agent-bubble {
+  padding: 12px 16px;
+  border-radius: 12px;
+  max-width: 90%;
+  background-color: #0B0C0E;
+  border: 1px solid rgba(143, 227, 176, 0.3);
+  color: #E9EBEF;
+}
+:root:not(.dark) .hero-agent-bubble {
+  background-color: #F0FDF4;
+  border-color: rgba(20, 149, 111, 0.3);
+  color: #0F172A;
+}
+
+.hero-card-footer {
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  font-family: var(--font-mono, monospace);
+  color: #636B76;
+}
+:root:not(.dark) .hero-card-footer {
+  border-top-color: #E2E8F0;
+  color: #64748B;
+}
+
+@keyframes heroFloatBob1 {
+  0%, 100% {
+    transform: translateZ(46px) translateY(0px);
+  }
+  50% {
+    transform: translateZ(46px) translateY(-10px);
+  }
+}
+
+@keyframes heroFloatBobMobile1 {
+  0%, 100% {
+    transform: translateX(-50%) translateZ(46px) translateY(0px);
+  }
+  50% {
+    transform: translateX(-50%) translateZ(46px) translateY(-8px);
+  }
+}
+
+@keyframes heroFloatBob2 {
+  0%, 100% {
+    transform: translateZ(58px) translateY(0px);
+  }
+  50% {
+    transform: translateZ(58px) translateY(10px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-3d-card,
+  .hero-floating-badge-top,
+  .hero-floating-badge-bottom {
+    animation: none !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+
 
