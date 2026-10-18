@@ -7,19 +7,19 @@ export interface LogoItem {
 }
 
 export const logos: LogoItem[] = [
+    {
+    name: 'Meta',
+    src: '/logos/meta.png',
+    srcLight: '/logos/meta-light.png',
+    url: 'https://about.meta.com/',
+    type: 'partner',
+  },
   {
     name: 'Rain Realty',
     src: '/logos/rain-realty.png',
     srcLight: '/logos/rain-realty-light.png',
     url: 'https://rainrealty.id/',
     type: 'client',
-  },
-  {
-    name: 'Meta',
-    src: '/logos/meta.png',
-    srcLight: '/logos/meta-light.png',
-    url: 'https://about.meta.com/',
-    type: 'partner',
   },
   {
     name: 'WIKA',
