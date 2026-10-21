@@ -4022,7 +4022,7 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(24px, 3.2vw, 48px);
+  gap: 64px;
   flex: 1;
   padding-inline: 16px;
   margin: 0;
@@ -4050,10 +4050,9 @@ html, body {
 
 .logo-strip-tablet-list {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-start;
-  gap: 32px;
+  justify-content: center;
+  gap: 64px;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -4072,13 +4071,22 @@ html, body {
   }
 }
 
-.logo-strip-mobile-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  row-gap: 24px;
-  column-gap: 16px;
+.logo-strip-mobile-list {
+  display: flex;
   align-items: center;
-  justify-items: center;
+  justify-content: center;
+  gap: 36px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.logo-strip-mobile-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
   width: 100%;
   margin: 0;
   padding: 0;

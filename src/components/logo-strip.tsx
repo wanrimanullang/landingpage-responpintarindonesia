@@ -80,7 +80,7 @@ export function LogoStrip({ className = '' }: LogoStripProps) {
 
   const labelBadge = (
     <div className="logo-strip-chip">
-      <span>DIPERCAYA OLEH</span>
+      <span>KLIEN &amp; PARTNER</span>
     </div>
   );
 
@@ -119,12 +119,12 @@ export function LogoStrip({ className = '' }: LogoStripProps) {
             </ul>
           </div>
 
-          {/* ===== 3. Mobile Layout (< 768px): Label on top, grid of logos, link on bottom ===== */}
+          {/* ===== 3. Mobile Layout (< 768px): Label on top, 2 logos side by side centered, link on bottom ===== */}
           <div className="logo-strip-mobile">
             <div className="flex items-center justify-start">
               {labelBadge}
             </div>
-            <ul role="list" className="logo-strip-mobile-grid">
+            <ul role="list" className="logo-strip-mobile-list">
               {logos.map((logo) => renderLogoItem(logo, true))}
             </ul>
             {caseStudyLink && (
