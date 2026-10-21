@@ -3844,7 +3844,7 @@ html, body {
 }
 
 .footer-badge-link:focus-visible {
-  outline: 2px solid var(--signal-pos);
+  outline: 2px solid var(--signal-pos, #8FE3B0);
   outline-offset: 2px;
 }
 
