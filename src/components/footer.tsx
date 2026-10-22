@@ -17,9 +17,22 @@ import SignalBadge from './showcase/SignalBadge';
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
-  const playStoreUrl = import.meta.env.NEXT_PUBLIC_PLAYSTORE_URL || import.meta.env.VITE_PLAYSTORE_URL;
+  const playStoreUrl =
+    import.meta.env.NEXT_PUBLIC_PLAYSTORE_URL ||
+    import.meta.env.VITE_PLAYSTORE_URL ||
+    'https://play.google.com/store/apps/details?id=com.responpintar.app';
   const appStoreUrl = import.meta.env.NEXT_PUBLIC_APPSTORE_URL || import.meta.env.VITE_APPSTORE_URL;
   const metaPartnerUrl = import.meta.env.NEXT_PUBLIC_META_PARTNER_URL || import.meta.env.VITE_META_PARTNER_URL;
+
+  const handlePlayStoreClick = () => {
+    if (typeof window !== 'undefined') {
+      if ((window as any).dataLayer) {
+        (window as any).dataLayer.push({ event: 'click_download_playstore' });
+      } else if ((window as any).gtag) {
+        (window as any).gtag('event', 'click_download_playstore');
+      }
+    }
+  };
 
   return (
     <footer className="relative bg-[#0B0C0E] text-[#E9EBEF] border-t border-[rgba(255,255,255,0.12)] overflow-hidden">
@@ -85,36 +98,22 @@ export function Footer() {
                 <div className="flex flex-wrap items-start gap-3">
                   {/* Google Play */}
                   <div className="footer-badge-item">
-                    {playStoreUrl ? (
-                      <a
-                        href={playStoreUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="footer-badge-link"
-                        aria-label="Dapatkan di Google Play"
-                      >
-                        <img
-                          src="/badges/google-play.svg"
-                          alt="Dapatkan di Google Play"
-                          className="footer-badge-img"
-                          width={138}
-                          height={40}
-                        />
-                      </a>
-                    ) : (
-                      <div className="flex flex-col items-start">
-                        <div className="footer-badge-link footer-badge-disabled">
-                          <img
-                            src="/badges/google-play.svg"
-                            alt="Dapatkan di Google Play"
-                            className="footer-badge-img"
-                            width={138}
-                            height={40}
-                          />
-                        </div>
-                        <span className="footer-badge-subtext">Segera hadir</span>
-                      </div>
-                    )}
+                    <a
+                      href={playStoreUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="footer-badge-link"
+                      aria-label="Dapatkan ResPin di Google Play"
+                      onClick={handlePlayStoreClick}
+                    >
+                      <img
+                        src="/badges/google-play.svg"
+                        alt="Dapatkan di Google Play"
+                        className="footer-badge-img"
+                        width={138}
+                        height={40}
+                      />
+                    </a>
                   </div>
 
                   {/* App Store */}
